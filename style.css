@@ -1219,104 +1219,132 @@ body {
 	margin: 0;
 	padding: 0;
 }
- 
+
 .main-container {
 	display: block;
 	max-width: 80%;
-	margin: 0 auto;	
+	margin: 0 auto;
 }
- 
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: ‘Lora’, serif;
 }
- 
+
 h1  {
 	font-size: 30px;
 }
- 
+
 h2 {
 	font-size: 25px;
 }
- 
+
 p {
 	font-family: ‘Karla’, sans-serif;
 	font-size: 14px;
 }
- 
+
 nav-bar {
 	background-color: #E6E6E6;
 }
- 
+
 nav-bar p {
 	font-family: ‘Karla’, sans-serif;
 	font-color: black;
 }
- 
+
 a {
 	color: black;
 	text-decoration:none;
-	font-size: 15px;	
+	font-size: 15px;
 }
- 
+
 a:hover{
 	text-decoration:underline;
 }
- 
+
 .news a:hover {
 	color: #486885;
 }
- 
+
 .news img {
 	border: 1px solid #486885;
 }
- 
+
 .newscolor {
 	color: #486885;
 }
- 
+
 .artscolor {
 color: #8F2682;
 }
- 
+
 .livingcolor {
 	color: #8C9141;
 }
- 
+
 .eventscolor {
 	color: #B26300;
 }
- 
+
 .arts a:hover {
 	color: #8F2682;
 }
- 
+
 .arts img {
 	border: 1px solid #8F2682;
 }
- 
+
 .living a:hover {
 	color: #8C9141;
 }
- 
+
 .living img {
 	border: 1px solid #8C9141;
 }
- 
+
 .events a:hover {
 	color: #B26300;
 }
- 
- 
+
+
 img {
 	z-index: -20;
 }
- 
+
 .image-block:hover {
 	opacity: 0.8;
 }
 
+/*--------------------------------------------------------------
+## CSS Advertising Styles
+--------------------------------------------------------------*/
 
+.block-ad{
+	width:300px;
+}
 
+.block-ad-img{
+	width:100%;
+}
 
+.banner-ad{
+	width:730px;
+	margin:0 auto;
+}
 
+.banner-ad-img{
+	width:100%;
+}
 
+@media (max-width:800px){
+	.banner-ad{
+		width:85%;
+	}
+}
+
+@media(max-width:450px){
+	.block-ad{
+		width:85%;
+		margin:0 auto;
+	}
+}
