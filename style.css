@@ -1212,12 +1212,14 @@ object {
 /*--------------------------------------------------------------
 ## CSS SETUP & RULES
 --------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Karla|Lora');
 
 body {
 	color: black;
 	background-color: white;
 	margin: 0;
 	padding: 0;
+	font-family: 'Karla', sans-serif;
 }
  
 .main-container {
@@ -1227,19 +1229,32 @@ body {
 }
  
 h1, h2, h3, h4, h5, h6 {
-	font-family: ‘Lora’, serif;
+	font-family: 'Lora', serif;
 }
  
 h1  {
+	font-size: 30px;
+}
+
+h1 a {
 	font-size: 30px;
 }
  
 h2 {
 	font-size: 25px;
 }
+
+h2 a {
+	font-size: 25px;
+}
  
 p {
-	font-family: ‘Karla’, sans-serif;
+	font-family: 'Karla', sans-serif;
+	font-size: 14px;
+}
+
+p a {
+	font-family: 'Karla', sans-serif;
 	font-size: 14px;
 }
  
@@ -1248,11 +1263,12 @@ nav-bar {
 }
  
 nav-bar p {
-	font-family: ‘Karla’, sans-serif;
+	font-family: 'Karla', sans-serif;
 	font-color: black;
 }
  
 a {
+	font-weight: normal;
 	color: black;
 	text-decoration:none;
 	font-size: 15px;	
@@ -1270,19 +1286,35 @@ a:hover{
 	border: 1px solid #486885;
 }
  
-.newscolor {
+.Newscolor {
+	color: #486885;
+}
+
+.Newscolor:hover {
 	color: #486885;
 }
  
-.artscolor {
-color: #8F2682;
+.Artscolor {
+	color: #8F2682;
+}
+
+.Artscolor:hover {
+	color: #8F2682;
 }
  
-.livingcolor {
+.Livingcolor {
+	color: #8C9141;
+}
+
+.Livingcolor:hover {
 	color: #8C9141;
 }
  
-.eventscolor {
+.Eventscolor {
+	color: #B26300;
+}
+
+.Eventscolor:hover {
 	color: #B26300;
 }
  
@@ -1314,6 +1346,38 @@ img {
 .image-block:hover {
 	opacity: 0.8;
 }
+
+/*--------------------------------------------------------------
+## ARTICLE LISTING ON HOME (content-preview-right.php)
+--------------------------------------------------------------*/
+.post {
+	font-size: 0;
+	padding-bottom: 40px;
+}
+.entry-header {
+	padding-right: 25px;
+	display: inline-block;
+}
+
+.entry-image {
+	display: inline-block;
+	right: 0;
+}
+
+.entry-category {
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
