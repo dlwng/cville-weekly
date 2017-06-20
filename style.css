@@ -1332,6 +1332,137 @@ img {
 	margin:0 auto;
 }
 
+/*--------------------------------------------------------------
+FOOTER
+--------------------------------------------------------------*/
+footer {
+	background-color: #CCF2FF;
+}
+
+.contact-text {
+	text-align: center;
+	width: 59%;
+	margin-left: 18.5%;
+	padding-bottom: 2%;
+	padding-top: 1%;
+}
+
+.grid__col--1-of-3 p {
+	font-size: 16px;
+}
+
+.grid__col--1-of-3 {
+	margin-bottom: -25px;
+}
+
+.mobile-contact-text {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+FOOTER RESPONSIVENESS
+--------------------------------------------------------------*/
+
+@media screen and (max-width: 1270px) {
+	.contact-text {
+		width: 70%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.contact-text {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 860px) {
+	.contact-text {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.contact-text {
+    	display: none;
+    }
+
+    .mobile-contact-text {
+    	display: inline-block;
+    	margin-left: 8%;
+    	text-align: center;
+    }
+
+	.grid__col--1-of-2 {
+		display: inline-block;
+		width: 40%;
+	}
+
+	#contact-us {
+		font-weight: bold;
+		margin-top: 25%;
+	}
+
+	#business-address {
+		margin-top: -5%;
+	}
+
+}
+
+@media screen and (max-width: 450px) {
+	.mobile-contact-text {
+		margin-left: 4%;
+		text-align: left;
+	}
+
+	.grid__col--1-of-2 {
+		vertical-align: middle;
+		width: 45%;
+	}
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) { 
+    /* iPhone 6 Portrait */ 
+    .contact-text {
+    	display: none;
+    }
+
+    .mobile-contact-text {
+    	display: inline-block;
+    	margin-left: 3%;
+    	text-align: left;
+    }
+
+    .mobile-contact-text p {
+    	font-size: 13px;
+    }
+
+	.grid__col--1-of-2 {
+		display: inline-block;
+		width: 40%;
+		vertical-align: bottom;
+	}
+
+	#contact-us {
+		font-weight: bold;
+		margin-bottom: -6%;
+	}
+
+	#business-address {
+		margin-top: -10%;
+	
+	}
+
+	.right-mobile-column {
+		margin-left: 10%;
+	}
+}
+
+/*--------------------------------------------------------------
+END FOOTER
+--------------------------------------------------------------*/
+>>>>>>> footer
+
 .banner-ad-img{
 	width:100%;
 }
