@@ -510,14 +510,10 @@ a {
 	color: royalblue;
 }
 
-a:visited {
-	color: purple;
-}
-
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: black;
 }
 
 a:focus {
@@ -1227,19 +1223,27 @@ body {
 }
  
 h1, h2, h3, h4, h5, h6 {
-	font-family: ‘Lora’, serif;
+	font-family: 'Lora', serif;
 }
  
 h1  {
+	font-size: 30px;
+}
+
+h1 a {
 	font-size: 30px;
 }
  
 h2 {
 	font-size: 25px;
 }
+
+h2 a {
+	font-size: 25px;
+}
  
 p {
-	font-family: ‘Karla’, sans-serif;
+	font-family: 'Karla', sans-serif;
 	font-size: 14px;
 }
  
@@ -1248,7 +1252,7 @@ nav-bar {
 }
  
 nav-bar p {
-	font-family: ‘Karla’, sans-serif;
+	font-family: 'Karla', sans-serif;
 	font-color: black;
 }
  
@@ -1262,50 +1266,25 @@ a:hover{
 	text-decoration:underline;
 }
  
-.news a:hover {
+.News a:hover {
 	color: #486885;
 }
  
-.news img {
-	border: 1px solid #486885;
-}
- 
-.newscolor {
+.Newscolor {
 	color: #486885;
 }
  
-.artscolor {
-color: #8F2682;
-}
- 
-.livingcolor {
-	color: #8C9141;
-}
- 
-.eventscolor {
-	color: #B26300;
-}
- 
-.arts a:hover {
+.Artscolor {
 	color: #8F2682;
 }
  
-.arts img {
-	border: 1px solid #8F2682;
-}
- 
-.living a:hover {
+.Livingcolor {
 	color: #8C9141;
 }
  
-.living img {
-	border: 1px solid #8C9141;
-}
- 
-.events a:hover {
+.Eventscolor {
 	color: #B26300;
 }
- 
  
 img {
 	z-index: -20;
@@ -1446,11 +1425,52 @@ END FOOTER
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-CATEGORY HIGHLIGHT BOXES
+TOP ARTICLE
 --------------------------------------------------------------*/
-
-.highlight-box {
-	display: inline-block;
-	width: 33.3%;
+.entry-mobile {
+	display: none;
 }
 
+.entry-image {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0px;
+}
+
+.entry-image:hover {
+	opacity: 0.8;
+}
+
+.entry-header {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.entry-meta {
+	display: flex;
+	justify-content: space-between;
+	font-family: 'Karla', sans-serif;
+	font-size: 14px;
+}
+
+.img-Artscolor {
+    border: 2px solid #8F2682;
+}
+.img-Livingcolor {
+    border: 2px solid #8C9141;
+}
+.img-Eventscolor {
+    border: 2px solid #B26300;
+}
+.img-Newscolor {
+    border: 2px solid #486885;
+}
+
+
+
+
+
+
+
+
+ 
