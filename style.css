@@ -1320,7 +1320,7 @@ img {
 --------------------------------------------------------------*/
 
 .block-ad{
-	width:300px;
+	width:100%;
 }
 
 .block-ad-img{
@@ -1479,3 +1479,19 @@ END FOOTER
 		margin:0 auto;
 	}
 }
+
+/*--------------------------------------------------------------
+## Events Side-bar Styles
+--------------------------------------------------------------*/
+
+.sidebarE{
+	width:30%;
+	float:right;
+}
+
+/*
+## Example code for what to do 
+.site-main{
+	width:70%;
+	float:left;
+}*/
