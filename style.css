@@ -1421,8 +1421,8 @@ FOOTER RESPONSIVENESS
 	}
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) { 
-    /* iPhone 6 Portrait */ 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) {
+    /* iPhone 6 Portrait */
     .contact-text {
     	display: none;
     }
@@ -1450,7 +1450,7 @@ FOOTER RESPONSIVENESS
 
 	#business-address {
 		margin-top: -10%;
-	
+
 	}
 
 	.right-mobile-column {
@@ -1461,7 +1461,6 @@ FOOTER RESPONSIVENESS
 /*--------------------------------------------------------------
 END FOOTER
 --------------------------------------------------------------*/
->>>>>>> footer
 
 .banner-ad-img{
 	width:100%;
@@ -1490,8 +1489,35 @@ END FOOTER
 }
 
 /*
-## Example code for what to do 
+## Example code for what to do
 .site-main{
 	width:70%;
 	float:left;
 }*/
+
+/*--------------------------------------------------------------
+##404 styles
+--------------------------------------------------------------*/
+.text-404{
+	width:50%;
+	margin:0 auto;
+	text-align:center;
+}
+
+.super-size-me{
+	font-size:110px;
+	margin-top:40px;
+	margin-bottom:0px;
+}
+
+.err{
+	margin-bottom:185px;
+}
+
+@media (max-width:400px){
+
+	.super-size-me{
+		width:100%;
+	}
+
+}
