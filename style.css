@@ -510,9 +510,7 @@ a {
 	color: royalblue;
 }
 
-a:visited {
-	color: purple;
-}
+
 
 a:hover,
 a:focus,
@@ -1347,26 +1345,155 @@ img {
 	opacity: 0.8;
 }
 
+.img-Artscolor {
+	border: 2px solid #8F2682;
+}
+
+.img-Livingcolor {
+	border: 2px solid #8C9141;
+}
+
+.img-Eventscolor {
+	border: 2px solid #B26300;
+}
+
+.img-Newscolor {
+	border: 2px solid #486885;
+}
+
 /*--------------------------------------------------------------
 ## ARTICLE LISTING ON HOME (content-preview-right.php)
 --------------------------------------------------------------*/
 .post {
 	font-size: 0;
-	padding-bottom: 40px;
+	margin-bottom: 45px;
 }
-.entry-header {
-	padding-right: 25px;
+.entry-header-right {
+	padding-right: 45px;
 	display: inline-block;
+	vertical-align: middle;
 }
 
-.entry-image {
+.entry-image-right {
 	display: inline-block;
 	right: 0;
+	vertical-align: middle;
 }
 
-.entry-category {
+.entry-header-left {
+	padding-left: 45px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.entry-image-left {
+	display: inline-block;
+	right: 0;
+	vertical-align: middle;
+}
+.entry-mobile {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+## ARTICLE LISTING ON HOME MEDIA QUERIES
+--------------------------------------------------------------*/
+@media (max-width: 1224px) {
+	h2 {
+		font-size: 20px;
+	}
+
+	h2 a {
+		font-size: 20px;
+	}
+
+	p {
+		font-size: 12px;
+	}
+
+	p a {
+		font-size: 12px;
+	}
+
+	.entry-category a {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 768px) {
+	.entry {
+		display: none;
+	}
+	.entry-mobile {
+		display: block;
+	}
+	.post {
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 550px) {
+	h2 {
+		font-size: 15px;
+	}
+	h2 a {
+		font-size: 15px;
+	}
 
 }
+
+@media (max-width: 480px) {
+	h2 {
+		font-size: 13px;
+	}
+	h2 a {
+		font-size: 13px;
+	}
+
+	.post {
+		margin-bottom: 12px;
+	}
+
+	.entry-image-left {
+		width: 140px;
+		padding: 0px;
+	}
+
+	.entry-header-left {
+		width: 50%;
+		padding-left: 10%;
+	}
+
+	.entry-image-right {
+		width: 140px;
+		padding: 0px;
+	}
+
+	.entry-header-right {
+		width: 50%;
+		padding-right: 10%;
+	}
+
+}
+
+@media (max-width: 350px) {
+	.entry-image-left {
+		width: 120px;
+	}
+
+	.entry-header-left {
+		padding-left: 3%;
+	}
+
+	.entry-image-right {
+		width: 120px;
+	}
+
+	.entry-header-right {
+		padding-right: 3%;
+	}
+}
+
 
 
 

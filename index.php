@@ -33,6 +33,29 @@ get_header(); ?>
 			<?php
 			endif;
 
+
+
+			// $threenews = new WP_Query( array (
+			// 	'$post_count' => 3,
+			// 	'$category_name' => 'News'
+			// );
+
+			// $threearts = new WP_Query( array (
+			// 	'$post_count' => 3,
+			// 	'$category_name' => 'Arts'
+			// );
+
+			// $threeliving = new WP_Query( array (
+			// 	'$post_count' => 3,
+			// 	'$category_name' => 'Living'
+			// );
+
+			// $threeevents = new WP_Query( array (
+			// 	'$post_count' => 3,
+			// 	'$category_name' => 'Events'
+			// );
+
+			
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
@@ -42,6 +65,17 @@ get_header(); ?>
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
 				get_template_part( 'template-parts/content-preview-right', get_post_format() );
+
+			endwhile;
+
+			while ( have_posts() ) : the_post();
+
+				/*
+				 * Include the Post-Format-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content-preview-left', get_post_format() );
 
 			endwhile;
 
