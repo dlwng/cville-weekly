@@ -56,10 +56,18 @@ get_header(); ?>
 				'category_name' => 'Living'
 			));
 
+			$news = get_cat_ID( 'News' );
+			$news_link = get_category_link($news);
+
+			$arts = get_cat_ID( 'Arts' );
+			$arts_link = get_category_link($arts);
+
+			$living = get_cat_ID( 'Living' );
+			$living_link = get_category_link($living);
+
 			?>
 
-			<h1 class="Newscolor">News</h1>
-			<div class="underline"></div>
+			<a href="<?php echo esc_url( $news_link ); ?>"><h1 class="Newscolor cat-title cat-title-news">News</h1></a>
 
 			<?php
 			while ( $threenews -> have_posts() ) : $threenews -> the_post();
@@ -73,7 +81,7 @@ get_header(); ?>
 			endwhile;
 			?>
 
-			<h1 class="Artscolor">Arts</h1>
+			<a href="<?php echo esc_url( $arts_link ); ?>"><h1 class="Artscolor cat-title cat-title-arts">Arts</h1></a>
 
 			<?php
 			while ( $threearts -> have_posts() ) : $threearts -> the_post();
@@ -87,7 +95,7 @@ get_header(); ?>
 			endwhile;
 			?>
 
-			<h1 class="Livingcolor">Living</h1>
+			<a href="<?php echo esc_url( $living_link ); ?>"><h1 class="Livingcolor cat-title cat-title-living">Living</h1></a>
 
 			<?php
 			while ( $threeliving -> have_posts() ) : $threeliving -> the_post();

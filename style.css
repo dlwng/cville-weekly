@@ -1362,7 +1362,7 @@ img {
 }
 
 /*--------------------------------------------------------------
-## ARTICLE LISTING ON HOME (content-preview-right.php)
+## ARTICLE LISTING ON HOME (content-preview-right/left.php)
 --------------------------------------------------------------*/
 .post {
 	font-size: 0;
@@ -1494,12 +1494,42 @@ img {
 	}
 }
 
+/*--------------------------------------------------------------
+## CATEGORY TITLES ON INDEX/HOME PAGE
+--------------------------------------------------------------*/
+.cat-title {
+  position: relative;
+  display: inline-block;
+}
+.cat-title-news:after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    bottom: 0;
+    left: 0%;
+    border-bottom: 3px solid #486885;
+}
 
+.cat-title-arts:after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    bottom: 0;
+    left: 0%;
+    border-bottom: 3px solid #8F2682;
+}
 
-
-
-
-
+.cat-title-living:after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    bottom: 0;
+    left: 0%;
+    border-bottom: 3px solid #8C9141;
+}
 
 
 
