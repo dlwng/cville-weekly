@@ -12,10 +12,16 @@
  * @package cville-weekly
  */
 
+function console_log( $data ){
+  echo '<script>';
+  echo 'console.log('. json_encode( $data ) .')';
+  echo '</script>';
+}
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main main-container" role="main">
 
 		<!-- while loop starts -->
 		<!-- get template part ( new thing you make) -->
@@ -35,41 +41,28 @@ get_header(); ?>
 
 
 
-			// $threenews = new WP_Query( array (
-			// 	'$post_count' => 3,
-			// 	'$category_name' => 'News'
-			// );
+			$threenews = new WP_Query( array (
+				'category_name' => 'News', 
+				'posts_per_page' => 3,
+			));
 
-			// $threearts = new WP_Query( array (
-			// 	'$post_count' => 3,
-			// 	'$category_name' => 'Arts'
-			// );
+			$threearts = new WP_Query( array (
+				'posts_per_page' => 3,
+				'category_name' => 'Arts'
+			));
 
-			// $threeliving = new WP_Query( array (
-			// 	'$post_count' => 3,
-			// 	'$category_name' => 'Living'
-			// );
+			$threeliving = new WP_Query( array (
+				'posts_per_page' => 3,
+				'category_name' => 'Living'
+			));
 
-			// $threeevents = new WP_Query( array (
-			// 	'$post_count' => 3,
-			// 	'$category_name' => 'Events'
-			// );
+			?>
 
-			
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			<h1 class="Newscolor">News</h1>
+			<div class="underline"></div>
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content-preview-right', get_post_format() );
-
-			endwhile;
-
-			while ( have_posts() ) : the_post();
-
+			<?php
+			while ( $threenews -> have_posts() ) : $threenews -> the_post();
 				/*
 				 * Include the Post-Format-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
@@ -78,6 +71,35 @@ get_header(); ?>
 				get_template_part( 'template-parts/content-preview-left', get_post_format() );
 
 			endwhile;
+			?>
+
+			<h1 class="Artscolor">Arts</h1>
+
+			<?php
+			while ( $threearts -> have_posts() ) : $threearts -> the_post();
+				/*
+				 * Include the Post-Format-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content-preview-right', get_post_format() );
+
+			endwhile;
+			?>
+
+			<h1 class="Livingcolor">Living</h1>
+
+			<?php
+			while ( $threeliving -> have_posts() ) : $threeliving -> the_post();
+				/*
+				 * Include the Post-Format-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content-preview-left', get_post_format() );
+
+			endwhile;
+			
 
 			the_posts_navigation();
 

@@ -8,7 +8,7 @@
  */
 
 ?>
-<div class="main-container">
+
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="entry">
 			<header class="entry-header-right grid__col--1-of-2">
@@ -86,4 +86,4 @@
 				
 			</div>
 	</article><!-- #post-<?php the_ID(); ?> -->
-</div>
+

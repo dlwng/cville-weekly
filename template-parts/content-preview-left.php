@@ -14,9 +14,14 @@
 // }
 
 ?>
-<div class="main-container">
+
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="entry">
+			<?php
+				$categories = get_the_category();
+				$category_link = get_category_link($categories[0]->cat_ID);
+				$arrow = " >";
+			?>
 			<div class="entry-image-left grid__col--1-of-2 img-<?php echo esc_html( $categories[0]->name);?>color">
 				<?php
 				the_post_thumbnail();
@@ -35,9 +40,7 @@
 				else :
 					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 				the_excerpt(); 
-				$categories = get_the_category();
-				$category_link = get_category_link($categories[0]->cat_ID);
-				$arrow = " >";
+				
 				//console_log($category_link);
 	 			?>
 
@@ -56,7 +59,7 @@
 			</header><!-- .entry-header -->
 		</div>
 		<div class="entry-mobile">
-			<div class="entry-image-right grid__col--1-of-3 img-<?php echo esc_html( $categories[0]->name);?>color">
+			<div class="entry-image-left grid__col--1-of-3 img-<?php echo esc_html( $categories[0]->name);?>color">
 				<?php
 				the_post_thumbnail();
 				//the_post_thumbnail();
@@ -93,4 +96,4 @@
 			</header><!-- .entry-header -->
 		</div>
 	</article><!-- #post-<?php the_ID(); ?> -->
-</div>
+
