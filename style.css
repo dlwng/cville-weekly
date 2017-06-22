@@ -2098,3 +2098,36 @@ MAIN ARTICLE RESPONSIVENESS
 	}
 }
 
+/*--------------------------------------------------------------
+CATEGORY MAIN ARTICLE BOXES
+--------------------------------------------------------------*/
+.main-three-boxes {
+	text-align: center;
+	padding-right: 10px;
+	padding-bottom: 6%;
+}
+
+.box-header a {
+	font-size: 14px;
+	text-align: center;
+}
+
+.box-header h2 {
+	line-height: 50%;
+}
+
+.box-category a {
+	font-size: 12px;
+}
+
+#main-box-header {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: -10%;
+}
+
+
+
+
+
+

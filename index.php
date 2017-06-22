@@ -66,6 +66,14 @@ get_header(); ?>
 
 			// endwhile;
 
+			$threecats = new WP_Query( array (
+				'posts_per_page' => 3
+			));
+
+			while ( $threecats -> have_posts() ) : $threecats -> the_post();
+				get_template_part( 'template-parts/cat-highlights', get_post_format() );
+			endwhile;
+
 			$threenews = new WP_Query( array (
 				'category_name' => 'News', 
 				'posts_per_page' => 3
