@@ -510,6 +510,11 @@ a {
 	color: royalblue;
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> article-listing
 a:hover,
 a:focus,
 a:active {
@@ -1208,12 +1213,14 @@ object {
 /*--------------------------------------------------------------
 ## CSS SETUP & RULES
 --------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Karla|Lora');
 
 body {
 	color: black;
 	background-color: white;
 	margin: 0;
 	padding: 0;
+	font-family: 'Karla', sans-serif;
 }
 
 .main-container {
@@ -1244,6 +1251,12 @@ h2 a {
  
 p {
 	font-family: 'Karla', sans-serif;
+
+	font-size: 14px;
+}
+
+p a {
+	font-family: 'Karla', sans-serif;
 	font-size: 14px;
 }
 
@@ -1257,6 +1270,7 @@ nav-bar p {
 }
 
 a {
+	font-weight: normal;
 	color: black;
 	text-decoration:none;
 	font-size: 15px;
@@ -1269,20 +1283,36 @@ a:hover{
 .News a:hover {
 	color: #486885;
 }
- 
+
 .Newscolor {
+	color: #486885;
+}
+
+.Newscolor:hover {
 	color: #486885;
 }
  
 .Artscolor {
 	color: #8F2682;
 }
+
+.Artscolor:hover {
+	color: #8F2682;
+}
  
 .Livingcolor {
 	color: #8C9141;
 }
+
+.Livingcolor:hover {
+	color: #8C9141;
+}
  
 .Eventscolor {
+	color: #B26300;
+}
+
+.Eventscolor:hover {
 	color: #B26300;
 }
  
@@ -1541,6 +1571,178 @@ MAIN ARTICLE
 }
 
 /*--------------------------------------------------------------
+## ARTICLE LISTING ON HOME (content-preview-right/left.php)
+--------------------------------------------------------------*/
+.post {
+	font-size: 0;
+	margin-bottom: 45px;
+}
+
+.entry-header-right {
+	padding-right: 45px;
+	display: inline-block;
+	vertical-align: middle;
+}
+	
+.entry-image-right {
+	display: inline-block;
+	right: 0;
+	vertical-align: middle;
+}
+
+.entry-header-left {
+	padding-left: 45px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.entry-image-left {
+	display: inline-block;
+	right: 0;
+	vertical-align: middle;
+}
+.entry-mobile {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+## ARTICLE LISTING ON HOME MEDIA QUERIES
+--------------------------------------------------------------*/
+@media (max-width: 1224px) {
+	h2 {
+		font-size: 20px;
+	}
+
+	h2 a {
+		font-size: 20px;
+	}
+
+	p {
+		font-size: 12px;
+	}
+
+	p a {
+		font-size: 12px;
+	}
+
+	.entry-category a {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 768px) {
+	.entry {
+		display: none;
+	}
+	.entry-mobile {
+		display: block;
+	}
+	.post {
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 550px) {
+	h2 {
+		font-size: 15px;
+	}
+	h2 a {
+		font-size: 15px;
+	}
+
+}
+
+@media (max-width: 480px) {
+	h2 {
+		font-size: 13px;
+	}
+	h2 a {
+		font-size: 13px;
+	}
+
+	.post {
+		margin-bottom: 12px;
+	}
+
+	.entry-image-left {
+		width: 140px;
+		padding: 0px;
+	}
+
+	.entry-header-left {
+		width: 50%;
+		padding-left: 10%;
+	}
+
+	.entry-image-right {
+		width: 140px;
+		padding: 0px;
+	}
+
+	.entry-header-right {
+		width: 50%;
+		padding-right: 10%;
+	}
+
+}
+
+@media (max-width: 350px) {
+	.entry-image-left {
+		width: 120px;
+	}
+
+	.entry-header-left {
+		padding-left: 3%;
+	}
+
+	.entry-image-right {
+		width: 120px;
+	}
+
+	.entry-header-right {
+		padding-right: 3%;
+	}
+}
+
+/*--------------------------------------------------------------
+## CATEGORY TITLES ON INDEX/HOME PAGE
+--------------------------------------------------------------*/
+.cat-title {
+  position: relative;
+  display: inline-block;
+}
+.cat-title-news:after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    bottom: 0;
+    left: 0%;
+    border-bottom: 3px solid #486885;
+}
+
+.cat-title-arts:after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    bottom: 0;
+    left: 0%;
+    border-bottom: 3px solid #8F2682;
+}
+
+.cat-title-living:after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    bottom: 0;
+    left: 0%;
+    border-bottom: 3px solid #8C9141;
+}
+
+
+/*--------------------------------------------------------------
 MAIN ARTICLE RESPONSIVENESS
 --------------------------------------------------------------*/
 @media screen and (max-width: 810px) {
@@ -1568,8 +1770,6 @@ MAIN ARTICLE RESPONSIVENESS
 	}
 
 }
-
-
 
 
 
