@@ -19,6 +19,7 @@
 	<script src="<?php bloginfo('template_directory'); ?>/js/navbar.js"></script>
 
 <link rel="profile" href="http://gmpg.org/xfn/11">
+<link href="dist/hamburgers.css" rel="stylesheet">
 
 
 <?php wp_head(); ?>
