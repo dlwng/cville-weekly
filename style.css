@@ -46,6 +46,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Karla|Lora');
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -528,7 +530,7 @@ a:active {
 	outline: 0;
 }
 
-nav a.selected:link, a.selected:active {  
+nav a.selected:link, a.selected:active {
 	color: #CCF2FF;
 }
 
@@ -666,10 +668,10 @@ a.menu-image-title-after {
 	font-size: 20px;
 }
 
-#menu-item-24, 
-#menu-item-32, 
-#menu-item-33, 
-#menu-item-34, 
+#menu-item-24,
+#menu-item-32,
+#menu-item-33,
+#menu-item-34,
 #menu-item-35{
 	margin-bottom: -8px;
 }
@@ -752,7 +754,7 @@ button#subscribebutton {
   	transition-duration: .3s;
   	transition-timing-function: linear;
   	transition: opacity .3s,z-index .3s step-end,-webkit-transform .3s;
-    transition: opacity .3s,z-index .3s 
+    transition: opacity .3s,z-index .3s
 }
 
 
@@ -769,7 +771,7 @@ input.search-submit {
   	transition-duration: .3s;
   	transition-timing-function: linear;
   	transition: opacity .3s,z-index .3s step-end,-webkit-transform .3s;
-    transition: opacity .3s,z-index .3s 
+    transition: opacity .3s,z-index .3s
 }
 
 .menu-item-24 a:hover {
@@ -1359,7 +1361,6 @@ object {
 ## CSS SETUP & RULES
 --------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Karla|Lora');
 
 body {
 	color: black;
@@ -1639,7 +1640,10 @@ END FOOTER
 
 .sidebarE{
 	width:30%;
+	display:inline-block;
 	float:right;
+	vertical-align:top;
+	margin-top:30px;
 }
 
 /*
@@ -1918,4 +1922,45 @@ MAIN ARTICLE RESPONSIVENESS
 		width: 80%;
 	}
 
+}
+
+/*--------------------------------------------------------------
+## Events Styles
+--------------------------------------------------------------*/
+
+.eventList{
+	width:65%;
+	margin-top:30px;
+	background-color:#ccf2ff;
+	display:inline-block;
+}
+
+.imgAndTitleP{
+	padding-left:20px;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+.EventImgP, .titleBlockP{
+	display:inline-block;
+}
+
+.titleP, .dateP, .locationP, .priceP{
+	font-family:"lora",serif;
+	padding:0px;
+	margin:0px;
+
+}
+
+.titleBlockP{
+	vertical-align:top;
+	margin-left:30px;
+}
+
+.titleP{
+	text-transform:uppercase;
+}
+
+.site-content{
+	margin-bottom:30px;
 }
