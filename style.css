@@ -1230,24 +1230,18 @@ h1  {
 	font-size: 30px;
 }
 
-<<<<<<< HEAD
-=======
 h1 a {
 	font-size: 30px;
 }
- 
->>>>>>> main-article
+
 h2 {
 	font-size: 25px;
 }
 
-<<<<<<< HEAD
-=======
 h2 a {
 	font-size: 25px;
 }
  
->>>>>>> main-article
 p {
 	font-family: 'Karla', sans-serif;
 	font-size: 14px;
@@ -1271,54 +1265,6 @@ a {
 a:hover{
 	text-decoration:underline;
 }
-<<<<<<< HEAD
-
-.news a:hover {
-	color: #486885;
-}
-
-.news img {
-	border: 1px solid #486885;
-}
-
-.newscolor {
-	color: #486885;
-}
-
-.artscolor {
-color: #8F2682;
-}
-
-.livingcolor {
-	color: #8C9141;
-}
-
-.eventscolor {
-	color: #B26300;
-}
-
-.arts a:hover {
-	color: #8F2682;
-}
-
-.arts img {
-	border: 1px solid #8F2682;
-}
-
-.living a:hover {
-	color: #8C9141;
-}
-
-.living img {
-	border: 1px solid #8C9141;
-}
-
-.events a:hover {
-	color: #B26300;
-}
-
-
-=======
  
 .News a:hover {
 	color: #486885;
@@ -1340,13 +1286,8 @@ color: #8F2682;
 	color: #B26300;
 }
  
->>>>>>> main-article
 img {
 	z-index: -20;
-}
-
-.image-block:hover {
-	opacity: 0.8;
 }
 
 /*--------------------------------------------------------------
@@ -1556,7 +1497,7 @@ END FOOTER
 	}
 
 }
-=======
+
 /*--------------------------------------------------------------
 MAIN ARTICLE
 --------------------------------------------------------------*/
@@ -1633,5 +1574,4 @@ MAIN ARTICLE RESPONSIVENESS
 
 
 
- 
->>>>>>> main-article
+
