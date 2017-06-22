@@ -7,7 +7,7 @@
 					'orderby' => 'meta_value',
 					'order' => 'ASC',
 					'meta_key' => 'date',
-					'posts_per_page' => 5
+					'posts_per_page' => 1
 				);
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post(); ?>
@@ -21,6 +21,17 @@
                   $content = the_content();
                   $bannerImg = the_post_thumbnail();
 					?>
+				<div class=imgAndTitle>
+               <div class=EventImg>
+                  <img src="<?php echo $bannerImg ?>"/>
+               </div>
+               <div class="titleBlock">
+                  <h1 class="title"><?php echo $title ?></h1>
+                  <h2 class="date"><?php echo $date ?></h2>
+                  <p class="location"><?php echo $location ?></p>
+                  <p class="price"><?php echo $price ?></p>
+               </div>
+            </div>
 				<?php endwhile;?>
 				<!-- WHILE LOOP ENDS -->
 
