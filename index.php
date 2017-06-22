@@ -42,10 +42,18 @@ get_header(); ?>
 			endif;
 
 
-			while ( have_posts() ) : the_post();
+			// while ( have_posts() ) : the_post();
+			// 	get_template_part( 'template-parts/content-hero', get_post_format() );
+			// endwhile;
+
+			$mainarticle = new WP_Query( array (
+				'posts_per_page' => 1
+			));
+
+			while ( $mainarticle -> have_posts() ) : $mainarticle -> the_post();
 				get_template_part( 'template-parts/content-hero', get_post_format() );
 			endwhile;
-
+			
 			/* Start the Loop */
 			// while ( have_posts() ) : the_post();
 
