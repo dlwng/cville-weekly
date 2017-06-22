@@ -12,7 +12,7 @@
 //   echo '</script>';
 // }
 ?>
-<div class="main-container">
+
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <div class="entry">
             <?php $categories = get_the_category(); ?>
@@ -94,4 +94,3 @@
             </header><!-- .entry-header -->
         </div>
     </article><!-- #post-<?php the_ID(); ?> -->
-</div>
