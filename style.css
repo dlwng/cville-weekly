@@ -663,7 +663,7 @@ nav a.selected:link, a.selected:active {
 }
 
 a.menu-image-title-after {
-	font-size: 24px;
+	font-size: 2vw;
 }
 
 #menu-item-24, 
@@ -682,10 +682,12 @@ a.menu-image-title-after {
 .menu-item-34 a:hover {
 	color: #8F2682;
 }
+
 /*change hover color for living*/
 .menu-item-33 a:hover {
 	color: #8C9141;
 }
+
 /*change hover color for events*/
 .menu-item-32 a:hover {
 	color: #B26300;
@@ -701,32 +703,31 @@ a.menu-image-title-after {
 }
 
 #nav-section-1 {
-	width: 54%;
-/*	border: 1px solid blue;
-*/}
+	width: 60%;
+	border: 1px solid green;
+}
 
 #nav-section-2 {
-	width: 45%;
+	width: 39%;
 	height: auto;
-/*	border: 1px solid blue;
-*/}
+	border: 1px solid green;
+}
 
-.search{
+form.search-form{
 	display: inline-block;
 	width: 50%;
 	text-align: right;
-/*	border: 1px solid blue;
-*/	position: relative;
-vertical-align: middle;
+	border: 1px solid blue;
+	position: relative;
+	vertical-align: middle;
 }
 
 .dropdown {
     display: inline-block;
-    width: 49%;
+    width: 48%;
     text-align: left;
-/*    border: 1px solid blue;
-*/    position: relative;
-	vertical-align: middle;
+    border: 1px solid blue;
+    vertical-align: middle;
 }
 
 
@@ -795,8 +796,8 @@ input.search-submit {
     z-index: 20;
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRFU1NT9fX1lJSUXl5e1dXVfn5+c3Nz6urqv7+/tLS0iYmJqampn5+fysrK39/faWlp////Vi4ZywAAABF0Uk5T/////////////////////wAlrZliAAABLklEQVR42rSWWRbDIAhFHeOUtN3/ags1zaA4cHrKZ8JFRHwoXkwTvwGP1Qo0bYObAPwiLmbNAHBWFBZlD9j0JxflDViIObNHG/Do8PRHTJk0TezAhv7qloK0JJEBh+F8+U/hopIELOWfiZUCDOZD1RADOQKA75oq4cvVkcT+OdHnqqpQCITWAjnWVgGQUWz12lJuGwGoaWgBKzRVBcCypgUkOAoWgBX/L0CmxN40u6xwcIJ1cOzWYDffp3axsQOyvdkXiH9FKRFwPRHYZUaXMgPLeiW7QhbDRciyLXJaKheCuLbiVoqx1DVRyH26yb0hsuoOFEPsoz+BVE0MRlZNjGZcRQyHYkmMp2hBTIzdkzCTc/pLqOnBrk7/yZdAOq/q5NPBH1f7x7fGP4C3AAMAQrhzX9zhcGsAAAAASUVORK5CYII=) center center no-repeat;
     background-size: contain;
-/*    border: 1px solid blue;
-*/    height: 40px;
+    /*border: 1px solid blue;*/
+    height: 40px;
 }
 
 input.search-field {
@@ -817,15 +818,16 @@ input.search-field {
 input.search-field:focus:hover {
   border-bottom: 1px solid #BBB;
   z-index: 10;
-
 }
 
 input.search-field:focus {
-  width: 220px;
+  width: 100%;
   z-index: 10;
   border-bottom: 1px solid #BBB;
   cursor: text;
 }
+
+
 
 
 
@@ -834,6 +836,43 @@ input.search-field:focus {
 .activeon
 {
     color: #3AA8DE;
+}
+
+/*--------------------------------------------------------------
+NAVBAR RESPONSIVENESS
+--------------------------------------------------------------*/
+
+@media screen and (max-width: 1270px) {
+	
+}
+
+@media screen and (max-width: 1150px) {
+	
+}
+
+@media screen and (max-width: 934px) {
+	input.search-field {
+		padding-right: 40px;
+	}
+
+	#nav-section-2 {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	
+
+}
+
+@media screen and (max-width: 450px) {
+	
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) {
+    /* iPhone 6 Portrait */
+    
+
 }
 
 /*
@@ -1477,6 +1516,7 @@ a:hover{
 	text-decoration:underline;
 }
 
+
 .News a:hover {
 	color: #486885;
 }
@@ -1572,6 +1612,7 @@ FOOTER RESPONSIVENESS
 		margin: 0 auto;
 	}
 }
+
 
 @media screen and (max-width: 1150px) {
 	.contact-text {
@@ -1776,6 +1817,7 @@ MAIN ARTICLE
 	padding-top: 50px;
 }
 
+
 /*--------------------------------------------------------------
 ## ARTICLE LISTING ON HOME (content-preview-right/left.php)
 --------------------------------------------------------------*/
@@ -1796,9 +1838,11 @@ MAIN ARTICLE
 	vertical-align: middle;
 }
 
+
 .entry-image-right:hover {
 	opacity: 0.8;
 }
+
 
 .entry-header-left {
 	padding-left: 45px;
@@ -1815,6 +1859,7 @@ MAIN ARTICLE
 .entry-image-left:hover {
 	opacity: 0.8;
 }
+
 
 .entry-mobile {
 	display: none;
@@ -1955,6 +2000,7 @@ MAIN ARTICLE
     left: 0%;
     border-bottom: 3px solid #8C9141;
 }
+
 
 .cat-title-recent:after{
     content: "";
@@ -2137,3 +2183,4 @@ button {
 	font-family: 'Karla', sans-serif;
 }
 
+*/
