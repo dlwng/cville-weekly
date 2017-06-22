@@ -2137,3 +2137,79 @@ button {
 	font-family: 'Karla', sans-serif;
 }
 
+/*--------------------------------------------------------------
+CATEGORY MAIN ARTICLE BOXES
+--------------------------------------------------------------*/
+.main-three-boxes {
+	text-align: center;
+	padding-right: 10px;
+	padding-bottom: 6%;
+}
+
+.box-header a {
+	font-size: 14px;
+	text-align: center;
+}
+
+.box-header h2 {
+	line-height: 50%;
+}
+
+.box-category a {
+	font-size: 12px;
+}
+
+#main-box-header {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: -10%;
+}
+
+.boxImg-Artscolor {
+    border: 2px solid #8F2682;
+}
+	
+.boxImg-Livingcolor {
+	border: 2px solid #8C9141;
+}
+	
+.boxImg-Eventscolor {
+	border: 2px solid #B26300;
+}
+	
+.boxImg-Newscolor {
+	border: 2px solid #486885;
+}
+
+/*--------------------------------------------------------------
+CATEGORY MAIN ARTICLE BOXES RESPONSIVESS
+--------------------------------------------------------------*/
+
+@media screen and (max-width: 850px) {
+	.main-three-boxes {
+		padding-right: 0px;
+	}
+}
+
+@media screen and (max-width: 758px) {
+	.box-header a {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.main-three-boxes {
+		width: 32.5%;
+	}
+
+	.box-header a {
+		font-size: 11px;
+	}
+}
+
+@media screen and (max-width: 670px) {
+	.main-three-boxes {
+		display: none;
+	}
+}
+
