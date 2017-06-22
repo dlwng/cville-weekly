@@ -223,10 +223,10 @@ input[type="number"]::-webkit-outer-spin-button {
 	height: auto;
 }
 
-input[type="search"]::-webkit-search-cancel-button,
+/*input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
-}
+}*/
 
 fieldset {
 	border: 1px solid #c0c0c0;
@@ -415,6 +415,8 @@ table {
 	width: 100%;
 }
 
+
+}
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -425,7 +427,7 @@ input[type="submit"] {
 	border: 1px solid;
 	border-color: #ccc #ccc #bbb;
 	border-radius: 3px;
-	background: #e6e6e6;
+	background: #EBF4F7;
 	color: rgba(0, 0, 0, .8);
 	font-size: 12px;
 	font-size: 0.75rem;
@@ -455,7 +457,7 @@ input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
-input[type="search"],
+/*input[type="search"],*/
 input[type="number"],
 input[type="tel"],
 input[type="range"],
@@ -481,7 +483,7 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
 input[type="password"]:focus,
-input[type="search"]:focus,
+/*input[type="search"]:focus,*/
 input[type="number"]:focus,
 input[type="tel"]:focus,
 input[type="range"]:focus,
@@ -503,6 +505,7 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
@@ -510,11 +513,6 @@ a {
 	color: royalblue;
 }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> article-listing
 a:hover,
 a:focus,
 a:active {
@@ -530,14 +528,23 @@ a:active {
 	outline: 0;
 }
 
+nav a.selected:link, a.selected:active {  
+	color: #CCF2FF;
+}
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+#site-navigation {
+	position: relative;
+}
 .main-navigation {
 	clear: both;
 	display: block;
 	float: left;
 	width: 100%;
+	background-color: #EBF4F7;
+	padding: 1% 10%;
 }
 
 .main-navigation ul {
@@ -547,9 +554,11 @@ a:active {
 	padding-left: 0;
 }
 
-.main-navigation li {
-	float: left;
+.main-navigation li{
+	display: inline-block;
 	position: relative;
+	padding: 0px 15px;
+	vertical-align: middle;
 }
 
 .main-navigation a {
@@ -644,6 +653,140 @@ a:active {
 	width: 50%;
 }
 
+#menu-item-23 {
+	width: 13vw;
+	vertical-align: middle;
+}
+
+#menu-item-23 img {
+	width: 100% !important;
+}
+
+a.menu-image-title-after {
+	font-size: 20px;
+}
+
+#menu-item-24, 
+#menu-item-32, 
+#menu-item-33, 
+#menu-item-34, 
+#menu-item-35{
+	margin-bottom: -8px;
+}
+
+.dropdown {
+	display: inline-block;
+	width: 20%;
+	margin: 0% 14.5%;
+	/*border: 1px solid pink;*/
+
+}
+#site-navigation {
+	background-color: #EBF4F7;
+}
+
+.nav-section {
+	display: inline-block;
+}
+
+#nav-section-1 {
+	width: 50%;
+	/*border: 1px solid blue;*/
+}
+
+#nav-section-2 {
+	width: 48%;
+	height: auto;
+	/*border: 1px solid blue;*/
+}
+
+form{
+	display: inline-block;
+	width: 50%;
+	text-align: right;
+	/*border: 1px solid pink;*/
+}
+
+.search-field, .search-submit {
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+span.screen-reader-text {
+	display: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover {
+    transition: opacity .5;
+}
+
+#submityouremail {
+	text-align: center;
+}
+
+button#subscribebutton {
+	background-color: #CCF2FF;
+	border: 1px solid #3AA8DE;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	cursor: pointer;
+	font-weight: 800;
+	padding: 5px 20px;
+	box-shadow: 3px 3px #3AA8DE;
+  	transition-property: opacity;
+  	transition-duration: .3s;
+  	transition-timing-function: linear;
+  	transition: opacity .3s,z-index .3s step-end,-webkit-transform .3s;
+    transition: opacity .3s,z-index .3s 
+}
+
+
+button#subscribebutton:hover {
+  opacity: .7;
+}
+
+input.search-submit {
+	background-color: #CCF2FF;
+	border: 1px solid #3AA8DE;
+	font-weight: 800;
+	box-shadow: 3px 3px #3AA8DE;
+  	transition-property: opacity;
+  	transition-duration: .3s;
+  	transition-timing-function: linear;
+  	transition: opacity .3s,z-index .3s step-end,-webkit-transform .3s;
+    transition: opacity .3s,z-index .3s 
+}
+
+.menu-item-24 a:hover {
+	color: #486885;
+}
+/*change hover color for arts*/
+.menu-item-34 a:hover {
+	color: #8F2682;
+}
+/*change hover color for living*/
+.menu-item-33 a:hover {
+	color: #8C9141;
+}
+/*change hover color for events*/
+.menu-item-32 a:hover {
+	color: #B26300;
+}
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -656,6 +799,8 @@ a:active {
 	overflow: hidden;
 	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
+
+
 
 .screen-reader-text:focus {
 	background-color: #f1f1f1;
@@ -1213,6 +1358,7 @@ object {
 /*--------------------------------------------------------------
 ## CSS SETUP & RULES
 --------------------------------------------------------------*/
+
 @import url('https://fonts.googleapis.com/css?family=Karla|Lora');
 
 body {
@@ -1222,6 +1368,7 @@ body {
 	padding: 0;
 	font-family: 'Karla', sans-serif;
 }
+
 
 .main-container {
 	display: block;
@@ -1261,7 +1408,7 @@ p a {
 }
 
 nav-bar {
-	background-color: #E6E6E6;
+	background-color: #EBF4F7;
 }
 
 nav-bar p {
@@ -1319,6 +1466,7 @@ a:hover{
 img {
 	z-index: -20;
 }
+
 
 /*--------------------------------------------------------------
 ## CSS Advertising Styles
