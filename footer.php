@@ -37,10 +37,10 @@
 		</div>
 
 		<div class="mobile-contact-text">
-			<div class = "grid__col--1-of-2 grid__col">
+			<div class = "grid__col--1-of-2 grid__col mobile-column">
 				<img src="<?php echo home_url(); ?>/wp-content/themes/cville-weekly/images/transp-logo.png" id="footer-logo">
 				<p id="business-address">308 East Main St, <br> Charlottesville,  22902</p>
-			</div><div class = "grid__col--1-of-2 grid__col right-mobile-column">
+			</div><div class = "grid__col--1-of-2 grid__col mobile_column right-mobile-column">
 				<p id="contact-us">CONTACT US</p>
 				<p>news@c-ville.com <br> arts@c-ville.com <br> editor@c-ville.com <br> eatdrink@c-ville.com</p>
 			</div>
