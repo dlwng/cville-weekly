@@ -13,11 +13,11 @@
  */
 
 
-// function console_log( $data ){
-//   echo '<script>';
-//   echo 'console.log('. json_encode( $data ) .')';
-//   echo '</script>';
-// }
+function console_log( $data ){
+  echo '<script>';
+  echo 'console.log('. json_encode( $data ) .')';
+  echo '</script>';
+}
 
 get_header(); ?>
 
@@ -42,10 +42,18 @@ get_header(); ?>
 			endif;
 
 
-			while ( have_posts() ) : the_post();
+			// while ( have_posts() ) : the_post();
+			// 	get_template_part( 'template-parts/content-hero', get_post_format() );
+			// endwhile;
+
+			$mainarticle = new WP_Query( array (
+				'posts_per_page' => 1
+			));
+
+			while ( $mainarticle -> have_posts() ) : $mainarticle -> the_post();
 				get_template_part( 'template-parts/content-hero', get_post_format() );
 			endwhile;
-
+			
 			/* Start the Loop */
 			// while ( have_posts() ) : the_post();
 
@@ -58,6 +66,14 @@ get_header(); ?>
 
 			// endwhile;
 
+			$threecats = new WP_Query( array (
+				'posts_per_page' => 3
+			));
+
+			while ( $threecats -> have_posts() ) : $threecats -> the_post();
+				get_template_part( 'template-parts/cat-highlights', get_post_format() );
+			endwhile;
+
 			$threenews = new WP_Query( array (
 				'category_name' => 'News', 
 				'posts_per_page' => 3
@@ -66,11 +82,13 @@ get_header(); ?>
 			$threearts = new WP_Query( array (
 				'posts_per_page' => 3,
 				'category_name' => 'Arts'
+
 			));
 
 			$threeliving = new WP_Query( array (
 				'posts_per_page' => 3,
 				'category_name' => 'Living'
+
 			));
 
 			$news = get_cat_ID( 'News' );
@@ -82,32 +100,31 @@ get_header(); ?>
 			$living = get_cat_ID( 'Living' );
 			$living_link = get_category_link($living);
 
+			$news_ids = [];
+			$arts_ids = [];
+			$living_ids = [];
+
 			?>
 
 			<a href="<?php echo esc_url( $news_link ); ?>"><h1 class="Newscolor cat-title cat-title-news">News</h1></a>
 
 			<?php
 			while ( $threenews -> have_posts() ) : $threenews -> the_post();
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
+				
 				get_template_part( 'template-parts/content-preview-left', get_post_format() );
+				array_push($news_ids, get_the_ID());
 
 			endwhile;
 			?>
+
 
 			<a href="<?php echo esc_url( $arts_link ); ?>"><h1 class="Artscolor cat-title cat-title-arts">Arts</h1></a>
 
 			<?php
 			while ( $threearts -> have_posts() ) : $threearts -> the_post();
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
+				
 				get_template_part( 'template-parts/content-preview-right', get_post_format() );
+				array_push($arts_ids, get_the_ID());
 
 			endwhile;
 			?>
@@ -116,18 +133,36 @@ get_header(); ?>
 
 			<?php
 			while ( $threeliving -> have_posts() ) : $threeliving -> the_post();
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
+
 				get_template_part( 'template-parts/content-preview-left', get_post_format() );
+				array_push($living_ids, get_the_ID());
 
 			endwhile;
 
-			
-			
+			$more_ids = array_merge($news_ids, $arts_ids, $living_ids);
+			?>
 
+			<h1 class="cat-title cat-title-recent">Recent Stories</h1>
+
+			<?php
+
+			$moreposts = new WP_Query( array (
+				'post__not_in' => $more_ids, 
+				'posts_per_page' => 6
+			));
+
+			while ( $moreposts -> have_posts() ) : $moreposts -> the_post();
+
+				get_template_part( 'template-parts/content-preview-left', get_post_format() );
+
+			endwhile;
+			?>
+			
+			<div class="center-button">
+				<button type="button" class="morebutton">More Stories</button>
+			</div>
+
+			<?php
 			the_posts_navigation();
 
 		else :
