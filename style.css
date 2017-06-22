@@ -2126,8 +2126,50 @@ CATEGORY MAIN ARTICLE BOXES
 	margin-top: -10%;
 }
 
+.boxImg-Artscolor {
+    border: 2px solid #8F2682;
+}
+	
+.boxImg-Livingcolor {
+	border: 2px solid #8C9141;
+}
+	
+.boxImg-Eventscolor {
+	border: 2px solid #B26300;
+}
+	
+.boxImg-Newscolor {
+	border: 2px solid #486885;
+}
 
+/*--------------------------------------------------------------
+CATEGORY MAIN ARTICLE BOXES RESPONSIVESS
+--------------------------------------------------------------*/
 
+@media screen and (max-width: 850px) {
+	.main-three-boxes {
+		padding-right: 0px;
+	}
+}
 
+@media screen and (max-width: 758px) {
+	.box-header a {
+		font-size: 12px;
+	}
+}
 
+@media screen and (max-width: 700px) {
+	.main-three-boxes {
+		width: 32.5%;
+	}
 
+	.box-header a {
+		font-size: 11px;
+	}
+}
+
+@media screen and (max-width: 670px) {
+	.main-three-boxes {
+		display: noneR;
+	}
+}

@@ -17,7 +17,7 @@
                 
    	</div> 
             
-    <header class="box-header img-<?php echo esc_html( $categories[0]->name);?>color"" id="main-box-header">
+    <header class="box-header boxImg-<?php echo esc_html( $categories[0]->name);?>color"" id="main-box-header">
     	<?php
             if ( is_singular() ) :
                 the_title( '<h2 class="box-header">', '</h2>' );
