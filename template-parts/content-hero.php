@@ -12,9 +12,9 @@
 //   echo '</script>';
 // }
 ?>
-<div class="main-container">
+
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <div class="entry">
+        <div class="entry main-article">
             <?php $categories = get_the_category(); ?>
             <div class="entry-image grid__col--1-of-2 grid__col img-<?php echo esc_html( $categories[0]->name);?>color">
                     <?php 
@@ -27,7 +27,7 @@
                 if ( is_singular() ) :
                     the_title( '<h1 class="entry-title">', '</h1>' );
                 else :
-                    the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+                    the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
                 the_excerpt(); 
                 ?>
 
@@ -60,7 +60,7 @@
             </header><!-- .entry-header -->
         </div>
         <div class="entry-mobile">
-            <div class="entry-image grid__col--1-of-3">
+            <div class="entry-image grid__col--1-of-2 grid__col img-<?php echo esc_html( $categories[0]->name);?>color">
                 <?php
                 the_post_thumbnail();
                 //the_post_thumbnail();
@@ -70,7 +70,7 @@
                 //endif;?>
                 
             </div>
-            <header class="entry-header grid__col--2-of-3">
+            <header class="entry-header grid__col--1-of-2 grid__col img-<?php echo esc_html( $categories[0]->name);?>color">
                 <?php
                 if ( is_singular() ) :
                     the_title( '<h1 class="entry-title">', '</h1>' );
@@ -94,4 +94,3 @@
             </header><!-- .entry-header -->
         </div>
     </article><!-- #post-<?php the_ID(); ?> -->
-</div>

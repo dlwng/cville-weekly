@@ -68,7 +68,9 @@
   						</form>
   					</div>
  				</div>
+ 				<div class="search">
 				<?php get_search_form(); ?>
+				</div>
  			 </div>
 			</div>
 		</nav><!-- #site-navigation -->
