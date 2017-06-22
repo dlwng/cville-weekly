@@ -1445,7 +1445,7 @@ h2 {
 h2 a {
 	font-size: 25px;
 }
- 
+
 p {
 	font-family: 'Karla', sans-serif;
 
@@ -1476,7 +1476,7 @@ a {
 a:hover{
 	text-decoration:underline;
 }
- 
+
 .News a:hover {
 	color: #486885;
 }
@@ -1488,7 +1488,7 @@ a:hover{
 .Newscolor:hover {
 	color: #486885;
 }
- 
+
 .Artscolor {
 	color: #8F2682;
 }
@@ -1496,7 +1496,7 @@ a:hover{
 .Artscolor:hover {
 	color: #8F2682;
 }
- 
+
 .Livingcolor {
 	color: #8C9141;
 }
@@ -1504,7 +1504,7 @@ a:hover{
 .Livingcolor:hover {
 	color: #8C9141;
 }
- 
+
 .Eventscolor {
 	color: #B26300;
 }
@@ -1512,7 +1512,7 @@ a:hover{
 .Eventscolor:hover {
 	color: #B26300;
 }
- 
+
 img {
 	z-index: -20;
 }
@@ -1719,13 +1719,14 @@ END FOOTER
 }
 
 @media (max-width:400px){
-
 	.super-size-me{
 		width:100%;
 	}
-
 }
 
+/*--------------------------------------------------------------
+##Event Styles
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 MAIN ARTICLE
 --------------------------------------------------------------*/
@@ -1781,7 +1782,7 @@ MAIN ARTICLE
 	display: inline-block;
 	vertical-align: middle;
 }
-	
+
 .entry-image-right {
 	display: inline-block;
 	right: 0;
@@ -1969,8 +1970,3 @@ MAIN ARTICLE RESPONSIVENESS
 
 }
 
-
-
-
-
-*/
