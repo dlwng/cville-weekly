@@ -1746,6 +1746,10 @@ MAIN ARTICLE
 	vertical-align: middle;
 }
 
+.entry-image-right:hover {
+	opacity: 0.8;
+}
+
 .entry-header-left {
 	padding-left: 45px;
 	display: inline-block;
@@ -1757,6 +1761,11 @@ MAIN ARTICLE
 	right: 0;
 	vertical-align: middle;
 }
+
+.entry-image-left:hover {
+	opacity: 0.8;
+}
+
 .entry-mobile {
 	display: none;
 }
