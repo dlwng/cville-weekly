@@ -1480,8 +1480,19 @@ MAIN ARTICLE RESPONSIVENESS
 
 	.entry-header {
 		display: inline-block;
+		width: 30%;
+		padding-left: 10%;
+
+	}
+
+	.entry-image {
 		width: 50%;
 	}
+
+	.entry-title h2 {
+		width: 80%;
+	}
+
 }
 
 
