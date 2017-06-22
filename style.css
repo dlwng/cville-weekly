@@ -829,6 +829,8 @@ input.search-field:focus {
 
 
 
+
+
 /*To highlight current page nav*/
 
 .activeon
@@ -851,6 +853,10 @@ NAVBAR RESPONSIVENESS
 @media screen and (max-width: 934px) {
 	input.search-field {
 		padding-right: 40px;
+	}
+
+	#nav-section-2 {
+		display: block;
 	}
 }
 
