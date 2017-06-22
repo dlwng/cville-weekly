@@ -415,6 +415,8 @@ table {
 	width: 100%;
 }
 
+
+}
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -503,6 +505,7 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
@@ -667,11 +670,11 @@ a.menu-image-title-after {
 	margin-bottom: -8px;
 }
 
-#subscribebutton {
-/*	display: inline-block;
-	position: absolute;
-	top: 2vh;
-	right: 20%;*/
+.dropdown {
+	display: inline-block;
+	width: 20%;
+	margin: 0% 14.5%;
+	border: 1px solid pink;
 
 }
 #site-navigation {
@@ -682,83 +685,78 @@ a.menu-image-title-after {
 	display: inline-block;
 }
 
-.nav-section-1 {
+#nav-section-1 {
 	width: 50%;
+	border: 1px solid blue;
 }
 
-.nav-section-2 {
-	width: 30%;
+#nav-section-2 {
+	width: 48%;
 	height: auto;
+	border: 1px solid blue;
 }
 
-/*SEARCH BUTTON*/
-@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
-@import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
-
-#wrap {
-  margin: 50px 100px;
-  display: inline-block;
-  position: relative;
-  height: 60px;
-  float: right;
-  padding: 0;
-  position: relative;
+form{
+	display: inline-block;
+	width: 50%;
+	text-align: right;
+	border: 1px solid pink;
 }
 
-input[type="text"] {
-  height: inherit;
-  font-size: 15px;
-  display: inline-block;
-  font-family: "karla";
-  font-weight: 100;
-  border: none;
-  outline: none;
-  color: #555;
-  padding: 3px;
-  padding-right: 60px;
-  width: 0px;
-  position: absolute;
-  top: 10px;
-  right: 0;
-  background: none;
-  z-index: 3;
-  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
-  cursor: pointer;
-  background-size: cover;
+.search-field, .search-submit {
 }
 
-input[type="text"]:focus:hover {
-  border-bottom: 1px solid #BBB;
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-input[type="text"]:focus {
-  width: 300px;
-  z-index: 1;
-  border-bottom: 1px solid #BBB;
-  cursor: text;
-}
-input[type="submit"] {
-  height: inherit;
-  width: 40px;
-  display: inline-block;
-  color:red;
-  float: right;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRFU1NT9fX1lJSUXl5e1dXVfn5+c3Nz6urqv7+/tLS0iYmJqampn5+fysrK39/faWlp////Vi4ZywAAABF0Uk5T/////////////////////wAlrZliAAABLklEQVR42rSWWRbDIAhFHeOUtN3/ags1zaA4cHrKZ8JFRHwoXkwTvwGP1Qo0bYObAPwiLmbNAHBWFBZlD9j0JxflDViIObNHG/Do8PRHTJk0TezAhv7qloK0JJEBh+F8+U/hopIELOWfiZUCDOZD1RADOQKA75oq4cvVkcT+OdHnqqpQCITWAjnWVgGQUWz12lJuGwGoaWgBKzRVBcCypgUkOAoWgBX/L0CmxN40u6xwcIJ1cOzWYDffp3axsQOyvdkXiH9FKRFwPRHYZUaXMgPLeiW7QhbDRciyLXJaKheCuLbiVoqx1DVRyH26yb0hsuoOFEPsoz+BVE0MRlZNjGZcRQyHYkmMp2hBTIzdkzCTc/pLqOnBrk7/yZdAOq/q5NPBH1f7x7fGP4C3AAMAQrhzX9zhcGsAAAAASUVORK5CYII=) center center no-repeat;
-  text-indent: -10000px;
-  border: none;
-  position: absolute;
-  top: 20px;
-  right: 0;
-  z-index: 2;
-  cursor: pointer;
-  opacity: 0.4;
-  transition: opacity .4s ease;
-  background-size: cover;
-  
+
+span.screen-reader-text {
+	display: none;
 }
 
-input[type="submit"]:hover {
-  opacity: 0.8;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover {
+    transition: opacity .5;
+}
+
+#submityouremail {
+	text-align: center;
+}
+
+button#subscribebutton {
+	background-color: #CCF2FF;
+	border: none;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	cursor: pointer;
+	font-weight: 800;
+	padding: 5px 20px;
+	box-shadow: 3px 3px #3AA8DE;
+  	transition-property: opacity;
+  	transition-duration: .3s;
+  	transition-timing-function: linear;
+  	transition: opacity .3s,z-index .3s step-end,-webkit-transform .3s;
+    transition: opacity .3s,z-index .3s 
+}
+
+
+
+
+
+button#subscribebutton:hover {
+  opacity: .7;
 }
 /*--------------------------------------------------------------
 # Accessibility
@@ -772,6 +770,8 @@ input[type="submit"]:hover {
 	overflow: hidden;
 	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
+
+
 
 .screen-reader-text:focus {
 	background-color: #f1f1f1;

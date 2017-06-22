@@ -15,7 +15,11 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/navbar.js"></script>
+
 <link rel="profile" href="http://gmpg.org/xfn/11">
+
 
 <?php wp_head(); ?>
 </head>
@@ -53,15 +57,23 @@
 				);
 			?></div>
 			<div id="nav-section-2" class="nav-section">
-				<button type="button" id="subscribebutton"> Subscribe</button> 
-				<form action="" autocomplete="on">
-  				<input id="search" name="search" type="text" placeholder=""><input id="search_submit" value="Rechercher" type="submit">
- 				 </form>
+				<div class="dropdown">
+					<button type="button" id="subscribebutton">Subscribe</button>
+					<div class="offset"></div>
+					<div class="dropdown-content">
+						<form action="<?php bloginfo('template_directory'); ?>/email.php" method="post">
+		    				<input type="text" name="email" placeholder="johndoe@gmail.com">
+		    				<input type="text" name="name" placeholder="John Doe">
+		    				<input type="submit" name="submit" id="submityouremail">
+  						</form>
+  					</div>
+ 				</div>
+				<?php get_search_form(); ?>
  			 </div>
 			</div>
 		</nav><!-- #site-navigation -->
 
-
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+
