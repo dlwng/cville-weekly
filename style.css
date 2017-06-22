@@ -1730,11 +1730,11 @@ END FOOTER
 /*--------------------------------------------------------------
 MAIN ARTICLE
 --------------------------------------------------------------*/
-.entry-mobile {
+.entry-mobile-hero {
 	display: none;
 }
 
-.entry-image {
+.entry-image-hero {
 	display: inline-block;
 	vertical-align: middle;
 	padding-left: 0px;
@@ -1742,17 +1742,17 @@ MAIN ARTICLE
 	height: auto;
 }
 
-.entry-image:hover {
+.entry-image-hero:hover {
 	opacity: 0.8;
 }
 
-.entry-header {
+.entry-header-hero {
 	display: inline-block;
 	vertical-align: middle;
 	width: 45%;
 }
 
-.entry-meta {
+.entry-meta-hero {
 	display: flex;
 	justify-content: space-between;
 	font-family: 'Karla', sans-serif;
@@ -1956,16 +1956,26 @@ MAIN ARTICLE
     border-bottom: 3px solid #8C9141;
 }
 
+.cat-title-recent:after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    bottom: 0;
+    left: 0%;
+    border-bottom: 3px solid black;
+}
+
 
 /*--------------------------------------------------------------
 MAIN ARTICLE RESPONSIVENESS
 --------------------------------------------------------------*/
 @media screen and (max-width: 1000px) {
-	.entry-header a {
+	.entry-header-hero a {
 		font-size: 25px;
 	}
 
-	.entry-category a {
+	.entry-category-hero a {
 		font-size: 14px;
 	}
 
@@ -1975,11 +1985,11 @@ MAIN ARTICLE RESPONSIVENESS
 }
 
 @media screen and (max-width: 916px) {
-	.entry-header a {
+	.entry-header-hero a {
 		font-size: 22px;
 	}
 
-	.entry-category a {
+	.entry-category-hero a {
 		font-size: 12px;
 	}
 
@@ -1989,27 +1999,27 @@ MAIN ARTICLE RESPONSIVENESS
 }
 
 @media screen and (max-width: 812px) {
-	.entry {
+	.entry-hero {
 		display: none;
 	}
 
-	.entry-mobile {
+	.entry-mobile-hero {
 		display: inline-block;
 		padding-top: 30px;
 	}
 
-	.entry-header {
+	.entry-header-hero {
 		display: inline-block;
 		width: 50%;
 		padding-left: 10%;
 
 	}
 
-	.entry-image {
+	.entry-image-hero {
 		width: 50%;
 	}
 
-	.entry-title h2 {
+	.entry-title-hero h2 {
 		width: 80%;
 	}
 
@@ -2029,33 +2039,33 @@ MAIN ARTICLE RESPONSIVENESS
 }
 
 @media screen and (max-width: 560px) {
-	.entry-header a {
+	.entry-header-hero a {
 		font-size: 20px;
 	}
 
-	.entry-category a {
+	.entry-category-hero a {
 		font-size: 14px;
 	}
 
 }
 
 @media screen and (max-width: 509px) {
-	.entry-header a {
+	.entry-header-hero a {
 		font-size: 18px;
 	}
 
-	.entry-category a {
+	.entry-category-hero a {
 		font-size: 12px;
 	}
 
 }
 
 @media screen and (max-width: 458px) {
-	.entry-image {
+	.entry-image-hero {
 		width: 100%;
 	}
 
-	.entry-header {
+	.entry-header-hero {
 		width: 80%;
 		z-index: 20;
 		margin-top: -12%;
@@ -2063,13 +2073,13 @@ MAIN ARTICLE RESPONSIVENESS
 		background-color: white;
 	}
 
-	.entry-category {
+	.entry-category-hero {
 		text-align: center;
 		padding-right: 12%;
 	}
 
 	.img-Artscolor {
-    border: 2px solid #8F2682;
+    	border: 2px solid #8F2682;
 	}
 	.img-Livingcolor {
 	    border: 2px solid #8C9141;
@@ -2084,17 +2094,46 @@ MAIN ARTICLE RESPONSIVENESS
 }
 
 @media screen and (max-width: 425px) {
-	.entry-header a {
+	.entry-header-hero a {
 		font-size: 16px;
 	}
 
-	.entry-category a {
+	.entry-category-hero a {
 		font-size: 12px;
 	}
 
-	.entry-header {
+	.entry-header-hero {
 		text-align: center;
 		padding-right: 5%;
 	}
+}
+
+/*--------------------------------------------------------------
+HOME PAGE MORE/RECENT STORIES SECTION
+--------------------------------------------------------------*/
+button.morebutton {
+	background-color: #CCF2FF;
+	border: 1px solid #3AA8DE;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	cursor: pointer;
+	font-weight: 800;
+	padding: 5px 20px;
+	box-shadow: 3px 3px #3AA8DE;
+	margin: 10px;
+}
+
+
+button.morebutton:hover {
+  	opacity: .7;
+}
+
+.center-button {
+	text-align: center;
+}
+
+button {
+	font-family: 'Karla', sans-serif;
 }
 
