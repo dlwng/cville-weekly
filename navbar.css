@@ -1,0 +1,19 @@
+#site-navigation {
+	background-color: #E6E6E6;
+}
+
+#site-navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.menu-item {
+	display: inline-block;
+	padding: 15px;
+
+}
+
+#site-navigation a {
+
+}
