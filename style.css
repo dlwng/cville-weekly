@@ -29,7 +29,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Forms
 # Navigation
 	## Links
-	## Menus
+	## NAVBAR
+	## NAVBAR RESPONSIVENESS
 # Accessibility
 # Alignments
 # Clearings
@@ -533,7 +534,7 @@ nav a.selected:link, a.selected:active {
 }
 
 /*--------------------------------------------------------------
-## Menus
+## NAVBAR
 --------------------------------------------------------------*/
 #site-navigation {
 	position: relative;
@@ -663,7 +664,7 @@ nav a.selected:link, a.selected:active {
 }
 
 a.menu-image-title-after {
-	font-size: 24px;
+	font-size: 2vw;
 }
 
 #menu-item-24, 
@@ -701,32 +702,30 @@ a.menu-image-title-after {
 }
 
 #nav-section-1 {
-	width: 54%;
-/*	border: 1px solid blue;
-*/}
+	width: 60%;
+
+}
 
 #nav-section-2 {
-	width: 45%;
+	width: 39%;
 	height: auto;
-/*	border: 1px solid blue;
-*/}
+}
 
-.search{
+form.search-form{
 	display: inline-block;
 	width: 50%;
 	text-align: right;
-/*	border: 1px solid blue;
-*/	position: relative;
-vertical-align: middle;
+	/*border: 1px solid blue;*/
+	position: relative;
+	vertical-align: middle;
 }
 
 .dropdown {
     display: inline-block;
-    width: 49%;
+    width: 48%;
     text-align: left;
-/*    border: 1px solid blue;
-*/    position: relative;
-	vertical-align: middle;
+    /*border: 1px solid blue;*/
+    vertical-align: middle;
 }
 
 
@@ -795,8 +794,8 @@ input.search-submit {
     z-index: 20;
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRFU1NT9fX1lJSUXl5e1dXVfn5+c3Nz6urqv7+/tLS0iYmJqampn5+fysrK39/faWlp////Vi4ZywAAABF0Uk5T/////////////////////wAlrZliAAABLklEQVR42rSWWRbDIAhFHeOUtN3/ags1zaA4cHrKZ8JFRHwoXkwTvwGP1Qo0bYObAPwiLmbNAHBWFBZlD9j0JxflDViIObNHG/Do8PRHTJk0TezAhv7qloK0JJEBh+F8+U/hopIELOWfiZUCDOZD1RADOQKA75oq4cvVkcT+OdHnqqpQCITWAjnWVgGQUWz12lJuGwGoaWgBKzRVBcCypgUkOAoWgBX/L0CmxN40u6xwcIJ1cOzWYDffp3axsQOyvdkXiH9FKRFwPRHYZUaXMgPLeiW7QhbDRciyLXJaKheCuLbiVoqx1DVRyH26yb0hsuoOFEPsoz+BVE0MRlZNjGZcRQyHYkmMp2hBTIzdkzCTc/pLqOnBrk7/yZdAOq/q5NPBH1f7x7fGP4C3AAMAQrhzX9zhcGsAAAAASUVORK5CYII=) center center no-repeat;
     background-size: contain;
-/*    border: 1px solid blue;
-*/    height: 40px;
+    /*border: 1px solid blue;*/
+    height: 40px;
 }
 
 input.search-field {
@@ -821,10 +820,14 @@ input.search-field:focus:hover {
 }
 
 input.search-field:focus {
-  width: 220px;
+  width: 100%;
   z-index: 10;
   border-bottom: 1px solid #BBB;
   cursor: text;
+}
+
+#site-navigation-mobile {
+	display: none;
 }
 
 
@@ -834,6 +837,251 @@ input.search-field:focus {
 .activeon
 {
     color: #3AA8DE;
+}
+
+#mySidenav {
+	display: none;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+   
+    right: 0;
+    background-color: #CFF2FF; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #3aa8de;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #818181;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+#hamburger {
+	font-size: 50px;
+	text-align: right;
+	display: block;
+	padding: 0 50px 0 0;
+	margin: 0;
+	color: #3AA8DE;
+}
+
+#hamburger:hover {
+	color: #112d38;
+}
+
+#hamburgercontainer {
+	position: absolute;
+	right: 0px;
+	display: none;
+}
+
+#hamburgercontainer:hover {
+	opacity: .7;
+}
+
+#cvillelogo {
+	position: absolute;
+	width: 200px;
+	left: 20%;
+	top: 12px;
+	display: none;
+}
+/*--------------------------------------------------------------
+NAVBAR RESPONSIVENESS
+--------------------------------------------------------------*/
+
+@media screen and (max-width: 1270px) {
+	
+}
+
+@media screen and (max-width: 1150px) {
+	
+}
+
+@media screen and (max-width: 934px) {
+	input.search-field {
+		padding-right: 40px;
+	}
+
+	#nav-section-2-mobile {
+		display: block;
+	}
+
+	.nav-section.mobile {
+		display: block;
+		margin: 0 auto;
+	}
+
+	#site-navigation-mobile {
+		display: block;
+	}
+
+	#site-navigation {
+		display: none;
+	}
+
+	li.menu-item.menu-item-type-custom.menu-item-object-custom.current-menu-item.current_page_item.menu-item-home.menu-item-23 {
+		display: block;
+		margin: 0 auto;
+	}
+
+	#nav-section-2-mobile img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.main-navigation li.menu-item-23 {
+		display: block;
+		margin: 0 auto;
+		
+	}
+
+	.menu-item a img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	ul#primary-menu.menu, div#nav-background-mobile {
+		text-align: center;
+		
+	}
+
+	#menu-item-24, 
+	#menu-item-32, 
+	#menu-item-33, 
+	#menu-item-34, 
+	#menu-item-35{
+		padding-top: 20px;
+
+	}
+
+	#menu-item-23 {
+		width: 80%;
+	}
+
+	.menu-item-type-post_type {
+		text-align: center;
+	}
+
+	button.subscribe-mobile{
+		text-align: right;
+		float: right;
+	}
+
+	form.search-form {
+		text-align: left;
+		margin: 0 auto;
+		left: 40px;
+	}
+
+	input.search-field {
+		left: 0px;
+		padding-left: 40px;
+		
+	}
+
+	div.dropdown-content-mobile {
+		text-align: center;
+	}
+	.dropdown-content {
+		top: 40px;
+		right: 0px;
+	}
+
+	input[type="text"],
+	input[name="submit"],
+	input[id="submityouremail"] {
+		text-align: center;
+		margin: 0 auto;
+    	display: block;
+	}
+
+	.nav-section.mobile {
+		padding: 3px 0 5px 0px;
+	}
+
+	form.search-form{
+		width: 45%;
+	
+		padding: 0;
+		margin: 0;
+	}
+
+	.dropdown.mobile {
+	    width: 53%;
+	 
+	    padding: 0;
+		margin: 0;
+	}
+
+	button.menu-toggle-mobile {
+		display: none;
+	}
+
+	.main-navigation li{
+		padding: 3px 15px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#nav-background-mobile {
+		height: 70px;
+	}
+
+	#nav-section-2-mobile {
+		display: none;
+	}
+
+	#mySidenav {
+	display: inline-block;
+	}
+
+	#hamburgercontainer {
+		display: block;
+	}
+
+	#cvillelogo {
+		display: block;
+	}
+
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) {
+    /* iPhone 6 Portrait */
+    
 }
 
 /*
@@ -1445,7 +1693,6 @@ h2 {
 h2 a {
 	font-size: 25px;
 }
-
 p {
 	font-family: 'Karla', sans-serif;
 
@@ -1456,6 +1703,7 @@ p a {
 	font-family: 'Karla', sans-serif;
 	font-size: 14px;
 }
+
 
 nav-bar {
 	background-color: #EBF4F7;
@@ -1476,6 +1724,7 @@ a {
 a:hover{
 	text-decoration:underline;
 }
+
 
 .News a:hover {
 	color: #486885;
@@ -1714,11 +1963,13 @@ END FOOTER
 	margin-bottom:0px;
 }
 
+
 .err{
 	margin-bottom:185px;
 }
 
 @media (max-width:400px){
+
 	.super-size-me{
 		width:100%;
 	}
@@ -1760,6 +2011,7 @@ MAIN ARTICLE
 }
 
 .entry-meta-hero {
+
 	display: flex;
 	justify-content: space-between;
 	font-family: 'Karla', sans-serif;
@@ -1779,9 +2031,11 @@ MAIN ARTICLE
     border: 2px solid #486885;
 }
 
+
 .main-article{
 	padding-top: 50px;
 }
+
 
 /*--------------------------------------------------------------
 ## ARTICLE LISTING ON HOME (content-preview-right/left.php)
@@ -1803,6 +2057,7 @@ MAIN ARTICLE
 	vertical-align: middle;
 }
 
+
 .entry-image-right img {
 	display: block;
 	height: 100%;
@@ -1813,6 +2068,7 @@ MAIN ARTICLE
 .entry-image-right:hover {
 	opacity: 0.8;
 }
+
 
 .entry-header-left {
 	padding-left: 45px;
@@ -1826,6 +2082,7 @@ MAIN ARTICLE
 	vertical-align: middle;
 }
 
+
 .entry-image-left img {
 	display: block;
 	height: 100%;
@@ -1835,6 +2092,7 @@ MAIN ARTICLE
 .entry-image-left:hover {
 	opacity: 0.8;
 }
+
 
 .entry-mobile {
 	display: none;
@@ -1987,9 +2245,11 @@ MAIN ARTICLE
 }
 
 
+
 /*--------------------------------------------------------------
 MAIN ARTICLE RESPONSIVENESS
 --------------------------------------------------------------*/
+
 @media screen and (max-width: 1000px) {
 	.entry-header-hero a {
 		font-size: 25px;
