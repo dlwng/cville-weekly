@@ -664,7 +664,7 @@ nav a.selected:link, a.selected:active {
 }
 
 a.menu-image-title-after {
-	font-size: 2vw;
+	font-size: 1.7vw;
 }
 
 #menu-item-24, 
@@ -851,7 +851,6 @@ input.search-field:focus {
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0;
-   
     right: 0;
     background-color: #CFF2FF; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
@@ -884,10 +883,7 @@ input.search-field:focus {
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-    transition: margin-left .5s;
-    padding: 20px;
-}
+
 
 #hamburger {
 	font-size: 50px;
@@ -1055,6 +1051,10 @@ NAVBAR RESPONSIVENESS
 	.main-navigation li{
 		padding: 3px 15px;
 	}
+
+	a.menu-image-title-after {
+	font-size: 16.8px;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -1093,7 +1093,7 @@ NAVBAR RESPONSIVENESS
     }
 
     .menu-image-title {
-    	font-size: 20px;
+    	font-size: 25px;
     }
 
 }
@@ -1101,7 +1101,13 @@ NAVBAR RESPONSIVENESS
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .menu-image-title {padding-top: 15px;}
-    .menu-image-title a {font-size: 18px;}
+    .menu-image-title a {
+    	 padding: 8px 8px 8px 32px;
+	    text-decoration: none;
+	    font-size: 25px;
+	    display: block;
+	    transition: 0.3s;;
+    }
 
 
     }
