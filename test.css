@@ -1,11 +1,69 @@
 a {
-	font-size: 1px
+	padding: 7px;
+	text-decoration: none;
+	color: #333333;
+/*	border: 1px solid black;*/
 }
 
-h1 {
-	font-size: 2px
+#mySidenav {
+	display: none;
 }
 
-h2 {
-	font-size: 3px
+
+@media screen and (max-width: 600px) {
+	#nav-background-mobile {
+		display: none;
+	}
+
+	#mySidenav {
+	display: inline-block;
+	}
+
+	span {
+		position: absolute;
+		top: 20px;
+		right: 10px;
+		display: block;
+		z-index: 9;
+	}
+
+	.sidenav {
+	    height: 100%;
+	    width: 0;
+	    position: fixed;
+	    z-index: 1;
+	    top: 0;
+	    right: 0;
+	    background-color: #111;
+	    overflow-x: hidden;
+	    transition: 0.5s;
+	    padding-top: 60px;
+	}
+
+	.sidenav a {
+	    padding: 8px 8px 8px 32px;
+	    text-decoration: none;
+	    font-size: 25px;
+	    color: #818181;
+	    display: block;
+	    transition: 0.3s;
+	}
+
+	.sidenav a:hover, .offcanvas a:focus{
+	    color: #f1f1f1;
+	}
+
+	.sidenav .closebtn {
+	    position: absolute;
+	    top: 0;
+	    right: 25px;
+	    font-size: 36px;
+	    margin-left: 50px;
+	}
+
+	.navbar {
+	height: 75px;
+	position: fixed;
+	}
+
 }
