@@ -23,15 +23,16 @@
 				$arrow = " >";
 			?>
 			<div class="entry-image-left grid__col--1-of-2 img-<?php echo esc_html( $categories[0]->name);?>color">
-				<?php
-				the_post_thumbnail();
-    			
-				//the_post_thumbnail();
-				//if ( has_post_thumbnail() ) {
-				//	the_post_thumbnail();
-				//}
-				//endif;?>
-				
+				<a href="<?php echo esc_url( get_permalink() ); ?>">
+					<?php
+					the_post_thumbnail();
+	    			
+					//the_post_thumbnail();
+					//if ( has_post_thumbnail() ) {
+					//	the_post_thumbnail();
+					//}
+					//endif;?>
+				</a>
 			</div>
 			<header class="entry-header-left grid__col--1-of-2">
 				<?php
@@ -60,14 +61,15 @@
 		</div>
 		<div class="entry-mobile">
 			<div class="entry-image-left grid__col--1-of-3 img-<?php echo esc_html( $categories[0]->name);?>color">
-				<?php
-				the_post_thumbnail();
-				//the_post_thumbnail();
-				//if ( has_post_thumbnail() ) {
-				//	the_post_thumbnail();
-				//}
-				//endif;?>
-				
+				<a href="<?php echo esc_url( get_permalink() ); ?>">
+					<?php
+					the_post_thumbnail();
+					//the_post_thumbnail();
+					//if ( has_post_thumbnail() ) {
+					//	the_post_thumbnail();
+					//}
+					//endif;?>
+				</a>
 			</div>
 			<header class="entry-header-left grid__col--2-of-3">
 				<?php
