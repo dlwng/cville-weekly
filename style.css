@@ -1976,6 +1976,10 @@ MAIN ARTICLE
     border-bottom: 3px solid #8C9141;
 }
 
+.cat-title-recent {
+	color: #2D7E9E;
+}
+
 .cat-title-recent:after{
     content: "";
     position: absolute;
@@ -1983,7 +1987,7 @@ MAIN ARTICLE
     height: 1px;
     bottom: 0;
     left: 0%;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #2D7E9E;
 }
 
 
