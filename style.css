@@ -1976,10 +1976,6 @@ MAIN ARTICLE
     border-bottom: 3px solid #8C9141;
 }
 
-.cat-title-recent {
-	color: #2D7E9E;
-}
-
 .cat-title-recent:after{
     content: "";
     position: absolute;
@@ -1987,7 +1983,7 @@ MAIN ARTICLE
     height: 1px;
     bottom: 0;
     left: 0%;
-    border-bottom: 3px solid #2D7E9E;
+    border-bottom: 3px solid black;
 }
 
 
@@ -2275,10 +2271,6 @@ CATEGORY MAIN ARTICLE BOXES RESPONSIVESS
 /*--------------------------------------------------------------
 CATEGORY PAGE
 --------------------------------------------------------------*/
-.cat-page-title {
-	margin-bottom: 0px;
-}
-
 .cat-title-News:after{
     content: "";
     position: absolute;
