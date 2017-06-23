@@ -116,10 +116,16 @@
 
 	<div id="mySidenav" class="sidenav">
 	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	  <a href="#">News</a>
-	  <a href="#">Arts</a>
-	  <a href="#">Living</a>
-	  <a href="#">Events</a>
+
+	  <?php
+				wp_nav_menu( array(
+
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) 
+				);
+			?>
+
 	</div>
 
 <!-- Use any element to open the sidenav -->

@@ -664,7 +664,7 @@ nav a.selected:link, a.selected:active {
 }
 
 a.menu-image-title-after {
-	font-size: 2vw;
+	font-size: 1.7vw;
 }
 
 #menu-item-24, 
@@ -850,7 +850,6 @@ input.search-field:focus {
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0;
-   
     right: 0;
     background-color: #CFF2FF; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
@@ -883,6 +882,7 @@ input.search-field:focus {
 }
 
 
+
 #hamburger {
 	font-size: 50px;
 	text-align: right;
@@ -910,9 +910,9 @@ input.search-field:focus {
 	position: absolute;
 	width: 200px;
 	left: 20%;
-	padding: 0 50px 0 0;
-	margin: 2vh;
+	top: 2vh;
 	display: none;
+
 }
 /*--------------------------------------------------------------
 NAVBAR RESPONSIVENESS
@@ -1049,6 +1049,10 @@ NAVBAR RESPONSIVENESS
 	.main-navigation li{
 		padding: 3px 15px;
 	}
+
+	a.menu-image-title-after {
+	font-size: 16.8px;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -1072,12 +1076,39 @@ NAVBAR RESPONSIVENESS
 		display: block;
 	}
 
+	li.menu-item {
+		text-align: left;
+	}
+
+	.menu-item a img {
+		display: none;
+	}
+
+	 ul#primary-menu.menu {
+    	list-style: none;
+   		margin: 3vh 0 0 0;
+   		padding: 0;
+    }
+
+    .menu-image-title {
+    	font-size: 25px;
+    }
+
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    .menu-image-title {padding-top: 15px;}
+    .menu-image-title a {
+    	 padding: 8px 8px 8px 32px;
+	    text-decoration: none;
+	    font-size: 25px;
+	    display: block;
+	    transition: 0.3s;;
+    }
+
+
+    }
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) {
