@@ -2236,7 +2236,7 @@ CATEGORY MAIN ARTICLE BOXES RESPONSIVESS
 	display:inline-block;
 }
 
-.eventList:nth-child(even){
+.eventList:nth-child(odd){
 	background-color:#ccf2ff;
 }
 
@@ -2285,8 +2285,14 @@ CATEGORY MAIN ARTICLE BOXES RESPONSIVESS
 }
 
 @media screen and (max-width:1200px){
-	.mainEventList, .sidebarE{
+	.mainEventList{
 		width:100%;
+	}
+	.sidebarE{
+		display:block;
+		width:65%;
+		margin:0 auto;
+		float:none;
 	}
 }
 
@@ -2295,7 +2301,7 @@ CATEGORY MAIN ARTICLE BOXES RESPONSIVESS
 	.EventImgP{
 		display:inline-block;
 		vertical-align:middle;
-		width:10
+		width:100px;
 	}
 
 	.titleP{
@@ -2304,5 +2310,44 @@ CATEGORY MAIN ARTICLE BOXES RESPONSIVESS
 
 	.dateP{
 		font-size:10px;
+	}
+}
+
+@media screen and (max-width:530px){
+
+	.titleBlockP{
+		margin-left:15px;
+	}
+	.EventImgP{
+		width:70px;
+	}
+
+	.titleP{
+		font-size:15px;
+	}
+
+	.dateP, .priceP, .locationP{
+		font-size:10px;
+	}
+	.locationP, .priceP{
+		padding-top:3px;
+	}
+}
+
+@media screen and (max-width:380px){
+
+	.titleBlockP{
+		margin-left:7px;
+	}
+	.EventImgP{
+		width:50px;
+	}
+
+	.titleP{
+		font-size:12px;
+	}
+
+	.locationP, .priceP{
+		padding-top:1px;
 	}
 }

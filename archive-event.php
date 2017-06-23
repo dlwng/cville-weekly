@@ -31,7 +31,6 @@
 		                  <?php $eventImg=the_post_thumbnail( array(150,150));
 								?>
 		               </div>
-
 		               <div class="titleBlockP">
 		                  <h1 class="titleP"><?php echo $title; ?></h1>
 		                  <h2 class="dateP"><?php echo $date; ?></h2>
