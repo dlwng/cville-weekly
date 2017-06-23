@@ -22,14 +22,14 @@ get_header(); ?>
 			if ( have_posts() ) : ?>
 
 			<header class="cat-header">
-				<h1 class="cat-title cat-title-<?php echo single_cat_title( "", true );?> <?php echo single_cat_title( "", true );?>color""><?php single_cat_title( "", true ); ?></h1>
+				<h1 class="cat-title cat-page-title cat-title-<?php echo single_cat_title( "", true );?> <?php echo single_cat_title( "", true );?>color""><?php single_cat_title( "", true ); ?></h1>
 
 
-				<?php
+				<!-- <?php
 					// Display optional category description
 				if ( category_description() ) : ?>
 				<div class="archive-meta"><?php echo category_description(); ?></div>
-				<?php endif; ?>
+				<?php endif; ?> -->
 			</header>
 
 			<?php

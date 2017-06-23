@@ -2275,6 +2275,10 @@ CATEGORY MAIN ARTICLE BOXES RESPONSIVESS
 /*--------------------------------------------------------------
 CATEGORY PAGE
 --------------------------------------------------------------*/
+.cat-page-title {
+	margin-bottom: 0px;
+}
+
 .cat-title-News:after{
     content: "";
     position: absolute;
