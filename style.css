@@ -1693,8 +1693,8 @@ END FOOTER
 	width:30%;
 	display:inline-block;
 	float:right;
-	vertical-align:top;
 	margin-top:30px;
+	vertical-align:top;
 }
 
 /*
@@ -2223,11 +2223,21 @@ CATEGORY MAIN ARTICLE BOXES RESPONSIVESS
 ## Events Styles
 --------------------------------------------------------------*/
 
-.eventList{
+.mainEventList{
 	width:65%;
-	margin-top:30px;
-	background-color:#ccf2ff;
 	display:inline-block;
+	margin:0;
+	padding:0;
+}
+
+.eventList{
+	width:100%;
+	margin-top:30px;
+	display:inline-block;
+}
+
+.eventList:nth-child(even){
+	background-color:#ccf2ff;
 }
 
 .imgAndTitleP{
@@ -2252,10 +2262,47 @@ CATEGORY MAIN ARTICLE BOXES RESPONSIVESS
 	margin-left:30px;
 }
 
+
+.locationP, .priceP{
+	padding-top:6px;
+}
+
+.dateP{
+	font-size:20px;
+}
+
 .titleP{
 	text-transform:uppercase;
 }
 
 .site-content{
 	margin-bottom:30px;
+}
+
+.EventImgP{
+	display:inline-block;
+	vertical-align:middle;
+}
+
+@media screen and (max-width:1200px){
+	.mainEventList, .sidebarE{
+		width:100%;
+	}
+}
+
+@media screen and (max-width:750px){
+
+	.EventImgP{
+		display:inline-block;
+		vertical-align:middle;
+		width:10
+	}
+
+	.titleP{
+		font-size:20px;
+	}
+
+	.dateP{
+		font-size:10px;
+	}
 }
