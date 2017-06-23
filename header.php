@@ -111,10 +111,14 @@
 
 	<div id="mySidenav" class="sidenav">
 	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	  <a href="#">About</a>
-	  <a href="#">Services</a>
-	  <a href="#">Clients</a>
-	  <a href="#">Contact</a>
+	  <?php
+				wp_nav_menu( array(
+
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) 
+				);
+			?>
 	</div>
 
 <!-- Use any element to open the sidenav -->
