@@ -910,7 +910,8 @@ input.search-field:focus {
 	position: absolute;
 	width: 200px;
 	left: 20%;
-	top: 12px;
+	padding: 0 50px 0 0;
+	margin: 2vh;
 	display: none;
 }
 /*--------------------------------------------------------------
