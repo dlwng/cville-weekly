@@ -2294,6 +2294,10 @@ MAIN ARTICLE RESPONSIVENESS
 		padding-top: 30px;
 	}
 
+	.entry-image-hero:hover {
+		opacity: 1;
+	}
+
 	.entry-header-hero {
 		display: inline-block;
 		width: 50%;
@@ -2514,23 +2518,7 @@ CATEGORY MAIN ARTICLE BOXES RESPONSIVESS
 	}
 }
 
-@media screen and (max-width: 758px) {
-	.box-header a {
-		font-size: 12px;
-	}
-}
-
-@media screen and (max-width: 700px) {
-	.main-three-boxes {
-		width: 32.5%;
-	}
-
-	.box-header a {
-		font-size: 11px;
-	}
-}
-
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 812px) {
 	.main-three-boxes {
 		display: none;
 	}
