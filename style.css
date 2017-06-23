@@ -768,8 +768,9 @@ button#subscribebutton {
   	transition-duration: .3s;
   	transition-timing-function: linear;
   	transition: opacity .3s,z-index .3s step-end,-webkit-transform .3s;
-    transition: opacity .3s,z-index .3s;
-    z-index: 4;
+	transition: opacity .3s,z-index .3s;
+	z-index: 4;
+
 }
 
 
