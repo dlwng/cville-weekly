@@ -11,19 +11,21 @@
 
 <div class="main-three-boxes grid__col--1-of-3 grid__col" id="post-<?php the_ID(); ?>">
     <?php $categories = get_the_category(); ?>
-    <div class="box-image">
+    <div class="box-image img-<?php echo esc_html( $categories[0]->name);?>color">
        <?php 
        		the_post_thumbnail();?> 
                 
    	</div> 
             
     <header class="box-header boxImg-<?php echo esc_html( $categories[0]->name);?>color"" id="main-box-header">
+        <div class="box-title">
     	<?php
             if ( is_singular() ) :
-                the_title( '<h2 class="box-header">', '</h2>' );
+                the_title( '<h2>', '</h2>' );
             else :
-                the_title( '<h2 class="box-header"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-                ?>				
+                the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+                ?>	
+        </div>			
 
         <?php
             $categories = get_the_category();

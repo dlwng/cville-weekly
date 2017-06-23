@@ -70,7 +70,7 @@
                 //endif;?>
                 
             </div>
-            <header class="entry-header-hero grid__col--1-of-2 grid__col img-<?php echo esc_html( $categories[0]->name);?>color">
+            <header class="entry-header-hero grid__col--1-of-2 grid__col img-<?php echo esc_html( $categories[0]->name);?>color-hero">
                 <?php
                 if ( is_singular() ) :
                     the_title( '<h1 class="entry-title-hero">', '</h1>' );
