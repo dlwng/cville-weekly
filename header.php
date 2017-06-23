@@ -12,14 +12,15 @@
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/navbar.js"></script>
 
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<link href="dist/hamburgers.css" rel="stylesheet">
+<link href="<?php bloginfo('template_directory'); ?>/hamburgers-master/dist/hamburgers.css" rel="stylesheet">
 
 
 <?php wp_head(); ?>
@@ -49,7 +50,8 @@
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'cville-weekly' ); ?></button>
 			<div id="nav-background">
-			<div id="nav-section-1" class="nav-section"><?php
+			<div id="nav-section-1" class="nav-section">
+				<?php
 				wp_nav_menu( array(
 
 					'theme_location' => 'menu-1',
@@ -74,7 +76,61 @@
 			</div>
 		</nav><!-- #site-navigation -->
 
+		<!-- CENTERED NAVBAR -->
+		<nav id="site-navigation-mobile" class="main-navigation mobile" role="navigation">
+			<button class="menu-toggle-mobile" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'cville-weekly' ); ?></button>
+			<div id="nav-background-mobile">
+			<div id="nav-section-1-mobile" class="nav-section mobile"><?php
+				wp_nav_menu( array(
+
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) 
+				);
+			?></div>
+			<div id="nav-section-2-mobile" class="nav-section mobile">
+				<div class="dropdown mobile">
+					<button type="button" id="subscribebutton" class="subscribe-mobile">Subscribe</button>
+					<div class="offset mobile"></div>
+					<div class="dropdown-content mobile">
+						<form class="mobileform" action="<?php bloginfo('template_directory'); ?>/email.php" method="post">
+		    				<input class="centeralign" type="text" name="email" placeholder="johndoe@gmail.com">
+		    				<input type="text" name="name" placeholder="John Doe">
+		    				<input type="submit" name="mobile" id="submityouremail">
+  						</form>
+  					</div>
+ 				</div>
+				<?php get_search_form(); ?>
+ 			 </div>
+			</div>
+		</nav>
+
+	<!-- 	MOBILE NAVBAR -->
+
+	<div id="cvillelogo"><img src="<?php bloginfo('template_directory'); ?>/images/Menu-logo.png"></div>
+
+	<div id="mySidenav" class="sidenav">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a href="#">About</a>
+	  <a href="#">Services</a>
+	  <a href="#">Clients</a>
+	  <a href="#">Contact</a>
+	</div>
+
+<!-- Use any element to open the sidenav -->
+<span id="hamburgercontainer" onclick="openNav()"><p id="hamburger">☰</p></span>
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	
+	</body>
+	</html>
 
