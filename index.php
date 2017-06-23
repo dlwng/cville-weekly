@@ -46,12 +46,14 @@ get_header(); ?>
 			// 	get_template_part( 'template-parts/content-hero', get_post_format() );
 			// endwhile;
 
+			$main_ids = [];
 			$mainarticle = new WP_Query( array (
 				'posts_per_page' => 1
 			));
 
 			while ( $mainarticle -> have_posts() ) : $mainarticle -> the_post();
 				get_template_part( 'template-parts/content-hero', get_post_format() );
+				array_push($main_ids, get_the_ID());
 			endwhile;
 			
 			/* Start the Loop */
@@ -67,12 +69,14 @@ get_header(); ?>
 			// endwhile;
 
 			$threecats = new WP_Query( array (
+				'post__not_in' => $main_ids,
 				'posts_per_page' => 3
 			));
 
 			while ( $threecats -> have_posts() ) : $threecats -> the_post();
 				get_template_part( 'template-parts/cat-highlights', get_post_format() );
 			endwhile;
+
 
 			$threenews = new WP_Query( array (
 				'category_name' => 'News', 
