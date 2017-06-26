@@ -107,7 +107,7 @@
 
 	<!-- 	MOBILE NAVBAR -->
 
-	<div id="cvillelogo"><img src="<?php bloginfo('template_directory'); ?>/images/Menu-logo.png"></div>
+	<div id="cvillelogo"><a href="<?php home_url( $path, $scheme ); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/Menu-logo.png"></a></div>
 
 	<div id="mySidenav" class="sidenav">
 	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
