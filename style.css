@@ -47,6 +47,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Karla|Lora');
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -529,7 +531,7 @@ a:active {
 	outline: 0;
 }
 
-nav a.selected:link, a.selected:active {  
+nav a.selected:link, a.selected:active {
 	color: #CCF2FF;
 }
 
@@ -664,13 +666,13 @@ nav a.selected:link, a.selected:active {
 }
 
 a.menu-image-title-after {
-	font-size: 1.7vw;
+	font-size: 2vw;
 }
 
-#menu-item-24, 
-#menu-item-32, 
-#menu-item-33, 
-#menu-item-34, 
+#menu-item-24,
+#menu-item-32,
+#menu-item-33,
+#menu-item-34,
 #menu-item-35{
 	margin-bottom: -8px;
 }
@@ -683,10 +685,12 @@ a.menu-image-title-after {
 .menu-item-34 a:hover {
 	color: #8F2682;
 }
+
 /*change hover color for living*/
 .menu-item-33 a:hover {
 	color: #8C9141;
 }
+
 /*change hover color for events*/
 .menu-item-32 a:hover {
 	color: #B26300;
@@ -765,8 +769,9 @@ button#subscribebutton {
   	transition-duration: .3s;
   	transition-timing-function: linear;
   	transition: opacity .3s,z-index .3s step-end,-webkit-transform .3s;
-    transition: opacity .3s,z-index .3s;
-    z-index: 4;
+	transition: opacity .3s,z-index .3s;
+	z-index: 4;
+
 }
 
 
@@ -796,6 +801,9 @@ input.search-submit {
     background-size: contain;
     /*border: 1px solid blue;*/
     height: 40px;
+<<<<<<< HEAD
+=======
+>>>>>>> ce434bcb2589f7aaaaab7fe60dc9333bc08fa3e7
 }
 
 input.search-field {
@@ -816,7 +824,6 @@ input.search-field {
 input.search-field:focus:hover {
   border-bottom: 1px solid #BBB;
   z-index: 10;
-
 }
 
 input.search-field:focus {
@@ -919,11 +926,11 @@ NAVBAR RESPONSIVENESS
 --------------------------------------------------------------*/
 
 @media screen and (max-width: 1270px) {
-	
+
 }
 
 @media screen and (max-width: 1150px) {
-	
+
 }
 
 @media screen and (max-width: 934px) {
@@ -961,7 +968,7 @@ NAVBAR RESPONSIVENESS
 	.main-navigation li.menu-item-23 {
 		display: block;
 		margin: 0 auto;
-		
+
 	}
 
 	.menu-item a img {
@@ -971,13 +978,13 @@ NAVBAR RESPONSIVENESS
 
 	ul#primary-menu.menu, div#nav-background-mobile {
 		text-align: center;
-		
+
 	}
 
-	#menu-item-24, 
-	#menu-item-32, 
-	#menu-item-33, 
-	#menu-item-34, 
+	#menu-item-24,
+	#menu-item-32,
+	#menu-item-33,
+	#menu-item-34,
 	#menu-item-35{
 		padding-top: 20px;
 
@@ -1005,7 +1012,7 @@ NAVBAR RESPONSIVENESS
 	input.search-field {
 		left: 0px;
 		padding-left: 40px;
-		
+
 	}
 
 	div.dropdown-content-mobile {
@@ -1030,14 +1037,14 @@ NAVBAR RESPONSIVENESS
 
 	form.search-form{
 		width: 45%;
-	
+
 		padding: 0;
 		margin: 0;
 	}
 
 	.dropdown.mobile {
 	    width: 53%;
-	 
+
 	    padding: 0;
 		margin: 0;
 	}
@@ -1113,7 +1120,8 @@ NAVBAR RESPONSIVENESS
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) {
     /* iPhone 6 Portrait */
-    
+
+
 }
 
 /*
@@ -1689,7 +1697,6 @@ object {
 ## CSS SETUP & RULES
 --------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Karla|Lora');
 
 body {
 	color: black;
@@ -1725,6 +1732,7 @@ h2 {
 h2 a {
 	font-size: 25px;
 }
+
 p {
 	font-family: 'Karla', sans-serif;
 
@@ -1735,7 +1743,6 @@ p a {
 	font-family: 'Karla', sans-serif;
 	font-size: 14px;
 }
-
 
 nav-bar {
 	background-color: #EBF4F7;
@@ -1854,6 +1861,7 @@ FOOTER RESPONSIVENESS
 	}
 }
 
+
 @media screen and (max-width: 1150px) {
 	.contact-text {
 		width: 90%;
@@ -1970,7 +1978,10 @@ END FOOTER
 
 .sidebarE{
 	width:30%;
+	display:inline-block;
 	float:right;
+	margin-top:30px;
+	vertical-align:top;
 }
 
 /*
@@ -1995,13 +2006,11 @@ END FOOTER
 	margin-bottom:0px;
 }
 
-
 .err{
 	margin-bottom:185px;
 }
 
 @media (max-width:400px){
-
 	.super-size-me{
 		width:100%;
 	}
@@ -2043,7 +2052,6 @@ MAIN ARTICLE
 }
 
 .entry-meta-hero {
-
 	display: flex;
 	justify-content: space-between;
 	font-family: 'Karla', sans-serif;
@@ -2062,7 +2070,6 @@ MAIN ARTICLE
 .img-Newscolor {
     border: 2px solid #486885;
 }
-
 
 .main-article{
 	padding-top: 50px;
@@ -2089,13 +2096,13 @@ MAIN ARTICLE
 	vertical-align: middle;
 }
 
-
 .entry-image-right img {
 	display: block;
 	height: 100%;
 	width: 100%;
 
 }
+
 
 .entry-image-right:hover {
 	opacity: 0.8;
@@ -2113,7 +2120,6 @@ MAIN ARTICLE
 	right: 0;
 	vertical-align: middle;
 }
-
 
 .entry-image-left img {
 	display: block;
@@ -2266,6 +2272,11 @@ MAIN ARTICLE
     border-bottom: 3px solid #8C9141;
 }
 
+
+.cat-title-recent {
+	color: #2D7E9E;
+}
+
 .cat-title-recent:after{
     content: "";
     position: absolute;
@@ -2275,7 +2286,6 @@ MAIN ARTICLE
     left: 0%;
     border-bottom: 3px solid black;
 }
-
 
 
 /*--------------------------------------------------------------
@@ -2350,6 +2360,7 @@ MAIN ARTICLE RESPONSIVENESS
 	}
 
 }
+
 
 @media screen and (max-width: 560px) {
 	.entry-header-hero a {
@@ -2451,6 +2462,7 @@ button {
 	font-family: 'Karla', sans-serif;
 }
 
+
 /*--------------------------------------------------------------
 CATEGORY MAIN ARTICLE BOXES
 --------------------------------------------------------------*/
@@ -2516,15 +2528,15 @@ CATEGORY MAIN ARTICLE BOXES
 .boxImg-Artscolor {
     border: 2px solid #8F2682;
 }
-	
+
 .boxImg-Livingcolor {
 	border: 2px solid #8C9141;
 }
-	
+
 .boxImg-Eventscolor {
 	border: 2px solid #B26300;
 }
-	
+
 .boxImg-Newscolor {
 	border: 2px solid #486885;
 }
@@ -2598,3 +2610,142 @@ CATEGORY PAGE
 
 
 
+/*--------------------------------------------------------------
+## Events Styles
+--------------------------------------------------------------*/
+
+.mainEventList{
+	width:65%;
+	display:inline-block;
+	margin:0;
+	padding:0;
+}
+
+.eventList{
+	width:100%;
+	margin-top:30px;
+	display:inline-block;
+}
+
+.eventList:nth-child(odd){
+	background-color:#ccf2ff;
+}
+
+.imgAndTitleP{
+	padding-left:20px;
+	padding-top:15px;
+	padding-bottom:15px;
+	position:relative;
+}
+
+.EventImgP, .titleBlockP{
+	display:inline-block;
+}
+
+.titleP, .dateP, .locationP, .priceP{
+	font-family:"lora",serif;
+	padding:0px;
+	margin:0px;
+
+}
+
+.titleBlockP{
+	vertical-align:top;
+	margin-left:30px;
+}
+
+
+.locationP, .priceP{
+	padding-top:6px;
+}
+
+.dateP{
+	font-size:20px;
+}
+
+.titleP{
+	text-transform:uppercase;
+}
+
+.site-content{
+	margin-bottom:30px;
+}
+
+.EventImgP{
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.moreInfo{
+	position:absolute;
+	bottom:5px;
+	right:30px;
+}
+
+@media screen and (max-width:1200px){
+	.mainEventList{
+		width:100%;
+	}
+	.sidebarE{
+		display:block;
+		width:65%;
+		margin:0 auto;
+		float:none;
+	}
+}
+
+@media screen and (max-width:750px){
+
+	.EventImgP{
+		display:inline-block;
+		vertical-align:middle;
+		width:100px;
+	}
+
+	.titleP{
+		font-size:20px;
+	}
+
+	.dateP{
+		font-size:10px;
+	}
+}
+
+@media screen and (max-width:530px){
+
+	.titleBlockP{
+		margin-left:15px;
+	}
+	.EventImgP{
+		width:70px;
+	}
+
+	.titleP{
+		font-size:15px;
+	}
+
+	.dateP, .priceP, .locationP{
+		font-size:10px;
+	}
+	.locationP, .priceP{
+		padding-top:3px;
+	}
+}
+
+@media screen and (max-width:380px){
+
+	.titleBlockP{
+		margin-left:7px;
+	}
+	.EventImgP{
+		width:50px;
+	}
+
+	.titleP{
+		font-size:12px;
+	}
+
+	.locationP, .priceP{
+		padding-top:1px;
+	}
+}

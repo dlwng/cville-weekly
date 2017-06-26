@@ -9,8 +9,7 @@
 					'meta_key' => 'date',
 					'posts_per_page' => 1
 				);
-				$loop = new WP_Query( $args );
-				while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				 ?>
 					<?php
 						$title = get_field('title');
 						$location = get_field('Location');
@@ -32,7 +31,6 @@
                   <p class="price"><?php echo $price ?></p>
                </div>
             </div>
-				<?php endwhile;?>
 				<!-- WHILE LOOP ENDS -->
 
 </div>

@@ -56,7 +56,7 @@
 
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
-				) 
+				)
 				);
 			?></div>
 			<div id="nav-section-2" class="nav-section">
@@ -71,9 +71,9 @@
   						</form>
   					</div>
  				</div>
- 				
+
 				<?php get_search_form(); ?>
-				
+
  			 </div>
 			</div>
 		</nav><!-- #site-navigation -->
@@ -89,12 +89,11 @@
 
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
-				) 
+				)
 				);
 			?></div>
 			<div id="nav-section-2-mobile" class="nav-section mobile">
-				<div class="dropdown mobile">
-
+				<div class="dropdown mobile">	
 					<button type="button" id="subscribebutton" class="subscribe-mobile">Subscribe</button>
 					<div class="offset mobile"></div>
 					<div class="dropdown-content mobile">
@@ -122,7 +121,7 @@
 
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
-				) 
+				)
 				);
 			?>
 
@@ -142,7 +141,6 @@
 		<title></title>
 	</head>
 	<body>
-	
+
 	</body>
 	</html>
-
