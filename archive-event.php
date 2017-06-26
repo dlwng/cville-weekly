@@ -2,6 +2,9 @@
 
 <?php get_header(); ?>
 <div class="event-container main-container">
+	<div class="mainEventList">
+
+
 				<!-- WHILE LOOP BEGINS -->
 				<?php
 				// $args = array(
@@ -12,7 +15,6 @@
 				// 	'posts_per_page' => 10
 				// );
 				// $loop = new WP_Query( $args );
-				 get_sidebar(); 
 			   while ( have_posts() ) : the_post();
 			    		$title = get_the_title();
 						$location = types_render_field( "location", array( ) );
@@ -26,7 +28,7 @@
 					<div class="eventList">
 						<div class=imgAndTitleP>
 		               <div class=EventImgP>
-		                  <?php the_post_thumbnail( array(150,150));
+		                  <?php $eventImg=the_post_thumbnail( array(150,150));
 								?>
 		               </div>
 		               <div class="titleBlockP">
@@ -35,10 +37,14 @@
 		                  <p class="locationP"><?php echo $location; ?></p>
 		                  <p class="priceP"><?php echo $price; ?></p>
 		               </div>
+							<p class="moreInfo">More Info ></p>
 		            </div>
 					</div>
+
 				<?php endwhile;?>
 				<!-- WHILE LOOP ENDS -->
+				</div>
+				<?php	get_sidebar();?>
 
 </div>
 
