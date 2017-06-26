@@ -12,9 +12,10 @@
 <div class="main-three-boxes grid__col--1-of-3 grid__col" id="post-<?php the_ID(); ?>">
     <?php $categories = get_the_category(); ?>
     <div class="box-image img-<?php echo esc_html( $categories[0]->name);?>color">
-       <?php 
-       		the_post_thumbnail();?> 
-                
+        <a href="<?php echo esc_url( get_permalink() ); ?>">
+           <?php 
+           		the_post_thumbnail();?> 
+        </a>    
    	</div> 
             
     <header class="box-header boxImg-<?php echo esc_html( $categories[0]->name);?>color"" id="main-box-header">
