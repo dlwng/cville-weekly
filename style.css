@@ -42,11 +42,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Single
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Karla|Lora');
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -529,7 +532,7 @@ a:active {
 	outline: 0;
 }
 
-nav a.selected:link, a.selected:active {  
+nav a.selected:link, a.selected:active {
 	color: #CCF2FF;
 }
 
@@ -654,24 +657,21 @@ nav a.selected:link, a.selected:active {
 	width: 50%;
 }
 
-#menu-item-23 {
+.menu-item-type-custom {
 	width: 13vw;
 	vertical-align: middle;
 }
 
-#menu-item-23 img {
+.menu-item-type-custom img {
 	width: 100% !important;
 }
 
 a.menu-image-title-after {
-	font-size: 1.7vw;
+	font-size: 2vw;
 }
 
-#menu-item-24, 
-#menu-item-32, 
-#menu-item-33, 
-#menu-item-34, 
-#menu-item-35{
+
+.menu-item-type-post{
 	margin-bottom: -8px;
 }
 
@@ -683,10 +683,12 @@ a.menu-image-title-after {
 .menu-item-34 a:hover {
 	color: #8F2682;
 }
+
 /*change hover color for living*/
 .menu-item-33 a:hover {
 	color: #8C9141;
 }
+
 /*change hover color for events*/
 .menu-item-32 a:hover {
 	color: #B26300;
@@ -721,12 +723,16 @@ form.search-form{
 }
 
 .dropdown {
-    position: relative;
     display: inline-block;
     width: 48%;
     text-align: left;
     /*border: 1px solid blue;*/
     vertical-align: middle;
+    position: relative;
+}
+
+.dropdown.mobile {
+	position: relative;
 }
 
 
@@ -742,6 +748,12 @@ span.screen-reader-text {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
+    text-align: center;
+}
+
+input {
+	display: block;
+	margin: 0 auto;
 }
 
 .dropdown:hover {
@@ -766,8 +778,9 @@ button#subscribebutton {
   	transition-duration: .3s;
   	transition-timing-function: linear;
   	transition: opacity .3s,z-index .3s step-end,-webkit-transform .3s;
-    transition: opacity .3s,z-index .3s;
-    z-index: 4;
+	transition: opacity .3s,z-index .3s;
+	z-index: 4;
+
 }
 
 
@@ -797,6 +810,7 @@ input.search-submit {
     background-size: contain;
     /*border: 1px solid blue;*/
     height: 40px;
+
 }
 
 input.search-field {
@@ -817,7 +831,6 @@ input.search-field {
 input.search-field:focus:hover {
   border-bottom: 1px solid #BBB;
   z-index: 10;
-
 }
 
 input.search-field:focus {
@@ -882,7 +895,6 @@ input.search-field:focus {
     margin-left: 50px;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 
 
 #hamburger {
@@ -912,7 +924,7 @@ input.search-field:focus {
 	position: absolute;
 	width: 200px;
 	left: 20%;
-	top: 2vh;
+	top: 55px;
 	display: none;
 
 }
@@ -921,11 +933,11 @@ NAVBAR RESPONSIVENESS
 --------------------------------------------------------------*/
 
 @media screen and (max-width: 1270px) {
-	
+
 }
 
 @media screen and (max-width: 1150px) {
-	
+
 }
 
 @media screen and (max-width: 934px) {
@@ -960,10 +972,10 @@ NAVBAR RESPONSIVENESS
 		margin: 0 auto;
 	}
 
-	.main-navigation li.menu-item-23 {
+	.main-navigation li.menu-item-type-custom {
 		display: block;
 		margin: 0 auto;
-		
+
 	}
 
 	.menu-item a img {
@@ -973,19 +985,19 @@ NAVBAR RESPONSIVENESS
 
 	ul#primary-menu.menu, div#nav-background-mobile {
 		text-align: center;
-		
+
 	}
 
-	#menu-item-24, 
-	#menu-item-32, 
-	#menu-item-33, 
-	#menu-item-34, 
+	#menu-item-24,
+	#menu-item-32,
+	#menu-item-33,
+	#menu-item-34,
 	#menu-item-35{
 		padding-top: 20px;
 
 	}
 
-	#menu-item-23 {
+	.menu-item-type-custom {
 		width: 80%;
 	}
 
@@ -1007,7 +1019,7 @@ NAVBAR RESPONSIVENESS
 	input.search-field {
 		left: 0px;
 		padding-left: 40px;
-		
+
 	}
 
 	div.dropdown-content-mobile {
@@ -1032,14 +1044,14 @@ NAVBAR RESPONSIVENESS
 
 	form.search-form{
 		width: 45%;
-	
+
 		padding: 0;
 		margin: 0;
 	}
 
 	.dropdown.mobile {
 	    width: 53%;
-	 
+
 	    padding: 0;
 		margin: 0;
 	}
@@ -1115,7 +1127,8 @@ NAVBAR RESPONSIVENESS
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) {
     /* iPhone 6 Portrait */
-    
+
+
 }
 
 /*
@@ -1691,7 +1704,6 @@ object {
 ## CSS SETUP & RULES
 --------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Karla|Lora');
 
 body {
 	color: black;
@@ -1727,7 +1739,7 @@ h2 {
 h2 a {
 	font-size: 25px;
 }
- 
+
 p {
 	font-family: 'Karla', sans-serif;
 
@@ -1758,7 +1770,8 @@ a {
 a:hover{
 	text-decoration:underline;
 }
- 
+
+
 .News a:hover {
 	color: #486885;
 }
@@ -1770,7 +1783,7 @@ a:hover{
 .Newscolor:hover {
 	color: #486885;
 }
- 
+
 .Artscolor {
 	color: #8F2682;
 }
@@ -1778,7 +1791,7 @@ a:hover{
 .Artscolor:hover {
 	color: #8F2682;
 }
- 
+
 .Livingcolor {
 	color: #8C9141;
 }
@@ -1786,7 +1799,7 @@ a:hover{
 .Livingcolor:hover {
 	color: #8C9141;
 }
- 
+
 .Eventscolor {
 	color: #B26300;
 }
@@ -1794,7 +1807,7 @@ a:hover{
 .Eventscolor:hover {
 	color: #B26300;
 }
- 
+
 img {
 	z-index: -20;
 }
@@ -1854,6 +1867,7 @@ FOOTER RESPONSIVENESS
 		margin: 0 auto;
 	}
 }
+
 
 @media screen and (max-width: 1150px) {
 	.contact-text {
@@ -1971,7 +1985,10 @@ END FOOTER
 
 .sidebarE{
 	width:30%;
+	display:inline-block;
 	float:right;
+	margin-top:30px;
+	vertical-align:top;
 }
 
 /*
@@ -2001,36 +2018,47 @@ END FOOTER
 }
 
 @media (max-width:400px){
-
 	.super-size-me{
 		width:100%;
 	}
-
 }
 
 /*--------------------------------------------------------------
+##Event Styles
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 MAIN ARTICLE
 --------------------------------------------------------------*/
-.entry-mobile {
+.entry-mobile-hero {
 	display: none;
 }
 
-.entry-image {
+.entry-image-hero {
 	display: inline-block;
 	vertical-align: middle;
-	padding: 0px;
+	padding-left: 0px;
+	width: 55%;
+	height: auto;
 }
 
-.entry-image:hover {
+.entry-image-hero img {
+	height: 100%;
+	display: block;
+}
+
+.entry-image-hero:hover {
 	opacity: 0.8;
 }
 
-.entry-header {
+.entry-header-hero {
 	display: inline-block;
 	vertical-align: middle;
+	width: 45%;
+	padding: 10px;
+	padding-left: 20px;
 }
 
-.entry-meta {
+.entry-meta-hero {
 	display: flex;
 	justify-content: space-between;
 	font-family: 'Karla', sans-serif;
@@ -2050,12 +2078,17 @@ MAIN ARTICLE
     border: 2px solid #486885;
 }
 
+.main-article{
+	padding-top: 50px;
+}
+
+
 /*--------------------------------------------------------------
 ## ARTICLE LISTING ON HOME (content-preview-right/left.php)
 --------------------------------------------------------------*/
 .post {
 	font-size: 0;
-	margin-bottom: 45px;
+	margin: 0 0 30px;
 }
 
 .entry-header-right {
@@ -2063,12 +2096,25 @@ MAIN ARTICLE
 	display: inline-block;
 	vertical-align: middle;
 }
-	
+
 .entry-image-right {
 	display: inline-block;
 	right: 0;
 	vertical-align: middle;
 }
+
+.entry-image-right img {
+	display: block;
+	height: 100%;
+	width: 100%;
+
+}
+
+
+.entry-image-right:hover {
+	opacity: 0.8;
+}
+
 
 .entry-header-left {
 	padding-left: 45px;
@@ -2081,6 +2127,18 @@ MAIN ARTICLE
 	right: 0;
 	vertical-align: middle;
 }
+
+.entry-image-left img {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.entry-image-left:hover {
+	opacity: 0.8;
+}
+
+
 .entry-mobile {
 	display: none;
 }
@@ -2222,37 +2280,502 @@ MAIN ARTICLE
 }
 
 
+.cat-title-recent {
+	color: #2D7E9E;
+}
+
+.cat-title-recent:after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    bottom: 0;
+    left: 0%;
+    border-bottom: 3px solid black;
+}
+
+
 /*--------------------------------------------------------------
 MAIN ARTICLE RESPONSIVENESS
 --------------------------------------------------------------*/
-@media screen and (max-width: 810px) {
-	.entry {
+
+@media screen and (max-width: 1000px) {
+	.entry-header-hero a {
+		font-size: 25px;
+	}
+
+	.entry-category-hero a {
+		font-size: 14px;
+	}
+
+	.entry-author {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 916px) {
+	.entry-header-hero a {
+		font-size: 22px;
+	}
+
+	.entry-category-hero a {
+		font-size: 12px;
+	}
+
+	.entry-author {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 812px) {
+	.entry-hero {
 		display: none;
 	}
 
-	.entry-mobile {
+	.entry-mobile-hero {
 		display: inline-block;
+		padding-top: 30px;
 	}
 
-	.entry-header {
+	.entry-image-hero:hover {
+		opacity: 1;
+	}
+
+	.entry-header-hero {
 		display: inline-block;
-		width: 30%;
+		width: 50%;
 		padding-left: 10%;
 
+
 	}
 
-	.entry-image {
+	.entry-image-hero {
 		width: 50%;
 	}
 
-	.entry-title h2 {
+	.entry-title-hero h2 {
 		width: 80%;
 	}
 
+	.img-Artscolor-hero {
+    	border: none;
+	}
+	.img-Livingcolor-hero {
+	    border: none;
+	}
+	.img-Eventscolor-hero {
+	    border: none;
+	}
+	.img-Newscolor-hero {
+	    border: none;
+	}
+
+}
+
+
+@media screen and (max-width: 560px) {
+	.entry-header-hero a {
+		font-size: 20px;
+	}
+
+	.entry-category-hero a {
+		font-size: 14px;
+	}
+
+}
+
+@media screen and (max-width: 509px) {
+	.entry-header-hero a {
+		font-size: 18px;
+	}
+
+	.entry-category-hero a {
+		font-size: 12px;
+	}
+
+}
+
+@media screen and (max-width: 458px) {
+	.entry-image-hero {
+		width: 100%;
+	}
+
+	.entry-header-hero {
+		width: 80%;
+		z-index: 20;
+		margin-top: -12%;
+		margin-left: 10%;
+		background-color: white;
+		padding: 10px;
+	}
+
+	.entry-category-hero {
+		text-align: center;
+		padding-right: 12%;
+	}
+
+	.img-Artscolor-hero {
+    	border: 2px solid #8F2682;
+	}
+	.img-Livingcolor-hero {
+	    border: 2px solid #8C9141;
+	}
+	.img-Eventscolor-hero {
+	    border: 2px solid #B26300;
+	}
+	.img-Newscolor-hero {
+	    border: 2px solid #486885;
+	}
+
+}
+
+@media screen and (max-width: 425px) {
+	.entry-header-hero a {
+		font-size: 16px;
+	}
+
+	.entry-category-hero a {
+		font-size: 12px;
+	}
+
+	.entry-header-hero {
+		text-align: center;
+		padding-right: 5%;
+	}
+}
+
+/*--------------------------------------------------------------
+HOME PAGE MORE/RECENT STORIES SECTION
+--------------------------------------------------------------*/
+button.morebutton {
+	background-color: #CCF2FF;
+	border: 1px solid #3AA8DE;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	cursor: pointer;
+	font-weight: 800;
+	padding: 5px 20px;
+	box-shadow: 3px 3px #3AA8DE;
+	margin: 10px;
+}
+
+
+button.morebutton:hover {
+  	opacity: .7;
+}
+
+.center-button {
+	text-align: center;
+}
+
+button {
+	font-family: 'Karla', sans-serif;
+}
+
+
+/*--------------------------------------------------------------
+CATEGORY MAIN ARTICLE BOXES
+--------------------------------------------------------------*/
+.main-three-boxes {
+	display: inline-block;
+	text-align: center;
+	padding-right: 10px;
+	padding-bottom: 6%;
+}
+
+.box-header {
+/*	height: 100px;
+	width: 260px;*/
+	position: relative;
+	width: 80%;
+	margin-left: 10%;
+	margin-top: -10%;
+	z-index: 100;
+	background-color: white;
+	padding: 10px;
+}
+
+.box-header a {
+	font-size: 14px;
+}
+
+.box-header h2 {
+	line-height: 50%;
+}
+
+/*.box-title {
+	width: 100%;
+	position: absolute;
+	padding: 10px;
+}*/
+
+.box-category {
+/*	position: absolute;*/
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+
+.box-category a {
+	font-size: 12px;
+	text-align: center;
+}
+
+#main-box-header {
+}
+
+.box-image {
+	z-index: -20;
+}
+
+.box-image img {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.boxImg-Artscolor {
+    border: 2px solid #8F2682;
+}
+
+.boxImg-Livingcolor {
+	border: 2px solid #8C9141;
+}
+
+.boxImg-Eventscolor {
+	border: 2px solid #B26300;
+}
+
+.boxImg-Newscolor {
+	border: 2px solid #486885;
+}
+
+/*--------------------------------------------------------------
+CATEGORY MAIN ARTICLE BOXES RESPONSIVESS
+--------------------------------------------------------------*/
+
+@media screen and (max-width: 850px) {
+	.main-three-boxes {
+		padding-right: 0px;
+	}
+}
+
+@media screen and (max-width: 812px) {
+	.main-three-boxes {
+		display: none;
+	}
+}
+/*--------------------------------------------------------------
+CATEGORY PAGE
+--------------------------------------------------------------*/
+.cat-title-News:after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    bottom: 0;
+    left: 0%;
+    border-bottom: 3px solid #486885;
+}
+
+.cat-title-Arts:after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    bottom: 0;
+    left: 0%;
+    border-bottom: 3px solid #8F2682;
+}
+
+.cat-title-Living:after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    bottom: 0;
+    left: 0%;
+    border-bottom: 3px solid #8C9141;
 }
 
 
 
 
 
+
+/*--------------------------------------------------------------
+## Events Styles
+--------------------------------------------------------------*/
+
+.mainEventList{
+	width:65%;
+	display:inline-block;
+	margin:0;
+	padding:0;
+}
+
+.eventList{
+	width:100%;
+	margin-top:30px;
+	display:inline-block;
+}
+
+.eventList:nth-child(odd){
+	background-color:#ccf2ff;
+}
+
+.imgAndTitleP{
+	padding-left:20px;
+	padding-top:15px;
+	padding-bottom:15px;
+	position:relative;
+}
+
+.EventImgP, .titleBlockP{
+	display:inline-block;
+}
+
+.titleP, .dateP, .locationP, .priceP{
+	font-family:"lora",serif;
+	padding:0px;
+	margin:0px;
+
+}
+
+.titleBlockP{
+	vertical-align:top;
+	margin-left:30px;
+}
+
+
+.locationP, .priceP{
+	padding-top:6px;
+}
+
+.dateP{
+	font-size:20px;
+}
+
+.titleP{
+	text-transform:uppercase;
+}
+
+.site-content{
+	margin-bottom:30px;
+}
+
+.EventImgP{
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.moreInfo{
+	position:absolute;
+	bottom:5px;
+	right:30px;
+}
+
+@media screen and (max-width:1200px){
+	.mainEventList{
+		width:100%;
+	}
+	.sidebarE{
+		display:block;
+		width:65%;
+		margin:0 auto;
+		float:none;
+	}
+}
+
+@media screen and (max-width:750px){
+
+	.EventImgP{
+		display:inline-block;
+		vertical-align:middle;
+		width:100px;
+	}
+
+	.titleP{
+		font-size:20px;
+	}
+
+	.dateP{
+		font-size:10px;
+	}
+}
+
+@media screen and (max-width:530px){
+
+	.titleBlockP{
+		margin-left:15px;
+	}
+	.EventImgP{
+		width:70px;
+	}
+
+	.titleP{
+		font-size:15px;
+	}
+
+	.dateP, .priceP, .locationP{
+		font-size:10px;
+	}
+	.locationP, .priceP{
+		padding-top:3px;
+	}
+}
+
+@media screen and (max-width:380px){
+
+	.titleBlockP{
+		margin-left:7px;
+	}
+	.EventImgP{
+		width:50px;
+	}
+
+	.titleP{
+		font-size:12px;
+	}
+
+	.locationP, .priceP{
+		padding-top: 1px;
+	}
+}
+
+/*--------------------------------------------------------------
+## Single
+--------------------------------------------------------------*/
+/*.single-back {
+	display: block;
+}
+
+.singlediv {
+	text-align: center;
+	margin: 0 100px;
+}
+
+header.entry-header-single {
+	margin-top: 40px;
+}
+
+.entry-content {
+	margin-top: 80px;
+}
+
+.box-header.single {
+	width: 40%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+	top: -30px;
+	font-size: 4vw;
+}
+
+.box-title-single h2 {
+	font-size: 3vw;
+	line-height: 1em;
+}
 */

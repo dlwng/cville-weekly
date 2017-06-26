@@ -56,7 +56,7 @@
 
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
-				) 
+				)
 				);
 			?></div>
 			<div id="nav-section-2" class="nav-section">
@@ -71,25 +71,29 @@
   						</form>
   					</div>
  				</div>
+
 				<?php get_search_form(); ?>
+
  			 </div>
 			</div>
 		</nav><!-- #site-navigation -->
+
 
 		<!-- CENTERED NAVBAR -->
 		<nav id="site-navigation-mobile" class="main-navigation mobile" role="navigation">
 			<button class="menu-toggle-mobile" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'cville-weekly' ); ?></button>
 			<div id="nav-background-mobile">
 			<div id="nav-section-1-mobile" class="nav-section mobile"><?php
+
 				wp_nav_menu( array(
 
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
-				) 
+				)
 				);
 			?></div>
 			<div id="nav-section-2-mobile" class="nav-section mobile">
-				<div class="dropdown mobile">
+				<div class="dropdown mobile">	
 					<button type="button" id="subscribebutton" class="subscribe-mobile">Subscribe</button>
 					<div class="offset mobile"></div>
 					<div class="dropdown-content mobile">
@@ -107,22 +111,25 @@
 
 	<!-- 	MOBILE NAVBAR -->
 
-	<div id="cvillelogo"><img src="<?php bloginfo('template_directory'); ?>/images/Menu-logo.png"></div>
+	<div id="cvillelogo"><a href="<?php home_url( $path, $scheme ); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/Menu-logo.png"></a></div>
 
 	<div id="mySidenav" class="sidenav">
 	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
 	  <?php
 				wp_nav_menu( array(
 
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
-				) 
+				)
 				);
 			?>
+
 	</div>
 
 <!-- Use any element to open the sidenav -->
 <span id="hamburgercontainer" onclick="openNav()"><p id="hamburger">☰</p></span>
+
 
 	</header><!-- #masthead -->
 
@@ -134,7 +141,6 @@
 		<title></title>
 	</head>
 	<body>
-	
+
 	</body>
 	</html>
-

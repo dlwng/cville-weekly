@@ -9,22 +9,54 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+<?php $categories = get_the_category();
+			$category_link = get_category_link($categories[0]->cat_ID);
+			$arrow = " >"; ?>
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php cville_weekly_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
+<div class="singlediv">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="thebackbutton">
+		<a
+			href="<?php echo esc_url( $category_link ); ?>" 
+			class ="<?php echo esc_html( $categories[0]->name);?> single-back" >
+				<?php echo esc_html( $categories[0]->name);
+			 	?>
+		</a>
+		<?php 
+			the_post_thumbnail();
+		?>
+	</div>
+
+	
+	<!-- .entry-header -->
+
+	<header class="box-header single boxImg-<?php echo esc_html( $categories[0]->name);?>color"" id="main-box-header">
+        <div class="box-title-single">
+    	<?php
+            if ( is_singular() ) :
+                the_title( '<h2>', '</h2>' );
+            else :
+                the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+                ?>	
+        </div>			
+
+        <?php
+            $categories = get_the_category();
+            $category_link = get_category_link($categories[0]->cat_ID);
+            $arrow = " >";
+            ?>
+
+	        <div class="box-category">
+	            <a href="<?php echo esc_url( $category_link ); ?>" class ="<?php echo esc_html( $categories[0]->name);?>color">
+	            <?php
+	                if ( ! empty( $categories ) ) {
+	                    echo esc_html( $categories[0]->name);
+	                    echo $arrow;   
+	                }
+	            endif;?>
+	            </a>
+	        </div>
+    </header>
 
 	<div class="entry-content">
 		<?php
@@ -52,3 +84,4 @@
 		<?php cville_weekly_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
+</div>
