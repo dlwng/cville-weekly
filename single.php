@@ -14,9 +14,11 @@ get_header(); ?>
 
 		<?php
 		while ( have_posts() ) : the_post();
-
-			$prev = get_previous_posts_link();
-			echo $prev;
+		
+				$categories = get_the_category();
+				$category_link = get_category_link($categories[0]->cat_ID);
+				$arrow = " >";
+			
 
 			get_template_part( 'template-parts/content', get_post_format() );
 
