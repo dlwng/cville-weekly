@@ -48,7 +48,7 @@ get_header(); ?>
 
 			$main_ids = [];
 			$mainarticle = new WP_Query( array (
-				'posts_per_page' => 1
+				'posts_per_page' => 5
 			));
 
 			while ( $mainarticle -> have_posts() ) : $mainarticle -> the_post();
