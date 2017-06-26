@@ -656,12 +656,12 @@ nav a.selected:link, a.selected:active {
 	width: 50%;
 }
 
-#menu-item-23 {
+.menu-item-type-custom {
 	width: 13vw;
 	vertical-align: middle;
 }
 
-#menu-item-23 img {
+.menu-item-type-custom img {
 	width: 100% !important;
 }
 
@@ -990,7 +990,7 @@ NAVBAR RESPONSIVENESS
 
 	}
 
-	#menu-item-23 {
+	.menu-item-type-custom {
 		width: 80%;
 	}
 
