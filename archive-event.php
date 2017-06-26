@@ -37,6 +37,7 @@
 		                  <p class="locationP"><?php echo $location; ?></p>
 		                  <p class="priceP"><?php echo $price; ?></p>
 		               </div>
+							<p class="moreInfo">More Info ></p>
 		            </div>
 					</div>
 

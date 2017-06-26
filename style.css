@@ -2244,6 +2244,7 @@ CATEGORY MAIN ARTICLE BOXES RESPONSIVESS
 	padding-left:20px;
 	padding-top:15px;
 	padding-bottom:15px;
+	position:relative;
 }
 
 .EventImgP, .titleBlockP{
@@ -2282,6 +2283,12 @@ CATEGORY MAIN ARTICLE BOXES RESPONSIVESS
 .EventImgP{
 	display:inline-block;
 	vertical-align:middle;
+}
+
+.moreInfo{
+	position:absolute;
+	bottom:5px;
+	right:30px;
 }
 
 @media screen and (max-width:1200px){
