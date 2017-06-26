@@ -8,17 +8,11 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
+		<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 		<?php
 		while ( have_posts() ) : the_post();
-		
-				$categories = get_the_category();
-				$category_link = get_category_link($categories[0]->cat_ID);
-				$arrow = " >";
-			
 
 			get_template_part( 'template-parts/content', get_post_format() );
 
@@ -38,3 +32,4 @@ get_header(); ?>
 <?php
 get_sidebar();
 get_footer();
+

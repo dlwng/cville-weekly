@@ -9,7 +9,22 @@
 
 ?>
 
+<?php $categories = get_the_category();
+			$category_link = get_category_link($categories[0]->cat_ID);
+			$arrow = " >"; ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="thebackbutton">
+		<a 
+			href="<?php echo esc_url( $category_link ); ?>" 
+			class ="<?php echo esc_html( $categories[0]->name);?>">
+				<?php echo esc_html( $categories[0]->name);
+			 	?>
+		</a>
+		<?php 
+			the_post_thumbnail();
+		?>
+	</div>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
