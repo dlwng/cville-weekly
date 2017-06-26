@@ -56,7 +56,7 @@
 
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
-				) 
+				)
 				);
 			?></div>
 			<div id="nav-section-2" class="nav-section">
@@ -71,9 +71,9 @@
   						</form>
   					</div>
  				</div>
- 				<div class="search">
+
 				<?php get_search_form(); ?>
-				</div>
+
  			 </div>
 			</div>
 		</nav><!-- #site-navigation -->
@@ -89,12 +89,11 @@
 
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
-				) 
+				)
 				);
 			?></div>
 			<div id="nav-section-2-mobile" class="nav-section mobile">
-				<div class="dropdown mobile">
-	
+				<div class="dropdown mobile">	
 					<button type="button" id="subscribebutton" class="subscribe-mobile">Subscribe</button>
 					<div class="offset mobile"></div>
 					<div class="dropdown-content mobile">
@@ -116,10 +115,16 @@
 
 	<div id="mySidenav" class="sidenav">
 	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	  <a href="#">About</a>
-	  <a href="#">Services</a>
-	  <a href="#">Clients</a>
-	  <a href="#">Contact</a>
+
+	  <?php
+				wp_nav_menu( array(
+
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				)
+				);
+			?>
+
 	</div>
 
 <!-- Use any element to open the sidenav -->
@@ -136,7 +141,6 @@
 		<title></title>
 	</head>
 	<body>
-	
+
 	</body>
 	</html>
-

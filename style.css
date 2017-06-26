@@ -794,15 +794,6 @@ input.search-submit {
   	transition-duration: .3s;
   	transition-timing-function: linear;
   	transition: opacity .3s,z-index .3s step-end,-webkit-transform .3s;
-<<<<<<< HEAD
-	transition: opacity .3s,z-index .3s ;
-	position: relative;
-	z-index: 20;
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRFU1NT9fX1lJSUXl5e1dXVfn5+c3Nz6urqv7+/tLS0iYmJqampn5+fysrK39/faWlp////Vi4ZywAAABF0Uk5T/////////////////////wAlrZliAAABLklEQVR42rSWWRbDIAhFHeOUtN3/ags1zaA4cHrKZ8JFRHwoXkwTvwGP1Qo0bYObAPwiLmbNAHBWFBZlD9j0JxflDViIObNHG/Do8PRHTJk0TezAhv7qloK0JJEBh+F8+U/hopIELOWfiZUCDOZD1RADOQKA75oq4cvVkcT+OdHnqqpQCITWAjnWVgGQUWz12lJuGwGoaWgBKzRVBcCypgUkOAoWgBX/L0CmxN40u6xwcIJ1cOzWYDffp3axsQOyvdkXiH9FKRFwPRHYZUaXMgPLeiW7QhbDRciyLXJaKheCuLbiVoqx1DVRyH26yb0hsuoOFEPsoz+BVE0MRlZNjGZcRQyHYkmMp2hBTIzdkzCTc/pLqOnBrk7/yZdAOq/q5NPBH1f7x7fGP4C3AAMAQrhzX9zhcGsAAAAASUVORK5CYII=) center center no-repeat;
-	background-size: contain;
-/*    border: 1px solid blue;
-*/    height: 40px;
-=======
     transition: opacity .3s,z-index .3s ;
     position: relative;
     z-index: 20;
@@ -810,7 +801,9 @@ input.search-submit {
     background-size: contain;
     /*border: 1px solid blue;*/
     height: 40px;
->>>>>>> 9e99e7358c015e0f116a761f694821a072a5e336
+<<<<<<< HEAD
+=======
+>>>>>>> ce434bcb2589f7aaaaab7fe60dc9333bc08fa3e7
 }
 
 input.search-field {
@@ -864,7 +857,6 @@ input.search-field:focus {
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0;
-   
     right: 0;
     background-color: #CFF2FF; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
@@ -896,11 +888,7 @@ input.search-field:focus {
     margin-left: 50px;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-    transition: margin-left .5s;
-    padding: 20px;
-}
+
 
 #hamburger {
 	font-size: 50px;
@@ -929,19 +917,20 @@ input.search-field:focus {
 	position: absolute;
 	width: 200px;
 	left: 20%;
-	top: 12px;
+	top: 2vh;
 	display: none;
+
 }
 /*--------------------------------------------------------------
 NAVBAR RESPONSIVENESS
 --------------------------------------------------------------*/
 
 @media screen and (max-width: 1270px) {
-	
+
 }
 
 @media screen and (max-width: 1150px) {
-	
+
 }
 
 @media screen and (max-width: 934px) {
@@ -979,7 +968,7 @@ NAVBAR RESPONSIVENESS
 	.main-navigation li.menu-item-23 {
 		display: block;
 		margin: 0 auto;
-		
+
 	}
 
 	.menu-item a img {
@@ -989,13 +978,13 @@ NAVBAR RESPONSIVENESS
 
 	ul#primary-menu.menu, div#nav-background-mobile {
 		text-align: center;
-		
+
 	}
 
-	#menu-item-24, 
-	#menu-item-32, 
-	#menu-item-33, 
-	#menu-item-34, 
+	#menu-item-24,
+	#menu-item-32,
+	#menu-item-33,
+	#menu-item-34,
 	#menu-item-35{
 		padding-top: 20px;
 
@@ -1023,7 +1012,7 @@ NAVBAR RESPONSIVENESS
 	input.search-field {
 		left: 0px;
 		padding-left: 40px;
-		
+
 	}
 
 	div.dropdown-content-mobile {
@@ -1048,14 +1037,14 @@ NAVBAR RESPONSIVENESS
 
 	form.search-form{
 		width: 45%;
-	
+
 		padding: 0;
 		margin: 0;
 	}
 
 	.dropdown.mobile {
 	    width: 53%;
-	 
+
 	    padding: 0;
 		margin: 0;
 	}
@@ -1066,6 +1055,10 @@ NAVBAR RESPONSIVENESS
 
 	.main-navigation li{
 		padding: 3px 15px;
+	}
+
+	a.menu-image-title-after {
+	font-size: 16.8px;
 	}
 }
 
@@ -1090,17 +1083,44 @@ NAVBAR RESPONSIVENESS
 		display: block;
 	}
 
+	li.menu-item {
+		text-align: left;
+	}
+
+	.menu-item a img {
+		display: none;
+	}
+
+	 ul#primary-menu.menu {
+    	list-style: none;
+   		margin: 3vh 0 0 0;
+   		padding: 0;
+    }
+
+    .menu-image-title {
+    	font-size: 25px;
+    }
+
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    .menu-image-title {padding-top: 15px;}
+    .menu-image-title a {
+    	 padding: 8px 8px 8px 32px;
+	    text-decoration: none;
+	    font-size: 25px;
+	    display: block;
+	    transition: 0.3s;;
+    }
+
+
+    }
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) {
     /* iPhone 6 Portrait */
-    
+
 
 }
 
@@ -2264,13 +2284,14 @@ MAIN ARTICLE
     height: 1px;
     bottom: 0;
     left: 0%;
-    border-bottom: 3px solid #2D7E9E;
+    border-bottom: 3px solid black;
 }
 
 
 /*--------------------------------------------------------------
 MAIN ARTICLE RESPONSIVENESS
 --------------------------------------------------------------*/
+
 @media screen and (max-width: 1000px) {
 	.entry-header-hero a {
 		font-size: 25px;
@@ -2554,10 +2575,6 @@ CATEGORY MAIN ARTICLE BOXES RESPONSIVESS
 /*--------------------------------------------------------------
 CATEGORY PAGE
 --------------------------------------------------------------*/
-.cat-page-title {
-	margin-bottom: 0px;
-}
-
 .cat-title-News:after{
     content: "";
     position: absolute;
