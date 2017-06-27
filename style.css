@@ -2036,6 +2036,7 @@ MAIN ARTICLE
 
 .entry-image-hero img {
 	height: 100%;
+	width: 100%;
 	display: block;
 }
 
@@ -2284,7 +2285,7 @@ MAIN ARTICLE
     height: 1px;
     bottom: 0;
     left: 0%;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #2D7E9E;
 }
 
 
@@ -2473,7 +2474,6 @@ CATEGORY MAIN ARTICLE BOXES
 .main-three-boxes {
 	display: inline-block;
 	text-align: center;
-	padding-right: 10px;
 	padding-bottom: 6%;
 }
 
@@ -2482,7 +2482,7 @@ CATEGORY MAIN ARTICLE BOXES
 	width: 260px;*/
 	position: relative;
 	width: 80%;
-	margin-left: 10%;
+	margin-left: 4%;
 	margin-top: -10%;
 	z-index: 100;
 	background-color: white;
@@ -2521,6 +2521,9 @@ CATEGORY MAIN ARTICLE BOXES
 
 .box-image {
 	z-index: -20;
+	/*the margin lines below center the image boxes*/
+	margin-left: -3%;
+	margin-right: 8%;
 }
 
 .box-image img {
