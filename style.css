@@ -1070,11 +1070,21 @@ NAVBAR RESPONSIVENESS
 }
 
 @media screen and (max-width: 600px) {
+	#site-navigation-mobile {
+		position: fixed;
+		top: 0;
+		z-index: 400;
+	}
+
 	#nav-background-mobile {
 		height: 70px;
 	}
 
 	#nav-section-2-mobile {
+		display: none;
+	}
+
+	#nav-section-1-mobile {
 		display: none;
 	}
 
@@ -1084,10 +1094,17 @@ NAVBAR RESPONSIVENESS
 
 	#hamburgercontainer {
 		display: block;
+		position: fixed;
+		z-index: 400;
+		top: 0;
 	}
 
 	#cvillelogo {
 		display: block;
+		position: fixed;
+		z-index: 400;
+		top: 0;
+		margin-top: 9px;
 	}
 
 	li.menu-item {
@@ -2407,6 +2424,7 @@ MAIN ARTICLE RESPONSIVENESS
 @media screen and (max-width: 458px) {
 	.entry-image-hero {
 		width: 100%;
+		margin-top: 80px;
 	}
 
 	.entry-header-hero {
