@@ -560,7 +560,7 @@ nav a.selected:link, a.selected:active {
 .main-navigation li{
 	display: inline-block;
 	position: relative;
-	padding: 0px 15px;
+	padding: 0px 17px;
 	vertical-align: middle;
 }
 
@@ -666,7 +666,7 @@ nav a.selected:link, a.selected:active {
 }
 
 a.menu-image-title-after {
-	font-size: 2vw;
+	font-size: 1.5vw;
 }
 
 #menu-item-24,
@@ -722,6 +722,7 @@ form.search-form{
 	/*border: 1px solid blue;*/
 	position: relative;
 	vertical-align: middle;
+	padding-left: 5px;
 }
 
 .dropdown {
@@ -771,7 +772,7 @@ button#subscribebutton {
   	transition: opacity .3s,z-index .3s step-end,-webkit-transform .3s;
 	transition: opacity .3s,z-index .3s;
 	z-index: 4;
-
+	margin-left: 30%;
 }
 
 
@@ -800,10 +801,9 @@ input.search-submit {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRFU1NT9fX1lJSUXl5e1dXVfn5+c3Nz6urqv7+/tLS0iYmJqampn5+fysrK39/faWlp////Vi4ZywAAABF0Uk5T/////////////////////wAlrZliAAABLklEQVR42rSWWRbDIAhFHeOUtN3/ags1zaA4cHrKZ8JFRHwoXkwTvwGP1Qo0bYObAPwiLmbNAHBWFBZlD9j0JxflDViIObNHG/Do8PRHTJk0TezAhv7qloK0JJEBh+F8+U/hopIELOWfiZUCDOZD1RADOQKA75oq4cvVkcT+OdHnqqpQCITWAjnWVgGQUWz12lJuGwGoaWgBKzRVBcCypgUkOAoWgBX/L0CmxN40u6xwcIJ1cOzWYDffp3axsQOyvdkXiH9FKRFwPRHYZUaXMgPLeiW7QhbDRciyLXJaKheCuLbiVoqx1DVRyH26yb0hsuoOFEPsoz+BVE0MRlZNjGZcRQyHYkmMp2hBTIzdkzCTc/pLqOnBrk7/yZdAOq/q5NPBH1f7x7fGP4C3AAMAQrhzX9zhcGsAAAAASUVORK5CYII=) center center no-repeat;
     background-size: contain;
     /*border: 1px solid blue;*/
-    height: 40px;
-<<<<<<< HEAD
-=======
->>>>>>> ce434bcb2589f7aaaaab7fe60dc9333bc08fa3e7
+    height: 30px;
+    margin-right: -50px;
+    margin-top: 5px;
 }
 
 input.search-field {
@@ -812,6 +812,7 @@ input.search-field {
   	outline: none;
   	border: none;
   	right: 0px;
+  	margin-left: 10%;
   	display: inline-block;
   	position: absolute;
   	z-index: 30;
@@ -819,6 +820,7 @@ input.search-field {
   	padding-right: 80px;
   	height: 110%;
   	transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  	margin-right: -50px;
 }
 
 input.search-field:focus:hover {
@@ -2749,14 +2751,15 @@ CATEGORY PAGE
 	display: none;
 }
 
-.sidebarE {
-	display: none;
-}
 
 .entry-content {
 	display: block;
 	max-width: 80%;
 	margin: 0 auto;
+}
+
+#secondary {
+	display: none;
 }
 
 

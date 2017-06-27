@@ -60,6 +60,7 @@
 				);
 			?></div>
 			<div id="nav-section-2" class="nav-section">
+				<?php get_search_form(); ?>
 				<div class="dropdown">
 					<button type="button" id="subscribebutton">Subscribe</button>
 					<div class="offset"></div>
@@ -72,8 +73,7 @@
   					</div>
  				</div>
 
-				<?php get_search_form(); ?>
-
+				
  			 </div>
 			</div>
 		</nav><!-- #site-navigation -->
