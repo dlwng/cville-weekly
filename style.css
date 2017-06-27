@@ -2958,6 +2958,10 @@ CATEGORY PAGE
 .navigation {
 	display: none;
 }
+
+.attachment-150x150 {
+	width: auto;
+}
 /*=======
 ## Single
 --------------------------------------------------------------*/
@@ -3141,5 +3145,7 @@ ol.comment-list {
 }
 
 }
+
+
 
 
