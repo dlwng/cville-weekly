@@ -2747,5 +2747,40 @@ CATEGORY PAGE
 }
 
 /*--------------------------------------------------------------
-## Events Styles
+## Individual Event Styles ("So Stylish")
 --------------------------------------------------------------*/
+
+.art-cont{
+	display:inline-block;
+	width:65%;
+	margin:0;
+	padding:0;
+}
+
+.EventImgA img{
+	width:100%;
+	max-height:450px;
+	z-index:-30px;
+}
+
+.article-head, .dateP, .locationP, .priceP{
+	text-align:center;
+	padding:0;
+	margin:0;
+}
+
+.inset-bocks{
+	z-index:30px;
+	border: 1px solid #B26300;
+	width:90%;
+	margin:0 auto;
+	position:relative;
+	top:-50px;
+	background-color:white;
+}
+
+@media screen and (max-width:1200px){
+	.art-cont{
+		width:100%;
+	}
+}
