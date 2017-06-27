@@ -51,14 +51,14 @@
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'cville-weekly' ); ?></button>
 			<div id="nav-background">
 			<div id="nav-section-1" class="nav-section">
-				<?php
-				wp_nav_menu( array(
+				<a href="<?php echo esc_url( $category_link ); ?>" class ="<?php echo esc_html( $categories[0]->name);?>color">
+				 <?php wp_nav_menu( array(
 
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
 				)
-				);
-			?></div>
+				); 
+			?></a></div>
 			<div id="nav-section-2" class="nav-section">
 				<?php get_search_form(); ?>
 				<div class="dropdown">
