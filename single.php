@@ -16,7 +16,7 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', get_post_format() );
 
-			the_post_navigation();
+
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			
@@ -27,7 +27,8 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<div class="relatedposts">
+<div class="relatedposts make660">
+	<div class="thumbnail-container">
 <h3>Related posts</h3>
 <?php
   $orig_post = $post;
@@ -51,9 +52,21 @@ get_header(); ?>
   ?>
    
   <div class="relatedthumb">
-    <a rel="external" href="<? the_permalink()?>"><?php the_post_thumbnail(array(660,335)); ?><br />
-    <?php the_title(); ?>
+    <a 	rel="external" 
+    	href="<? the_permalink()?>"
+    	class="<?php echo esc_html( $categories[0]->name);?> single-back <?php echo esc_html( $categories[0]->name);?>color">
+    	<?php
+            $categories = get_the_category();
+            $category_link = get_category_link($categories[0]->cat_ID);
+            $arrow = " >";
+            ?>
+	
+    	<?php the_post_thumbnail(array(660,335)); ?><br />
+    		<div class="box-header related single <?php echo esc_html( $categories[0]->name);?>color-border-related boxImg-<?php echo esc_html( $categories[0]->name);?>color" id="main-box-header" >
+    			<?php the_title(); ?>
+    		</div>
     </a>
+
   </div>
    
   <? }
@@ -61,6 +74,7 @@ get_header(); ?>
   $post = $orig_post;
   wp_reset_query();
   ?>
+  </div>
 </div>
 
 <?php
