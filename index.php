@@ -162,11 +162,6 @@ get_header(); ?>
 			endwhile;
 			?>
 			
-			<div class="center-button">
-				<a href="#archive.php">
-					<button type="button" class="morebutton">More Stories</button>
-				</a>
-			</div>
 
 			<?php
 			the_posts_navigation();
