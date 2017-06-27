@@ -16,10 +16,10 @@ get_header(); ?>
 
 	<div id="primary" class="content-area main-container">
 		<main id="content" class="site-main" role="main">
-
 			<?php 
 				// Check if there are any posts to display
 			if ( have_posts() ) : ?>
+
 
 			<header class="cat-header">
 				<h1 class="cat-title cat-page-title cat-title-<?php echo single_cat_title( "", true );?> <?php echo single_cat_title( "", true );?>color""><?php single_cat_title( "", true ); ?></h1>

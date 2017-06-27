@@ -1735,6 +1735,7 @@ body {
 	display: block;
 	max-width: 80%;
 	margin: 0 auto;
+	padding-top: 80px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2046,12 +2047,6 @@ END FOOTER
 /*--------------------------------------------------------------
 MAIN ARTICLE
 --------------------------------------------------------------*/
-
-.main-article {
-	margin-top: 60px;
-}
-
-
 .entry-mobile-hero {
 	display: none;
 }
@@ -2103,7 +2098,7 @@ MAIN ARTICLE
 }
 
 .main-article{
-	padding-top: 50px;
+	padding-top: 20px;
 }
 
 
@@ -2625,7 +2620,7 @@ CATEGORY MAIN ARTICLE BOXES
 /*--------------------------------------------------------------
 HOME PAGE MORE/RECENT STORIES SECTION
 --------------------------------------------------------------*/
-button.morebutton {
+.morebutton {
 	background-color: #CCF2FF;
 	border: 1px solid #3AA8DE;
 	-moz-border-radius: 30px;
@@ -2639,17 +2634,26 @@ button.morebutton {
 }
 
 
-button.morebutton:hover {
+.morebutton:hover {
   	opacity: .7;
+  	text-decoration: none;
 }
 
 .center-button {
 	text-align: center;
+	margin: 40px;
+	margin-top: 70px;
 }
 
-button {
+.center-button a{
 	font-family: 'Karla', sans-serif;
 }
+
+.center-button a {
+	height: 36px;
+}
+
+
 
 
 /*--------------------------------------------------------------
@@ -3136,7 +3140,6 @@ ol.comment-list {
 	
 }
 
->>>>>>> navbar
 }
 
 
