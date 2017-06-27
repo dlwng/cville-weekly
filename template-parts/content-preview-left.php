@@ -34,7 +34,6 @@
 					//endif;?>
 				</a>
 			</div>
-
 			<header class="entry-header-left grid__col--1-of-2">
 				<?php
 				if ( is_singular() ) :
@@ -99,5 +98,4 @@
 			</header><!-- .entry-header -->
 		</div>
 	</article><!-- #post-<?php the_ID(); ?> -->
-
 

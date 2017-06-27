@@ -407,7 +407,7 @@ dd {
 
 img {
 	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+	width: 100%; /* Adhere to container width. */
 }
 
 figure {
@@ -2650,7 +2650,7 @@ CATEGORY PAGE
 }
 
 
-.locationP, .priceP{
+.locationP, .priceP {
 	padding-top:6px;
 }
 
@@ -2748,13 +2748,20 @@ CATEGORY PAGE
 /*--------------------------------------------------------------
 ## Single
 --------------------------------------------------------------*/
-/*.single-back {
+.single-back {
 	display: block;
+	text-align: left;
+	margin: 10px 0px 10px 0px ;
 }
 
-.singlediv {
+.make660 {
+	width: 660px;
+}
+
+.singlediv, .make660 {
 	text-align: center;
-	margin: 0 100px;
+	margin: 0 auto;
+	width: 660px;
 }
 
 header.entry-header-single {
@@ -2762,11 +2769,12 @@ header.entry-header-single {
 }
 
 .entry-content {
-	margin-top: 80px;
+	margin-top: 0px;
+	text-align: left;
 }
 
 .box-header.single {
-	width: 40%;
+	width: 80%;
 	height: auto;
 	margin: 0 auto;
 	display: block;
@@ -2775,7 +2783,81 @@ header.entry-header-single {
 }
 
 .box-title-single h2 {
-	font-size: 3vw;
-	line-height: 1em;
+	font-size: 2.2vw;
+	line-height: 1.4em;
+	margin: 20px;
 }
-*/
+
+.entry-content.single-img-Newscolor {
+	border-bottom: 2px solid #486885;
+}
+
+.entry-content.single-img-Artscolor {
+	border-bottom: 2px solid #8F2682;
+}
+
+.entry-content.single-img-Livingcolor {
+	border-bottom: 2px solid #8C9141;
+}
+
+
+.Newscolor-border {
+	border: 1px solid #486885;
+}
+
+.Artscolor-border {
+	border: 1px solid #8F2682;
+}
+
+.Eventscolor-border {
+	border: 1px solid #486885;
+}
+
+.Livingcolor-border {
+	border: 4px solid #8C9141;
+}
+
+.nav-previous {
+	text-align: left;
+}
+
+ol.comment-list {
+	padding: 0;
+	margin: 0;
+}
+
+.relatedposts {
+	width: 660px; 
+	margin: 0 auto; 
+	font-size: 12px;
+	display: block;
+}
+
+.relatedposts h3 {
+	font-size: 20px; 
+	margin: 0 0 5px 0; 
+}
+
+.relatedthumb {
+	margin: 0 1px 0 1px; 
+	float: left; 
+}
+
+.relatedthumb img {
+	margin: 0 0 3px 0; 
+	padding: 0;
+}
+.relatedthumb a {
+	color :#333; 
+	text-decoration: none; 
+	display:block; 
+	padding: 4px; 
+	width: 150px;
+}
+
+.relatedthumb a:hover {
+	background-color: #ddd; 
+	color: #000;
+}
+
+

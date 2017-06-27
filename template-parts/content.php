@@ -18,13 +18,16 @@
 	<div class="thebackbutton">
 		<a
 			href="<?php echo esc_url( $category_link ); ?>" 
-			class ="<?php echo esc_html( $categories[0]->name);?> single-back" >
+			class ="<?php echo esc_html( $categories[0]->name);?> single-back <?php echo esc_html( $categories[0]->name);?>color"" >
 				<?php echo esc_html( $categories[0]->name);
 			 	?>
 		</a>
-		<?php 
-			the_post_thumbnail();
-		?>
+
+		<div class="<?php echo esc_html( $categories[0]->name);?>color-border">
+			<?php 
+				the_post_thumbnail();
+			?>
+		</div>
 	</div>
 
 	
@@ -58,7 +61,7 @@
 	        </div>
     </header>
 
-	<div class="entry-content">
+	<div class="entry-content single-img-<?php echo esc_html( $categories[0]->name);?>color"">
 		<?php
 			the_content( sprintf(
 				wp_kses(
@@ -80,8 +83,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php cville_weekly_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	
+	<!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
 </div>
