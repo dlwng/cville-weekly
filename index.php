@@ -163,8 +163,11 @@ get_header(); ?>
 			?>
 			
 			<div class="center-button">
-				<button onclick="/news" type="button" class="morebutton">More Stories</button>
+				<!-- <button onclick="/news" type="button" class="morebutton">More Stories</button> -->
+				<a href="cville-weekly/recent" type="button" class="morebutton">More Stories</a>
 			</div>
+
+
 
 			<?php
 
