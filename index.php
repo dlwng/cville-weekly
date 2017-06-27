@@ -162,9 +162,6 @@ get_header(); ?>
 			endwhile;
 			?>
 			
-			<div class="center-button">
-				<button type="button" class="morebutton">More Stories</button>
-			</div>
 
 			<?php
 			the_posts_navigation();
