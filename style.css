@@ -539,8 +539,10 @@ nav a.selected:link, a.selected:active {
 ## NAVBAR
 --------------------------------------------------------------*/
 #site-navigation {
-	position: relative;
+	position: fixed;
+	z-index: 400;
 }
+
 .main-navigation {
 	clear: both;
 	display: block;
@@ -2024,6 +2026,10 @@ END FOOTER
 /*--------------------------------------------------------------
 MAIN ARTICLE
 --------------------------------------------------------------*/
+.main-article {
+	margin-top: 60px;
+}
+
 .entry-mobile-hero {
 	display: none;
 }
@@ -2756,6 +2762,7 @@ CATEGORY PAGE
 	display: block;
 	max-width: 80%;
 	margin: 0 auto;
+	margin-top: 60px;
 }
 
 #secondary {
