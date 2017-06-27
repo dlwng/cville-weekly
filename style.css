@@ -2600,6 +2600,10 @@ CATEGORY MAIN ARTICLE BOXES
 	    border: 2px solid #486885;
 	}
 
+	.post {
+		margin-top: -100px;
+	}
+
 }
 
 @media screen and (max-width: 425px) {
@@ -3011,19 +3015,19 @@ header.entry-header-single {
 
 
 .Newscolor-border {
-	border: 4px solid #486885;
+	border: 2px solid #486885;
 }
 
 .Artscolor-border {
-	border: 4px solid #8F2682;
+	border: 2px solid #8F2682;
 }
 
 .Eventscolor-border {
-	border: 4px solid #486885;
+	border: 2px solid #486885;
 }
 
 .Livingcolor-border {
-	border: 4px solid #8C9141;
+	border: 2px solid #8C9141;
 }
 
 .nav-previous {
@@ -3077,20 +3081,21 @@ ol.comment-list {
 }
 
 .Newscolor-border-related {
-	border: 3px solid #486885;
+	border: 2px solid #486885;
 }
 
 .Artscolor-border-related {
-	border: 3px solid #8F2682;
+	border: 2px solid #8F2682;
 }
 
 .Eventscolor-border-related {
-	border: 3px solid #486885;
+	border: 2px solid #486885;
 }
 
 .Livingcolor-border-related {
-	border: 3px solid #8C9141;
+	border: 2px solid #8C9141;
 }
+
 /*--------------------------------------------------------------
 ## ARTICLE RESPONSIVENESS
 --------------------------------------------------------------*/
@@ -3141,5 +3146,13 @@ ol.comment-list {
 }
 
 }
+
+
+
+
+
+
+
+
 
 
