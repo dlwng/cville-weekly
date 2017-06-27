@@ -2737,3 +2737,26 @@ CATEGORY PAGE
 		padding-top:1px;
 	}
 }
+
+/*--------------------------------------------------------------
+## Recent Articles Page
+--------------------------------------------------------------*/
+.alm-btn-wrap {
+	
+}
+
+.entry-footer {
+	display: none;
+}
+
+.sidebarE {
+	display: none;
+}
+
+.entry-content {
+	display: block;
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+

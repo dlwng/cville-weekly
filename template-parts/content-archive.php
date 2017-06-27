@@ -38,11 +38,11 @@ get_header(); ?>
                 get_template_part( 'template-parts/content-preview-left', get_post_format() );
             endwhile; 
 
-        else: ?>
-            <p>Sorry, no posts matched your criteria.</p>
+        else: 
+            get_template_part( 'template-parts/content-preview-left', get_post_format() );
 
 
-        <?php endif; ?> 
+        endif; ?> 
 
 
 

@@ -43,7 +43,7 @@ get_header(); ?>
 
 
 			while ( have_posts() ) : the_post();
-				get_template_part( 'template-parts/content-archive', get_post_format() );
+				get_template_part( 'template-parts/content-preview-left', get_post_format() );
 			endwhile;
 
 			$mainarticle = new WP_Query( array (
@@ -51,7 +51,7 @@ get_header(); ?>
 			));
 
 			while ( $mainarticle -> have_posts() ) : $mainarticle -> the_post();
-				get_template_part( 'template-parts/content-archive', get_post_format() );
+				get_template_part( 'template-parts/content-preview-left', get_post_format() );
 			endwhile;
 			
 			/* Start the Loop */
