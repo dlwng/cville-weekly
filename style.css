@@ -42,6 +42,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Single
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -406,7 +407,7 @@ dd {
 
 img {
 	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+	width: 100%; /* Adhere to container width. */
 }
 
 figure {
@@ -669,6 +670,7 @@ nav a.selected:link, a.selected:active {
 
 a.menu-image-title-after {
 	font-size: 1.5vw;
+
 }
 
 
@@ -730,6 +732,11 @@ form.search-form{
     text-align: left;
     /*border: 1px solid blue;*/
     vertical-align: middle;
+    position: relative;
+}
+
+.dropdown.mobile {
+	position: relative;
 }
 
 
@@ -745,6 +752,12 @@ span.screen-reader-text {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
+    text-align: center;
+}
+
+input {
+	display: block;
+	margin: 0 auto;
 }
 
 .dropdown:hover {
@@ -803,6 +816,7 @@ input.search-submit {
     height: 30px;
     margin-right: -50px;
     margin-top: 5px;
+
 }
 
 input.search-field {
@@ -925,14 +939,6 @@ input.search-field:focus {
 /*--------------------------------------------------------------
 NAVBAR RESPONSIVENESS
 --------------------------------------------------------------*/
-
-@media screen and (max-width: 1270px) {
-
-}
-
-@media screen and (max-width: 1150px) {
-
-}
 
 @media screen and (max-width: 934px) {
 	input.search-field {
@@ -2023,9 +2029,11 @@ END FOOTER
 /*--------------------------------------------------------------
 MAIN ARTICLE
 --------------------------------------------------------------*/
+
 .main-article {
 	margin-top: 60px;
 }
+
 
 .entry-mobile-hero {
 	display: none;
@@ -2291,6 +2299,7 @@ MAIN ARTICLE
     bottom: 0;
     left: 0%;
     border-bottom: 3px solid #2D7E9E;
+
 }
 
 
@@ -2340,6 +2349,7 @@ MAIN ARTICLE RESPONSIVENESS
 		opacity: 1;
 	}
 
+
 	.entry-header-hero {
 		display: inline-block;
 		width: 50%;
@@ -2370,6 +2380,157 @@ MAIN ARTICLE RESPONSIVENESS
 	}
 
 }
+
+
+@media screen and (max-width: 560px) {
+	.entry-header-hero a {
+		font-size: 20px;
+	}
+
+	.entry-category-hero a {
+		font-size: 14px;
+	}
+
+}
+
+@media screen and (max-width: 509px) {
+	.entry-header-hero a {
+		font-size: 18px;
+	}
+
+	.entry-category-hero a {
+		font-size: 12px;
+	}
+
+}
+
+@media screen and (max-width: 458px) {
+	.entry-image-hero {
+		width: 100%;
+	}
+
+	.entry-header-hero {
+		width: 80%;
+		z-index: 20;
+		margin-top: -12%;
+		margin-left: 10%;
+		background-color: white;
+		padding: 10px;
+	}
+
+	.entry-category-hero {
+		text-align: center;
+		padding-right: 12%;
+	}
+
+	.img-Artscolor-hero {
+    	border: 2px solid #8F2682;
+	}
+	.img-Livingcolor-hero {
+	    border: 2px solid #8C9141;
+	}
+	.img-Eventscolor-hero {
+	    border: 2px solid #B26300;
+	}
+	.img-Newscolor-hero {
+	    border: 2px solid #486885;
+	}
+
+	.img-Artscolor-hero {
+    	border: none;
+	}
+	.img-Livingcolor-hero {
+	    border: none;
+	}
+	.img-Eventscolor-hero {
+	    border: none;
+	}
+	.img-Newscolor-hero {
+	    border: none;
+	}
+
+}
+
+@media screen and (max-width: 425px) {
+	.entry-header-hero a {
+		font-size: 16px;
+	}
+
+	.entry-category-hero a {
+		font-size: 12px;
+	}
+
+	.entry-header-hero {
+		text-align: center;
+		padding-right: 5%;
+	}
+}
+
+/*--------------------------------------------------------------
+HOME PAGE MORE/RECENT STORIES SECTION
+--------------------------------------------------------------*/
+button.morebutton {
+	background-color: #CCF2FF;
+	border: 1px solid #3AA8DE;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	cursor: pointer;
+	font-weight: 800;
+	padding: 5px 20px;
+	box-shadow: 3px 3px #3AA8DE;
+	margin: 10px;
+}
+
+
+button.morebutton:hover {
+  	opacity: .7;
+}
+
+.center-button {
+	text-align: center;
+}
+
+button {
+	font-family: 'Karla', sans-serif;
+}
+
+
+/*--------------------------------------------------------------
+CATEGORY MAIN ARTICLE BOXES
+--------------------------------------------------------------*/
+.main-three-boxes {
+	display: inline-block;
+	text-align: center;
+	padding-right: 10px;
+	padding-bottom: 6%;
+}
+
+.box-header {
+/*	height: 100px;
+	width: 260px;*/
+	position: relative;
+	width: 80%;
+	margin-left: 10%;
+	margin-top: -10%;
+	z-index: 100;
+	background-color: white;
+	padding: 10px;
+}
+
+.box-header a {
+	font-size: 14px;
+}
+
+.box-header h2 {
+	line-height: 50%;
+}
+
+/*.box-title {
+	width: 100%;
+	position: absolute;
+	padding: 10px;
+}*/
 
 
 @media screen and (max-width: 560px) {
@@ -2651,6 +2812,7 @@ CATEGORY PAGE
 }
 
 
+
 .locationP, .priceP{
 	padding-top:6px;
 }
@@ -2742,11 +2904,13 @@ CATEGORY PAGE
 	}
 
 	.locationP, .priceP{
-		padding-top:1px;
+		padding-top: 1px;
+
 	}
 }
 
 /*--------------------------------------------------------------
+<<<<<<< HEAD
 ## Recent Articles Page
 --------------------------------------------------------------*/
 .alm-btn-wrap {
@@ -2771,6 +2935,189 @@ CATEGORY PAGE
 
 .navigation {
 	display: none;
+=======
+## Single
+--------------------------------------------------------------*/
+.single-back {
+	display: block;
+	text-align: left;
+	margin: 10px 0px 10px 0px ;
+}
+
+.singlediv, .make660 {
+	text-align: center;
+	margin: 0 auto;
+	width: 660px;
+}
+
+header.entry-header-single {
+	margin-top: 40px;
+}
+
+.entry-content {
+	margin-top: 0px;
+	text-align: left;
+}
+
+.box-header.single {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+	top: -30px;
+	font-size: 4vw;
+}
+
+.box-title-single h2 {
+	font-size: 2.2vw;
+	line-height: 1.4em;
+	margin: 20px;
+}
+
+.entry-content.single-img-Newscolor {
+	border-bottom: 2px solid #486885;
+}
+
+.entry-content.single-img-Artscolor {
+	border-bottom: 2px solid #8F2682;
+}
+
+.entry-content.single-img-Livingcolor {
+	border-bottom: 2px solid #8C9141;
+}
+
+
+.Newscolor-border {
+	border: 4px solid #486885;
+}
+
+.Artscolor-border {
+	border: 4px solid #8F2682;
+}
+
+.Eventscolor-border {
+	border: 4px solid #486885;
+}
+
+.Livingcolor-border {
+	border: 4px solid #8C9141;
+}
+
+.nav-previous {
+	text-align: left;
+}
+
+ol.comment-list {
+	padding: 0;
+	margin: 0;
+}
+
+.relatedposts {
+	width: 660px; 
+	margin: 0 auto; 
+	font-size: 12px;
+	display: block;
+}
+
+.relatedposts h3 {
+	font-size: 20px; 
+	margin: 0 0 5px 0; 
+}
+
+.relatedthumb {
+	margin: 0 1px 0 1px; 
+	float: left; 
+}
+
+.relatedthumb img {
+	margin: 0 0 3px 0; 
+	padding: 0;
+}
+.relatedthumb a {
+	color :#333; 
+	text-decoration: none; 
+	display: block; 
+	padding: 4px; 
+	width: 200px;
+
+}
+
+.relatedthumb a:hover {
+	background-color: #ddd; 
+	color: #000;
+}
+
+
+.box-header.related {
+	font-size: 13px;
+	text-align: center;
+}
+
+.Newscolor-border-related {
+	border: 3px solid #486885;
+}
+
+.Artscolor-border-related {
+	border: 3px solid #8F2682;
+}
+
+.Eventscolor-border-related {
+	border: 3px solid #486885;
+}
+
+.Livingcolor-border-related {
+	border: 3px solid #8C9141;
+}
+/*--------------------------------------------------------------
+## ARTICLE RESPONSIVENESS
+--------------------------------------------------------------*/
+@media screen and (max-width: 700px) {
+
+.singlediv, .make660 {
+
+	width: 95%;
+}
+
+.relatedthumb a{
+	width: 240px;
+	
+}
+
+.relatedposts {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.single-back {
+	margin: 10px;
+	float: none;
+
+}
+
+.thumbnail-container {
+	margin: 0 auto;
+}
+}
+
+@media screen and (max-width: 552px) {
+
+.single-back {
+	margin: 0 auto;	
+}
+
+.relatedthumb {
+	margin: 0 auto;
+	float: none;
+	width: 80%;
+}
+
+
+.relatedthumb a{
+	width: 100%;
+	
+}
+
+>>>>>>> navbar
 }
 
 

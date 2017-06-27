@@ -57,8 +57,10 @@
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
 				)
-				); 
-			?></a></div>
+
+				);
+			?></div>
+
 			<div id="nav-section-2" class="nav-section">
 				<?php get_search_form(); ?>
 				<div class="dropdown">
@@ -72,8 +74,6 @@
   						</form>
   					</div>
  				</div>
-
-				
  			 </div>
 			</div>
 		</nav><!-- #site-navigation -->

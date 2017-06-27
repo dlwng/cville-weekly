@@ -19,3 +19,4 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	<?php get_template_part( 'template-parts/content-advert-block', get_post_format() );?>
 	<?php get_template_part( 'template-parts/content-advert-block', get_post_format() );?>
 </aside><!-- #secondary -->
+

@@ -163,10 +163,12 @@ get_header(); ?>
 			?>
 			
 			<div class="center-button">
+			
 				<button onclick="/news" type="button" class="morebutton">More Stories</button>
 			</div>
 
 			<?php
+
 
 		else :
 
