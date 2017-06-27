@@ -2779,6 +2779,17 @@ CATEGORY PAGE
 	background-color:white;
 }
 
+.realbuttonhours{
+	text-align:center;
+}
+.realbuttonhours a{
+	z-index:-7000px;
+}
+
+.BuyTickets{
+	z-index:800;
+}
+
 @media screen and (max-width:1200px){
 	.art-cont{
 		width:100%;

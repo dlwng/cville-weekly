@@ -69,9 +69,9 @@
 			) );
 		?>
       <div class="center-button">
-            <button type="button" class="morebutton">
-               <a href="<?php esc_html($tickets); ?>">Buy Tickets</a>
-            </button>
+				<button class="morebutton realbuttonhours">
+						<?php echo $tickets; ?>
+				</button>
       </div>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
