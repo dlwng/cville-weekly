@@ -33,6 +33,7 @@ get_header(); ?>
 <div class="relatedposts make660">
 	<div class="thumbnail-container">
 <h3>Related posts</h3>
+<div class="related-container">
 <?php
   $orig_post = $post;
   global $post;
@@ -44,7 +45,7 @@ get_header(); ?>
   $args=array(
   'tag__in' => $tag_ids,
   'post__not_in' => array($post->ID),
-  'posts_per_page'=>4, // Number of related posts to display.
+  'posts_per_page'=>3, // Number of related posts to display.
   'caller_get_posts'=>1
   );?>
 
@@ -78,6 +79,7 @@ get_header(); ?>
   $post = $orig_post;
   wp_reset_query();
   ?>
+  </div>
   </div>
 </div>
 

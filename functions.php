@@ -144,4 +144,19 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 
-
+add_action( 'init', 'update_my_custom_type', 99 );
+ 
+/**
+ * update_my_custom_type
+ *
+ * @author  Joe Sexton <joe@webtipblog.com>
+ */
+function update_my_custom_type() {
+	global $wp_post_types;
+ 
+	if ( post_type_exists( 'event' ) ) {
+ 
+		// exclude from search results
+		$wp_post_types['event']->exclude_from_search = true;
+	}
+}

@@ -1861,6 +1861,7 @@ footer {
 	margin-left: 18.5%;
 	padding-bottom: 2%;
 	padding-top: 1%;
+
 }
 
 .grid__col--1-of-3 p {
@@ -3092,6 +3093,11 @@ ol.comment-list {
 	border: 2px solid #8C9141;
 }
 
+.related-container {
+	margin: 0 auto;
+	width: 95%;
+}
+
 /*--------------------------------------------------------------
 ## ARTICLE RESPONSIVENESS
 --------------------------------------------------------------*/
@@ -3143,11 +3149,16 @@ ol.comment-list {
 
 }
 
+/*--------------------------------------------------------------
+SEARCH
+--------------------------------------------------------------*/
+.sorry-bro {
+	text-align: center;
 
-
-
-
-
+}
+.no-search {
+	height: 60vh;
+}
 
 
 

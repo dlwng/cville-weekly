@@ -36,10 +36,17 @@ get_header(); ?>
 			endwhile;
 
 
-		else :
+		else :?>
+			<div class="no-search">
+			<h2 class="page-title"><?php
+					/* translators: %s: search query. */
+				printf( esc_html__( 'Search Results for: %s', 'cville-weekly' ), '<span>' . get_search_query() . '</span>' );
+				?></h2>
 
-			get_template_part( 'template-parts/search-list', 'none' );
+			<h2 class="sorry-bro">Sorry, we didn't find any results for '<?php printf( esc_html__( '%s', 'cville-weekly' ), '<span>' . get_search_query() . '</span>'); ?>' :( </h2>
+			</div>
 
+		<?php
 		endif; ?>
 
 		</main><!-- #main -->
