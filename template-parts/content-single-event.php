@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" class="art-cont" <?php post_class(); ?>>
 
 	<div class="entry-content event-content">
 
@@ -20,15 +20,34 @@
    //	$date = strtotime($date);
       $price = types_render_field( "price" , array( ) );
       $tickets = types_render_field( "tickets", array( ) );
-      $eventImg=the_post_thumbnail( array(600,400));
+		$idNum=get_the_ID();
+      ?>
 
+
+      <p class="returnButton" onClick="history.go(-1);return true;"><a >< Return to Event Listing</a></p>
+      <div class="EventImgA">
+         <?php $eventImg=the_post_thumbnail( array(600,400)); ?>
+      </div>
+
+      <?php
       if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+         ?>
+         <div class="inset-bocks">
+         <?php
+			the_title( '<h1 class="entry-title article-head titleP">', '</h1>' );
+         ?>
+         <h2 class="dateP"><?php echo $date; ?></h2>
+         <p class="locationP"><?php echo $location; ?></p>
+         <p class="priceP"><?php echo $price; ?></p>
+         </div>
+         <?php
+
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
+
 			<?php cville_weekly_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
@@ -53,8 +72,4 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php cville_weekly_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -2824,6 +2824,8 @@ CATEGORY PAGE
 
 }
 
+
+
 .titleBlockP{
 	vertical-align:top;
 	margin-left:30px;
@@ -2928,7 +2930,6 @@ CATEGORY PAGE
 }
 
 /*--------------------------------------------------------------
-<<<<<<< HEAD
 ## Recent Articles Page
 --------------------------------------------------------------*/
 .alm-btn-wrap {
@@ -2948,7 +2949,7 @@ CATEGORY PAGE
 }
 
 #secondary {
-	display: none;
+	/*display: none;*/
 }
 
 .navigation {
@@ -3139,5 +3140,44 @@ ol.comment-list {
 	width: 100%;
 
 }
+}
+/*--------------------------------------------------------------
+## Individual Event Styles ("So Stylish")
+--------------------------------------------------------------*/
+
+.art-cont{
+	display:inline-block;
+	width:65%;
+	margin:0;
+	padding:0;
+}
+
+.EventImgA img{
+	width:100%;
+	max-height:450px;
+	z-index:-30px;
+}
+
+.article-head, .dateP, .locationP, .priceP{
+	padding:0;
+	margin:0;
+}
+
+.inset-bocks{
+	text-align:center;
+	z-index:30px;
+	border: 1px solid #B26300;
+	width:90%;
+	margin:0 auto;
+	position:relative;
+	top:-50px;
+	background-color:white;
+}
+
+
+@media screen and (max-width:1200px){
+	.art-cont{
+		width:100%;
+	}
 
 }

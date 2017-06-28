@@ -32,3 +32,8 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+
+
+
+var buttonId = document.getElementById("realbuttonhours");
+buttonId.innerHTML ="Buy Tickets";

@@ -24,6 +24,7 @@
                   $tickets = types_render_field( "tickets", array( ) );
                   //$content = the_content();
                   //$bannerImg = the_post_thumbnail();
+						$idNum=get_the_ID();
 					?>
 					<div class="eventList">
 						<div class=imgAndTitleP>
@@ -37,7 +38,7 @@
 		                  <p class="locationP"><?php echo $location; ?></p>
 		                  <p class="priceP"><?php echo $price; ?></p>
 		               </div>
-							<p class="moreInfo">More Info ></p>
+							<p class="moreInfo"><a href=<?php echo get_permalink($idNum); ?>>More Info ></a> </p>
 		            </div>
 					</div>
 
