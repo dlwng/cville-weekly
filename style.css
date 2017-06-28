@@ -42,6 +42,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Single
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -406,7 +407,7 @@ dd {
 
 img {
 	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+	width: 100%; /* Adhere to container width. */
 }
 
 figure {
@@ -539,8 +540,10 @@ nav a.selected:link, a.selected:active {
 ## NAVBAR
 --------------------------------------------------------------*/
 #site-navigation {
-	position: relative;
+	position: fixed;
+	z-index: 400;
 }
+
 .main-navigation {
 	clear: both;
 	display: block;
@@ -560,7 +563,7 @@ nav a.selected:link, a.selected:active {
 .main-navigation li{
 	display: inline-block;
 	position: relative;
-	padding: 0px 15px;
+	padding: 0px 17px;
 	vertical-align: middle;
 }
 
@@ -656,24 +659,22 @@ nav a.selected:link, a.selected:active {
 	width: 50%;
 }
 
-#menu-item-23 {
+.menu-item-type-custom {
 	width: 13vw;
 	vertical-align: middle;
 }
 
-#menu-item-23 img {
+.menu-item-type-custom img {
 	width: 100% !important;
 }
 
 a.menu-image-title-after {
-	font-size: 2vw;
+	font-size: 1.5vw;
+
 }
 
-#menu-item-24,
-#menu-item-32,
-#menu-item-33,
-#menu-item-34,
-#menu-item-35{
+
+.menu-item-type-post{
 	margin-bottom: -8px;
 }
 
@@ -722,6 +723,7 @@ form.search-form{
 	/*border: 1px solid blue;*/
 	position: relative;
 	vertical-align: middle;
+	padding-left: 5px;
 }
 
 .dropdown {
@@ -730,6 +732,11 @@ form.search-form{
     text-align: left;
     /*border: 1px solid blue;*/
     vertical-align: middle;
+    position: relative;
+}
+
+.dropdown.mobile {
+	position: relative;
 }
 
 
@@ -745,6 +752,12 @@ span.screen-reader-text {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
+    text-align: center;
+}
+
+input {
+	display: block;
+	margin: 0 auto;
 }
 
 .dropdown:hover {
@@ -771,7 +784,7 @@ button#subscribebutton {
   	transition: opacity .3s,z-index .3s step-end,-webkit-transform .3s;
 	transition: opacity .3s,z-index .3s;
 	z-index: 4;
-
+	margin-left: 30%;
 }
 
 
@@ -800,10 +813,10 @@ input.search-submit {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRFU1NT9fX1lJSUXl5e1dXVfn5+c3Nz6urqv7+/tLS0iYmJqampn5+fysrK39/faWlp////Vi4ZywAAABF0Uk5T/////////////////////wAlrZliAAABLklEQVR42rSWWRbDIAhFHeOUtN3/ags1zaA4cHrKZ8JFRHwoXkwTvwGP1Qo0bYObAPwiLmbNAHBWFBZlD9j0JxflDViIObNHG/Do8PRHTJk0TezAhv7qloK0JJEBh+F8+U/hopIELOWfiZUCDOZD1RADOQKA75oq4cvVkcT+OdHnqqpQCITWAjnWVgGQUWz12lJuGwGoaWgBKzRVBcCypgUkOAoWgBX/L0CmxN40u6xwcIJ1cOzWYDffp3axsQOyvdkXiH9FKRFwPRHYZUaXMgPLeiW7QhbDRciyLXJaKheCuLbiVoqx1DVRyH26yb0hsuoOFEPsoz+BVE0MRlZNjGZcRQyHYkmMp2hBTIzdkzCTc/pLqOnBrk7/yZdAOq/q5NPBH1f7x7fGP4C3AAMAQrhzX9zhcGsAAAAASUVORK5CYII=) center center no-repeat;
     background-size: contain;
     /*border: 1px solid blue;*/
-    height: 40px;
-<<<<<<< HEAD
-=======
->>>>>>> ce434bcb2589f7aaaaab7fe60dc9333bc08fa3e7
+    height: 30px;
+    margin-right: -50px;
+    margin-top: 5px;
+
 }
 
 input.search-field {
@@ -812,6 +825,7 @@ input.search-field {
   	outline: none;
   	border: none;
   	right: 0px;
+  	margin-left: 10%;
   	display: inline-block;
   	position: absolute;
   	z-index: 30;
@@ -819,6 +833,7 @@ input.search-field {
   	padding-right: 80px;
   	height: 110%;
   	transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  	margin-right: -50px;
 }
 
 input.search-field:focus:hover {
@@ -925,14 +940,6 @@ input.search-field:focus {
 NAVBAR RESPONSIVENESS
 --------------------------------------------------------------*/
 
-@media screen and (max-width: 1270px) {
-
-}
-
-@media screen and (max-width: 1150px) {
-
-}
-
 @media screen and (max-width: 934px) {
 	input.search-field {
 		padding-right: 40px;
@@ -965,7 +972,7 @@ NAVBAR RESPONSIVENESS
 		margin: 0 auto;
 	}
 
-	.main-navigation li.menu-item-23 {
+	.main-navigation li.menu-item-type-custom {
 		display: block;
 		margin: 0 auto;
 
@@ -990,7 +997,7 @@ NAVBAR RESPONSIVENESS
 
 	}
 
-	#menu-item-23 {
+	.menu-item-type-custom {
 		width: 80%;
 	}
 
@@ -1063,11 +1070,21 @@ NAVBAR RESPONSIVENESS
 }
 
 @media screen and (max-width: 600px) {
+	#site-navigation-mobile {
+		position: fixed;
+		top: 0;
+		z-index: 400;
+	}
+
 	#nav-background-mobile {
 		height: 70px;
 	}
 
 	#nav-section-2-mobile {
+		display: none;
+	}
+
+	#nav-section-1-mobile {
 		display: none;
 	}
 
@@ -1077,10 +1094,17 @@ NAVBAR RESPONSIVENESS
 
 	#hamburgercontainer {
 		display: block;
+		position: fixed;
+		z-index: 400;
+		top: 0;
 	}
 
 	#cvillelogo {
 		display: block;
+		position: fixed;
+		z-index: 400;
+		top: 0;
+		margin-top: 9px;
 	}
 
 	li.menu-item {
@@ -1711,6 +1735,7 @@ body {
 	display: block;
 	max-width: 80%;
 	margin: 0 auto;
+	padding-top: 80px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2036,6 +2061,7 @@ MAIN ARTICLE
 
 .entry-image-hero img {
 	height: 100%;
+	width: 100%;
 	display: block;
 }
 
@@ -2072,7 +2098,7 @@ MAIN ARTICLE
 }
 
 .main-article{
-	padding-top: 50px;
+	padding-top: 20px;
 }
 
 
@@ -2081,7 +2107,7 @@ MAIN ARTICLE
 --------------------------------------------------------------*/
 .post {
 	font-size: 0;
-	margin-bottom: 45px;
+	margin-bottom: 30px;
 }
 
 .entry-header-right {
@@ -2284,7 +2310,8 @@ MAIN ARTICLE
     height: 1px;
     bottom: 0;
     left: 0%;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #2D7E9E;
+
 }
 
 
@@ -2329,6 +2356,11 @@ MAIN ARTICLE RESPONSIVENESS
 		display: inline-block;
 		padding-top: 30px;
 	}
+
+	.entry-image-hero:hover {
+		opacity: 1;
+	}
+
 
 	.entry-header-hero {
 		display: inline-block;
@@ -2387,6 +2419,7 @@ MAIN ARTICLE RESPONSIVENESS
 @media screen and (max-width: 458px) {
 	.entry-image-hero {
 		width: 100%;
+		margin-top: 80px;
 	}
 
 	.entry-header-hero {
@@ -2414,6 +2447,19 @@ MAIN ARTICLE RESPONSIVENESS
 	}
 	.img-Newscolor-hero {
 	    border: 2px solid #486885;
+	}
+
+	.img-Artscolor-hero {
+    	border: none;
+	}
+	.img-Livingcolor-hero {
+	    border: none;
+	}
+	.img-Eventscolor-hero {
+	    border: none;
+	}
+	.img-Newscolor-hero {
+	    border: none;
 	}
 
 }
@@ -2499,6 +2545,152 @@ CATEGORY MAIN ARTICLE BOXES
 	padding: 10px;
 }*/
 
+
+@media screen and (max-width: 560px) {
+	.entry-header-hero a {
+		font-size: 20px;
+	}
+
+	.entry-category-hero a {
+		font-size: 14px;
+	}
+
+}
+
+@media screen and (max-width: 509px) {
+	.entry-header-hero a {
+		font-size: 18px;
+	}
+
+	.entry-category-hero a {
+		font-size: 12px;
+	}
+
+}
+
+@media screen and (max-width: 458px) {
+	.entry-image-hero {
+		width: 100%;
+	}
+
+	.entry-header-hero {
+		width: 80%;
+		z-index: 20;
+		margin-top: -12%;
+		margin-left: 10%;
+		background-color: white;
+		padding: 10px;
+	}
+
+	.entry-category-hero {
+		text-align: center;
+		padding-right: 12%;
+	}
+
+	.img-Artscolor-hero {
+    	border: 2px solid #8F2682;
+	}
+	.img-Livingcolor-hero {
+	    border: 2px solid #8C9141;
+	}
+	.img-Eventscolor-hero {
+	    border: 2px solid #B26300;
+	}
+	.img-Newscolor-hero {
+	    border: 2px solid #486885;
+	}
+
+}
+
+@media screen and (max-width: 425px) {
+	.entry-header-hero a {
+		font-size: 16px;
+	}
+
+	.entry-category-hero a {
+		font-size: 12px;
+	}
+
+	.entry-header-hero {
+		text-align: center;
+		padding-right: 5%;
+	}
+}
+
+/*--------------------------------------------------------------
+HOME PAGE MORE/RECENT STORIES SECTION
+--------------------------------------------------------------*/
+.morebutton {
+	background-color: #CCF2FF;
+	border: 1px solid #3AA8DE;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	cursor: pointer;
+	font-weight: 800;
+	padding: 5px 20px;
+	box-shadow: 3px 3px #3AA8DE;
+	margin: 10px;
+}
+
+
+.morebutton:hover {
+  	opacity: .7;
+  	text-decoration: none;
+}
+
+.center-button {
+	text-align: center;
+	margin: 40px;
+	margin-top: 70px;
+}
+
+.center-button a{
+	font-family: 'Karla', sans-serif;
+}
+
+.center-button a {
+	height: 36px;
+}
+
+
+
+
+/*--------------------------------------------------------------
+CATEGORY MAIN ARTICLE BOXES
+--------------------------------------------------------------*/
+.main-three-boxes {
+	display: inline-block;
+	text-align: center;
+	padding-bottom: 6%;
+}
+
+.box-header {
+/*	height: 100px;
+	width: 260px;*/
+	position: relative;
+	width: 80%;
+	margin-left: 4%;
+	margin-top: -10%;
+	z-index: 100;
+	background-color: white;
+	padding: 10px;
+}
+
+.box-header a {
+	font-size: 14px;
+}
+
+.box-header h2 {
+	line-height: 50%;
+}
+
+/*.box-title {
+	width: 100%;
+	position: absolute;
+	padding: 10px;
+}*/
+
 .box-category {
 /*	position: absolute;*/
 	margin-left: auto;
@@ -2517,6 +2709,9 @@ CATEGORY MAIN ARTICLE BOXES
 
 .box-image {
 	z-index: -20;
+	/*the margin lines below center the image boxes*/
+	margin-left: -3%;
+	margin-right: 8%;
 }
 
 .box-image img {
@@ -2551,23 +2746,7 @@ CATEGORY MAIN ARTICLE BOXES RESPONSIVESS
 	}
 }
 
-@media screen and (max-width: 758px) {
-	.box-header a {
-		font-size: 12px;
-	}
-}
-
-@media screen and (max-width: 700px) {
-	.main-three-boxes {
-		width: 32.5%;
-	}
-
-	.box-header a {
-		font-size: 11px;
-	}
-}
-
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 812px) {
 	.main-three-boxes {
 		display: none;
 	}
@@ -2649,6 +2828,7 @@ CATEGORY PAGE
 	vertical-align:top;
 	margin-left:30px;
 }
+
 
 
 .locationP, .priceP{
@@ -2742,10 +2922,222 @@ CATEGORY PAGE
 	}
 
 	.locationP, .priceP{
-		padding-top:1px;
+		padding-top: 1px;
+
 	}
 }
 
 /*--------------------------------------------------------------
-## Events Styles
+<<<<<<< HEAD
+## Recent Articles Page
 --------------------------------------------------------------*/
+.alm-btn-wrap {
+
+}
+
+.entry-footer {
+	display: none;
+}
+
+
+.entry-content {
+	display: block;
+	max-width: 80%;
+	margin: 0 auto;
+	margin-top: 60px;
+}
+
+#secondary {
+	display: none;
+}
+
+.navigation {
+	display: none;
+}
+
+.attachment-150x150 {
+	width: auto;
+}
+/*=======
+## Single
+--------------------------------------------------------------*/
+.single-back {
+	display: block;
+	text-align: left;
+	margin: 10px 0px 10px 0px ;
+}
+
+.singlediv, .make660 {
+	text-align: center;
+	margin: 0 auto;
+	width: 660px;
+}
+
+header.entry-header-single {
+	margin-top: 40px;
+}
+
+.entry-content {
+	margin-top: 0px;
+	text-align: left;
+}
+
+.box-header.single {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+	top: -30px;
+	font-size: 4vw;
+}
+
+.box-title-single h2 {
+	font-size: 2.2vw;
+	line-height: 1.4em;
+	margin: 20px;
+}
+
+.entry-content.single-img-Newscolor {
+	border-bottom: 2px solid #486885;
+}
+
+.entry-content.single-img-Artscolor {
+	border-bottom: 2px solid #8F2682;
+}
+
+.entry-content.single-img-Livingcolor {
+	border-bottom: 2px solid #8C9141;
+}
+
+
+.Newscolor-border {
+	border: 4px solid #486885;
+}
+
+.Artscolor-border {
+	border: 4px solid #8F2682;
+}
+
+.Eventscolor-border {
+	border: 4px solid #486885;
+}
+
+.Livingcolor-border {
+	border: 4px solid #8C9141;
+}
+
+.nav-previous {
+	text-align: left;
+}
+
+ol.comment-list {
+	padding: 0;
+	margin: 0;
+}
+
+.relatedposts {
+	width: 660px;
+	margin: 0 auto;
+	font-size: 12px;
+	display: block;
+}
+
+.relatedposts h3 {
+	font-size: 20px;
+	margin: 0 0 5px 0;
+}
+
+.relatedthumb {
+	margin: 0 1px 0 1px;
+	float: left;
+}
+
+.relatedthumb img {
+	margin: 0 0 3px 0;
+	padding: 0;
+}
+.relatedthumb a {
+	color :#333;
+	text-decoration: none;
+	display: block;
+	padding: 4px;
+	width: 200px;
+
+}
+
+.relatedthumb a:hover {
+	background-color: #ddd;
+	color: #000;
+}
+
+
+.box-header.related {
+	font-size: 13px;
+	text-align: center;
+}
+
+.Newscolor-border-related {
+	border: 3px solid #486885;
+}
+
+.Artscolor-border-related {
+	border: 3px solid #8F2682;
+}
+
+.Eventscolor-border-related {
+	border: 3px solid #486885;
+}
+
+.Livingcolor-border-related {
+	border: 3px solid #8C9141;
+}
+/*--------------------------------------------------------------
+## ARTICLE RESPONSIVENESS
+--------------------------------------------------------------*/
+@media screen and (max-width: 700px) {
+
+.singlediv, .make660 {
+
+	width: 95%;
+}
+
+.relatedthumb a{
+	width: 240px;
+
+}
+
+.relatedposts {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.single-back {
+	margin: 10px;
+	float: none;
+
+}
+
+.thumbnail-container {
+	margin: 0 auto;
+}
+}
+
+@media screen and (max-width: 552px) {
+
+.single-back {
+	margin: 0 auto;
+}
+
+.relatedthumb {
+	margin: 0 auto;
+	float: none;
+	width: 80%;
+}
+
+
+.relatedthumb a{
+	width: 100%;
+
+}
+
+}

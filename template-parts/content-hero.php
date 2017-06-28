@@ -17,9 +17,10 @@
         <div class="entry-hero main-article">
             <?php $categories = get_the_category(); ?>
             <div class="entry-image-hero grid__col--1-of-2 grid__col img-<?php echo esc_html( $categories[0]->name);?>color">
+                <a href="<?php echo esc_url( get_permalink() ); ?>">
                     <?php 
                       the_post_thumbnail();?>
-                
+                </a>
             </div>
             <header class="entry-header-hero grid__col--1-of-2 grid__col" id="main-article-header">
 
@@ -61,14 +62,15 @@
         </div>
         <div class="entry-mobile-hero">
             <div class="entry-image-hero grid__col--1-of-2 grid__col img-<?php echo esc_html( $categories[0]->name);?>color">
-                <?php
-                the_post_thumbnail();
-                //the_post_thumbnail();
-                //if ( has_post_thumbnail() ) {
-                //  the_post_thumbnail();
-                //}
-                //endif;?>
-                
+                <a href="<?php echo esc_url( get_permalink() ); ?>">
+                    <?php
+                    the_post_thumbnail();
+                    //the_post_thumbnail();
+                    //if ( has_post_thumbnail() ) {
+                    //  the_post_thumbnail();
+                    //}
+                    //endif;?>
+                </a> 
             </div>
             <header class="entry-header-hero grid__col--1-of-2 grid__col img-<?php echo esc_html( $categories[0]->name);?>color-hero">
                 <?php

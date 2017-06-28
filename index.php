@@ -157,17 +157,21 @@ get_header(); ?>
 
 			while ( $moreposts -> have_posts() ) : $moreposts -> the_post();
 
-				get_template_part( 'template-parts/content-preview-left', get_post_format() );
+				get_template_part( 'template-parts/content-preview-right', get_post_format() );
 
 			endwhile;
 			?>
 			
 			<div class="center-button">
-				<button type="button" class="morebutton">More Stories</button>
+				<!-- <button onclick="/news" type="button" class="morebutton">More Stories</button> -->
+				<a href="cville-weekly/recent" type="button" class="morebutton">More Stories</a>
+
 			</div>
 
+
+
 			<?php
-			the_posts_navigation();
+
 
 		else :
 

@@ -9,24 +9,59 @@
 
 ?>
 
+<?php $categories = get_the_category();
+			$category_link = get_category_link($categories[0]->cat_ID);
+			$arrow = " >"; ?>
+
+<div class="singlediv">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+	<div class="thebackbutton">
+		<a
+			href="<?php echo esc_url( $category_link ); ?>" 
+			class ="<?php echo esc_html( $categories[0]->name);?> single-back <?php echo esc_html( $categories[0]->name);?>color"" >
+				<?php echo esc_html( $categories[0]->name);
+			 	?>
+		</a>
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php cville_weekly_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
+		<div class="<?php echo esc_html( $categories[0]->name);?>color-border">
+			<?php 
+				the_post_thumbnail();
+			?>
+		</div>
+	</div>
 
-	<div class="entry-content">
+	
+	<!-- .entry-header -->
+
+	<header class="box-header single boxImg-<?php echo esc_html( $categories[0]->name);?>color"" id="main-box-header">
+        <div class="box-title-single">
+    	<?php
+            if ( is_singular() ) :
+                the_title( '<h2>', '</h2>' );
+            else :
+                the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+                ?>	
+        </div>			
+
+        <?php
+            $categories = get_the_category();
+            $category_link = get_category_link($categories[0]->cat_ID);
+            $arrow = " >";
+            ?>
+
+	        <div class="box-category">
+	            <a href="<?php echo esc_url( $category_link ); ?>" class ="<?php echo esc_html( $categories[0]->name);?>color">
+	            <?php
+	                if ( ! empty( $categories ) ) {
+	                    echo esc_html( $categories[0]->name);
+	                    echo $arrow;   
+	                }
+	            endif;?>
+	            </a>
+	        </div>
+    </header>
+
+	<div class="entry-content single-img-<?php echo esc_html( $categories[0]->name);?>color"">
 		<?php
 			the_content( sprintf(
 				wp_kses(
@@ -48,7 +83,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php cville_weekly_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	
+	<!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
+</div>
