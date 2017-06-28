@@ -2354,7 +2354,7 @@ MAIN ARTICLE RESPONSIVENESS
 
 	.entry-mobile-hero {
 		display: inline-block;
-		padding-top: 30px;
+		margin-top: -70px;
 	}
 
 	.entry-image-hero:hover {
