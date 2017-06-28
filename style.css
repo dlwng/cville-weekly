@@ -664,6 +664,10 @@ nav a.selected:link, a.selected:active {
 	vertical-align: middle;
 }
 
+li.menu-item-type-custom {
+	padding-left: 0;
+}
+
 .menu-item-type-custom img {
 	width: 100% !important;
 }
@@ -994,7 +998,6 @@ NAVBAR RESPONSIVENESS
 	#menu-item-34,
 	#menu-item-35{
 		padding-top: 20px;
-
 	}
 
 	.menu-item-type-custom {
@@ -2047,6 +2050,12 @@ END FOOTER
 /*--------------------------------------------------------------
 MAIN ARTICLE
 --------------------------------------------------------------*/
+
+.main-article {
+	margin-top: 60px;
+}
+
+
 .entry-mobile-hero {
 	display: none;
 }
@@ -2314,6 +2323,9 @@ MAIN ARTICLE
 
 }
 
+.entry-title a{
+	font-weight: bold;
+}
 
 /*--------------------------------------------------------------
 MAIN ARTICLE RESPONSIVENESS
@@ -2372,6 +2384,10 @@ MAIN ARTICLE RESPONSIVENESS
 
 	.entry-image-hero {
 		width: 50%;
+	}
+
+	.entry-title-hero {
+		font-weight: bold;
 	}
 
 	.entry-title-hero h2 {
@@ -2546,6 +2562,10 @@ CATEGORY MAIN ARTICLE BOXES
 }*/
 
 
+.box-title a {
+	font-weight: bold;
+}
+
 @media screen and (max-width: 560px) {
 	.entry-header-hero a {
 		font-size: 20px;
@@ -2620,6 +2640,7 @@ CATEGORY MAIN ARTICLE BOXES
 /*--------------------------------------------------------------
 HOME PAGE MORE/RECENT STORIES SECTION
 --------------------------------------------------------------*/
+
 .morebutton {
 	background-color: #CCF2FF;
 	border: 1px solid #3AA8DE;
@@ -2632,6 +2653,7 @@ HOME PAGE MORE/RECENT STORIES SECTION
 	box-shadow: 3px 3px #3AA8DE;
 	margin: 10px;
 }
+
 
 
 .morebutton:hover {
@@ -2652,8 +2674,6 @@ HOME PAGE MORE/RECENT STORIES SECTION
 .center-button a {
 	height: 36px;
 }
-
-
 
 
 /*--------------------------------------------------------------
@@ -2736,6 +2756,9 @@ CATEGORY MAIN ARTICLE BOXES
 	border: 2px solid #486885;
 }
 
+.entry-title-hero a {
+	font-weight: bold;
+}
 /*--------------------------------------------------------------
 CATEGORY MAIN ARTICLE BOXES RESPONSIVESS
 --------------------------------------------------------------*/
@@ -2930,6 +2953,7 @@ CATEGORY PAGE
 }
 
 /*--------------------------------------------------------------
+<<<<<<< HEAD
 ## Recent Articles Page
 --------------------------------------------------------------*/
 .alm-btn-wrap {
@@ -2950,16 +2974,21 @@ CATEGORY PAGE
 
 #secondary {
 	/*display: none;*/
+
 }
 
 .navigation {
 	display: none;
 }
 
+
 .attachment-150x150 {
 	width: auto;
 }
 /*=======
+=======
+/*============================================================
+>>>>>>> single
 ## Single
 --------------------------------------------------------------*/
 .single-back {
@@ -2972,6 +3001,11 @@ CATEGORY PAGE
 	text-align: center;
 	margin: 0 auto;
 	width: 660px;
+	font-size: 20px;
+}
+
+.singlediv p {
+	font-size: 15px;
 }
 
 header.entry-header-single {
@@ -2984,7 +3018,7 @@ header.entry-header-single {
 }
 
 .box-header.single {
-	width: 80%;
+	max-width: 80%;
 	height: auto;
 	margin: 0 auto;
 	display: block;
@@ -3075,7 +3109,11 @@ ol.comment-list {
 .box-header.related {
 	font-size: 13px;
 	text-align: center;
+	font-family: 'lora';
+	font-weight: bold;
 }
+
+.box-header
 
 .Newscolor-border-related {
 	border: 3px solid #486885;
@@ -3092,10 +3130,64 @@ ol.comment-list {
 .Livingcolor-border-related {
 	border: 3px solid #8C9141;
 }
+
+.smbuttons {
+	width: 5%;
+	margin: 20vh 0 0 5%;
+	position: fixed;
+	top: 0;
+	border: none;
+}
+
+.smbuttons img {
+	padding: 7px 0;
+}
+
+.smbuttons.dos {
+	display: none;
+}
+
+.box-title-single {
+	font-size: 10px;
+}
+
+.authordate p{
+	display: inline-block;
+	width: 18%;
+	margin-top: 0px;
+	text-align: center;
+}
+
+
 /*--------------------------------------------------------------
 ## ARTICLE RESPONSIVENESS
 --------------------------------------------------------------*/
+@media screen and (max-width: 934px) {
+	.smbuttons.dos {
+		display: flex;
+	}
+	.smbuttons {
+		display: flex;
+		width: 300px;
+		left: 28%;
+		position: relative;
+		margin: 0;
+		text-align: center;
+	}
+
+	.smbuttons a {
+		margin-right: 7%;
+	}
+
+	.smbuttons img {
+		padding: 0;
+	}
+}
+
 @media screen and (max-width: 700px) {
+.smbuttons {
+	left: 25%;
+}
 
 .singlediv, .make660 {
 
@@ -3121,9 +3213,22 @@ ol.comment-list {
 .thumbnail-container {
 	margin: 0 auto;
 }
+
+.box-title-single h2 {
+	font-size: 3vw;
+}
+
 }
 
 @media screen and (max-width: 552px) {
+
+.box-title-single h2 {
+	font-size: 4vw;
+}
+
+.smbuttons {
+		left: 20%;
+	}
 
 .single-back {
 	margin: 0 auto;
@@ -3158,6 +3263,7 @@ ol.comment-list {
 	z-index:-30px;
 }
 
+
 .article-head, .dateP, .locationP, .priceP{
 	padding:0;
 	margin:0;
@@ -3172,7 +3278,30 @@ ol.comment-list {
 	position:relative;
 	top:-50px;
 	background-color:white;
+
 }
+
+@media screen and (max-width: 525px) {
+	.smbuttons {
+		left: 15%;
+	}
+
+	}
+
+@media screen and (max-width: 500px) {
+	.smbuttons {
+		left: 15%;
+	}
+
+	}
+
+@media screen and (max-width: 450px) {
+	.smbuttons {
+		left: 10%;
+	}
+
+	}
+
 
 
 @media screen and (max-width:1200px){

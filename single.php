@@ -85,3 +85,10 @@ get_header(); ?>
 get_footer();
 ?>
 
+<div class="smbuttons uno">
+	<a href="https://twitter.com/cvillenews_desk?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="<?php bloginfo('template_directory'); ?>/images/Social-Media-Buttons-01.png" alt=""></a>
+	<a href="https://www.facebook.com/cville.weekly/"><img src="<?php bloginfo('template_directory'); ?>/images/Social-Media-Buttons-02.png" alt=""></a>
+	<a onclick='window.print()' href=""><img src="<?php bloginfo('template_directory'); ?>/images/Social-Media-Buttons-03.png" alt=""></a>
+	<a href="mailto:"><img src="<?php bloginfo('template_directory'); ?>/images/Social-Media-Buttons-04.png" alt=""></a>
+	<a href=""><img src="<?php bloginfo('template_directory'); ?>/images/Social-Media-Buttons-05.png" alt=""></a>
+</div>
