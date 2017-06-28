@@ -1861,6 +1861,7 @@ footer {
 	margin-left: 18.5%;
 	padding-bottom: 2%;
 	padding-top: 1%;
+
 }
 
 .grid__col--1-of-3 p {
@@ -3012,19 +3013,19 @@ header.entry-header-single {
 
 
 .Newscolor-border {
-	border: 4px solid #486885;
+	border: 2px solid #486885;
 }
 
 .Artscolor-border {
-	border: 4px solid #8F2682;
+	border: 2px solid #8F2682;
 }
 
 .Eventscolor-border {
-	border: 4px solid #486885;
+	border: 2px solid #486885;
 }
 
 .Livingcolor-border {
-	border: 4px solid #8C9141;
+	border: 2px solid #8C9141;
 }
 
 .nav-previous {
@@ -3078,20 +3079,26 @@ ol.comment-list {
 }
 
 .Newscolor-border-related {
-	border: 3px solid #486885;
+	border: 2px solid #486885;
 }
 
 .Artscolor-border-related {
-	border: 3px solid #8F2682;
+	border: 2px solid #8F2682;
 }
 
 .Eventscolor-border-related {
-	border: 3px solid #486885;
+	border: 2px solid #486885;
 }
 
 .Livingcolor-border-related {
-	border: 3px solid #8C9141;
+	border: 2px solid #8C9141;
 }
+
+.related-container {
+	margin: 0 auto;
+	width: 95%;
+}
+
 /*--------------------------------------------------------------
 ## ARTICLE RESPONSIVENESS
 --------------------------------------------------------------*/
@@ -3157,7 +3164,6 @@ ol.comment-list {
 	max-height:450px;
 	z-index:-30px;
 }
-
 .article-head, .dateP, .locationP, .priceP{
 	padding:0;
 	margin:0;
@@ -3181,3 +3187,16 @@ ol.comment-list {
 	}
 
 }
+
+/*--------------------------------------------------------------
+SEARCH
+--------------------------------------------------------------*/
+.sorry-bro {
+	text-align: center;
+
+}
+.no-search {
+	height: 60vh;
+}
+
+
