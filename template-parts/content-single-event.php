@@ -20,8 +20,11 @@
    //	$date = strtotime($date);
       $price = types_render_field( "price" , array( ) );
       $tickets = types_render_field( "tickets", array( ) );
+		$idNum=get_the_ID();
       ?>
 
+
+      <p class="returnButton" onClick="history.go(-1);return true;"><a >< Return to Event Listing</a></p>
       <div class="EventImgA">
          <?php $eventImg=the_post_thumbnail( array(600,400)); ?>
       </div>
