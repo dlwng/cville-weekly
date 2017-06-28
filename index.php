@@ -30,6 +30,7 @@ get_header(); ?>
 		<!-- while loop ends -->
 
 		<?php
+
 		
 		if ( have_posts() ) :
 
@@ -40,6 +41,8 @@ get_header(); ?>
 
 			<?php
 			endif;
+
+			get_template_part( 'template-parts/content-advert-banner', get_post_format() );
 
 
 			// while ( have_posts() ) : the_post();
@@ -119,6 +122,8 @@ get_header(); ?>
 				array_push($news_ids, get_the_ID());
 
 			endwhile;
+
+			get_template_part( 'template-parts/content-advert-banner', get_post_format() );
 			?>
 
 
@@ -131,6 +136,7 @@ get_header(); ?>
 				array_push($arts_ids, get_the_ID());
 
 			endwhile;
+			get_template_part( 'template-parts/content-advert-banner', get_post_format() );
 			?>
 
 			<a href="<?php echo esc_url( $living_link ); ?>"><h1 class="Livingcolor cat-title cat-title-living">Living</h1></a>
@@ -142,6 +148,7 @@ get_header(); ?>
 				array_push($living_ids, get_the_ID());
 
 			endwhile;
+			get_template_part( 'template-parts/content-advert-banner', get_post_format() );
 
 			$more_ids = array_merge($news_ids, $arts_ids, $living_ids);
 			?>

@@ -51,9 +51,14 @@ get_header(); ?>
 				'category_name' => single_cat_title( "", false )
 			));
 
+			$counter = 0;
 					// The Loop
 			while ( $cat_post -> have_posts() ) : $cat_post -> the_post();
 				get_template_part( 'template-parts/cat-list', get_post_format() );
+				$counter = $counter + 1;
+				if ($counter % 3 == 0) {
+					get_template_part( 'template-parts/content-advert-banner', get_post_format() );
+				}
 			endwhile; 
 
 		else: ?>
