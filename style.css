@@ -1070,6 +1070,9 @@ NAVBAR RESPONSIVENESS
 	a.menu-image-title-after {
 	font-size: 16.8px;
 	}
+	input.search-submit {
+    	margin-right: 90%;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -1127,6 +1130,7 @@ NAVBAR RESPONSIVENESS
     .menu-image-title {
     	font-size: 25px;
     }
+
 
 }
 
@@ -3159,7 +3163,7 @@ ol.comment-list {
 
 .authordate p{
 	display: inline-block;
-	width: 18%;
+	width: 24%;
 	margin-top: 0px;
 	text-align: center;
 }
