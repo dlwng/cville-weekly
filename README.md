@@ -14,6 +14,11 @@ Because this theme was build to support a news website, without a Wordpress acco
 
 ## Authors
 
+* [**Margaret Chen**](https://github.com/margarettchen)
+* [**Jocelyn Huang**](https://github.com/JocelynYH)
+* [**Benjamin Ormond**](https://github.com/bwo3db)
+* [**Dorothy Wang**](https://github.com/dlwng)
+
 See the list of [contributors](https://github.com/dlwng/cville-weekly/contributors) who participated in this project.
 
 
