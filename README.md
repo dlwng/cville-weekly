@@ -8,9 +8,15 @@ Because this theme was build to support a news website, without a Wordpress acco
 
 ## Built With
 
+Tools
 * [Underscores](https://underscores.me) - The starte theme/framework used
 * [Toast](https://daneden.github.io/Toast/) - The no non-sense CSS grid
 * [Toolset](https://wp-types.com/) - Wordpress plugin to create custom post types
+
+Languages
+* HTML/CSS
+* JavaScript
+* PHP
 
 ## Authors
 
